@@ -3,7 +3,7 @@
 
 $clientKey = 'sbaw2jpsjci0psiu0u';
 $clientSecret = '6dSAnGMApCwmnwv396yMxDBdZo2rQP8k';
-$redirectUri = 'https://50b1-2405-201-a408-6833-a078-bf73-5914-87bc.ngrok-free.app/tiktok/callback.php';
+$redirectUri = 'https://d579-2405-201-a408-6833-b8b8-fc30-465-375a.ngrok-free.app/tiktok/callback.php';
 
 if (isset($_GET['code'])) {
     $code = $_GET['code'];
