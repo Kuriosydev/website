@@ -1,12 +1,31 @@
+import ImageButtons from "../buttons/ImageButtons";
+import Heading from "../texts/Heading";
+import VideoPreview from "../videos/VideoPreview";
 
 export default function ImageBanner({ col, bgColor }) {
   return (
     <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-40`}>
-      <div className="w-full min-h-screen relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
+      <div className="w-full min-h-auto md:min-h-[42.2rem] relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
         {col === 1 &&
           <div className="flex flex-col w-full h-auto items-center justify-center">
-            <div className="absolute top-0 -left-28 h-auto">
-              <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[88%] h-full object-cover" />
+            <div className="absolute top-0 md:-left-28 h-auto hidden md:block">
+              <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[80%] h-full object-cover" />
+            </div>
+
+            <div className="flex flex-col w-full h-auto items-center justify-center">
+              <Heading
+                text="When Learning Feels Like Play - Parents Make the Magic Real"
+                fontFamily="font-luckiest"
+                fontSize="text-5xl md:text-7xl"
+                fontWeight="font-normal"
+                textAlign="text-center"
+                letterSpacing="md:tracking-wider"
+                textColor="text-[#8F0E00]"
+                customStyle="mt-10 px-24 md:px-80"
+              />
+              <div className="font-medium text-center text-base md:text-lg mt-10 md:px-0">
+                Support your child as they discover a new learning journey with Kurixel.
+              </div>
             </div>
           </div>
         }

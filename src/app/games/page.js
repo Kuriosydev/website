@@ -1,3 +1,4 @@
+import ResourceBlog from "@/components/pages/for-parents/ResourceBlog";
 import Banner from "@/components/pages/games/Banner";
 import JoinUs from "@/components/pages/home/sections/JoinUs";
 import SecondaryHeader from "@/Layouts/SecondaryHeader";
@@ -36,6 +37,25 @@ const menu = [
     },
 ];
 
+
+const resourceCards = [
+    {
+        text: "A Parent's Guide to Kurixel: Goals, Reports, Memberships",
+        linkText: "Learn More",
+        link: "#",
+    },
+    {
+        text: "Is a Kurixel Membership Worth It?",
+        linkText: "Learn More",
+        link: "#",
+    },
+    {
+        text: "What Is Prodigy? Your Top Questions, Answered!",
+        linkText: "Learn More",
+        link: "#",
+    }
+];
+
 export default function Games() {
     return (
         <>
@@ -46,6 +66,11 @@ export default function Games() {
                 buttonStyles="px-6 py-2 md:px-8 md:py-2.5"
             />
             <Banner />
+            <ResourceBlog
+                heading="Parent resources from our blog"
+                bgImgSrc="/images/resource_blog2.png"
+                resourceCards={resourceCards}
+            />
             <JoinUs
                 sectionStyle={"mt-8"}
                 heading={"JOIN THE KURIXEL EXPLORERS CLUB"}
