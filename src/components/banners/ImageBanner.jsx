@@ -23,7 +23,7 @@ export default function ImageBanner({ col, bgColor }) {
                 textColor="text-[#8F0E00]"
                 customStyle="mt-10 px-24 md:px-80"
               />
-              <div className="font-medium text-center text-base md:text-lg mt-10 md:px-0">
+              <div className="font-medium text-center text-base md:text-lg mt-10 px-8 md:px-0">
                 Support your child as they discover a new learning journey with Kurixel.
               </div>
             </div>
@@ -32,7 +32,10 @@ export default function ImageBanner({ col, bgColor }) {
 
         {col === 2 &&
           <div className="flex flex-col md:flex-row w-full h-auto items-center justify-center md:items-start md:justify-start">
-            <div className="w-full md:w-2/3 full flex flex-col text-left text-xl px-9 md:pl-12">
+            <div className="w-full md:w-2/3 full flex flex-col text-left text-xl px-9 md:pl-28">
+              <div className="absolute top-0 md:-left-28 h-auto hidden md:block">
+                <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[80%] h-full object-cover" />
+              </div>
               <Heading
                 text="Make math an exciting adventure"
                 fontFamily="font-luckiest"

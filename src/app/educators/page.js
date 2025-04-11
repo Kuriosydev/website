@@ -1,3 +1,4 @@
+import Banner from "@/components/pages/educators/Banner";
 import Faq from "@/components/pages/Faq";
 import ResourceBlog from "@/components/pages/for-parents/ResourceBlog";
 import JoinUs from "@/components/pages/home/sections/JoinUs";
@@ -121,6 +122,7 @@ export default function Educators() {
                 buttonText="Sign Up"
                 buttonStyles="mr-2 px-6 py-2 md:px-8 md:py-2.5"
             />
+            <Banner />
             <ResourceBlog
                 heading="Parent resources from our blog"
                 bgImgSrc="/images/resource_blog.png"
@@ -129,7 +131,6 @@ export default function Educators() {
             <Faq
                 heading="Frequently Asked Questions"
                 headingColor="text-[#8F0E00]"
-                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
                 faqs={faqs}
                 faqQuestionColor="text-[#8F0E00]"
                 faqQuestionFontFamily="font-luckiest"
