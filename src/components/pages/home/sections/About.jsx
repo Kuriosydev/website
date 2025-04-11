@@ -1,6 +1,7 @@
 import StoreButton from "@/components/buttons/StoreButton";
 import Feature from "@/components/texts/Feature";
 import Heading from "@/components/texts/Heading";
+import VideoPreview from "@/components/videos/VideoPreview";
 
 const features = [
     {
@@ -70,11 +71,19 @@ export default function About() {
                 <div className="relative flex flex-col items-center justify-center w-full h-full mt-8 md:mt-0">
                     <img src="/images/2149554978 1.png" alt="Tablet on Stone" className="w-full h-full object-contain" />
 
-                    <div className="absolute left-[42px] md:left-[83px] top-0 mt-[0.37rem] md:mt-[0.72rem] w-[71.7%] md:w-[71.7%] rotate-[0deg] justify-center items-center pointer-events-none z-50">
-                        <img
+                    <div className="absolute h-[23.7rem] left-[42px] md:left-[83px] top-0 mt-[0.37rem] md:mt-[0.72rem] w-[70%] md:w-[71.7%] rotate-[0.5deg] justify-center items-center pointer-events-none z-50">
+                        {/* <img
                             src="/images/game_screen_stone.png"
                             alt="Game Screenshot on tab"
                             className="w-full h-full object-cover"
+                        /> */}
+                        <VideoPreview
+                            src="/videos/preview.mp4"
+                            controls={false}
+                            autoPlay={true}
+                            muted={true}
+                            loop={true}
+                            wrapperClass="w-auto md:w-full h-full rounded-2xl" 
                         />
                     </div>
                 </div>

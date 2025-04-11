@@ -1,4 +1,5 @@
 import Accordian from "../accordian/Accordian";
+import ImageButtons from "../buttons/ImageButtons";
 import Heading from "../texts/Heading";
 
 export default function Faq({
@@ -20,7 +21,7 @@ export default function Faq({
     customStyles,
 }) {
     return (
-        <section className={`w-full h-auto ${bgColor} relative overflow-hidden z-30`}>
+        <section className={`w-full h-auto ${bgColor} relative overflow-hidden pb-10`}>
             <div className={`${customStyles} w-full h-full px-16`}>
                 <div className="flex flex-row">
                     <div className="flex flex-col items-center justify-center w-1/2">
@@ -51,7 +52,7 @@ export default function Faq({
                         />
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center mx-12 mt-20">
+                <div className="flex flex-col items-center justify-center mt-20">
                     <Accordian
                         items={faqs}
                         qFontFamily={faqQuestionFontFamily}
@@ -64,6 +65,16 @@ export default function Faq({
                         ansFontSize={faqAnswerFontSize}
                     />
                 </div>
+                {buttonText &&
+                    <div className="flex flex-col items-center justify-center mt-20">
+                        <ImageButtons
+                            text={buttonText}
+                            source="/images/Group.png"
+                            alt={buttonText + "button"}
+                            className=' md:mr-12 px-6 py-2 md:px-14 md:py-5'
+                        />
+                    </div>
+                }
             </div>
         </section>
     )

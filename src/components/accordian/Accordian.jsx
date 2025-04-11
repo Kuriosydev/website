@@ -29,8 +29,8 @@ export default function Accordion({
                     >
                         <h3 className={`${qFontWeight} ${qColor} ${qFontFamily} ${qFontSize} py-4`}>{faq.question}</h3>
                         {activeIndex === index
-                            ? <img src="/images/plus.png" alt="Plus Icon" className='w-5 h-5' />
-                            : <img src="/images/plus.png" alt="Plus Icon" className='w-5 h-5' />
+                            ? <img src="/images/minus.png" alt="minus Icon" className='w-8 object-fill' />
+                            : <img src="/images/plus.png" alt="Plus Icon" className='w-8 h-8' />
                         }
                     </div>
                     {activeIndex === index && (

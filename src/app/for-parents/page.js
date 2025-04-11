@@ -119,10 +119,14 @@ export default function ForParents() {
                 headingColor="text-[#8F0E00]"
                 description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
                 faqs={faqs}
-                faqQuestionColor="text-[#8F0E00]"
-                faqAnswerColor="text-[#8F0E00]"
                 buttonText="More FAQ"
-                accordianPlusColor="text-black"
+                faqQuestionColor="text-[#8F0E00]"
+                faqQuestionFontFamily="font-luckiest"
+                faqQuestionFontSize=" text-3xl"
+                faqQuestionFontWeight="font-normal"
+                faqAnswerFontSize="text-lg"
+                faqAnswerFontWeight="font-medium"
+                customStyles=""
             />
             <JoinUs
                 heading={"JOIN THE KURIXEL EXPLORERS CLUB"}
