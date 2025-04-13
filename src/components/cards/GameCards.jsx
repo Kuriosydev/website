@@ -1,12 +1,15 @@
 import ImageButtons from "../buttons/ImageButtons";
 import Heading from "../texts/Heading";
+import VideoPreview from "../videos/VideoPreview";
 
 export default function GameCards({ type, data }) {
+
+
     const renderScenario = () => {
         switch (type) {
             case 1:
                 return (
-                    <div className="flex flex-wrap items-center justify-center gap-4">
+                    <div className="flex flex-wrap items-center justify-center gap-10">
                         {data.map((item, index) => (
                             <div key={index} className="max-w-xs bg-white border border-gray-100 rounded-lg shadow-xl">
                                 <img className="rounded-t-lg p-2" src={item.imageSrc} alt={item.title} />
@@ -14,10 +17,21 @@ export default function GameCards({ type, data }) {
                                     <h5 className="mb-2 text-xl font-bold tracking-tight">{item.title}</h5>
                                     <p className="mb-3 font-medium text-lg">{item.description}</p>
                                     {item.buttonLink && (
-                                        <a href={item.buttonLink} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
-                                            {item.buttonText}
-                                            {/* You can add an icon here if needed */}
-                                        </a>
+                                        item.isImageButton
+                                            ? (
+                                                <ImageButtons
+                                                    text="Create A Free Account"
+                                                    source="/images/Group.png"
+                                                    alt="Create A Free Account"
+                                                    className="my-2 px-6 py-3 md:px-8 md:py-5"
+                                                    textSize="text-base"
+                                                />
+                                            )
+                                            : (
+                                                <a href={item.buttonLink} className="font-luckiest text-black font-normal text-xl">
+                                                    {item.buttonText}
+                                                </a>
+                                            )
                                     )}
                                 </div>
                             </div>
@@ -105,6 +119,45 @@ export default function GameCards({ type, data }) {
                                         <h5 className="mb-2 text-xl font-bold tracking-tight">{item.title}</h5>
                                     </a>
                                     <p className="mb-3 font-medium text-lg">{item.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                );
+            case 'video':
+                return (
+                    <div className="flex flex-wrap items-center justify-center gap-12 mx-auto">
+                        {data.map((item, index) => (
+                            <div key={index} className="max-w-xs bg-transparent rounded-lg ">
+                                <VideoPreview
+                                    src={item.videoSrc}
+                                    controls={false}
+                                    autoPlay={true}
+                                    muted={true}
+                                    loop={true}
+                                    wrapperClass="w-full h-full rounded-xl"
+                                />
+                                {/* <img className="rounded-t-lg p-2" src={item.imageSrc} alt={item.title} /> */}
+                                <div className="p-5">
+                                    <h5 className="mb-2 text-xl font-bold tracking-tight">{item.title}</h5>
+                                    <p className="mb-3 font-medium text-lg">{item.description}</p>
+                                    {item.buttonLink && (
+                                        item.isImageButton
+                                            ? (
+                                                <ImageButtons
+                                                    text="Create A Free Account"
+                                                    source="/images/Group.png"
+                                                    alt="Create A Free Account"
+                                                    className="my-2 px-6 py-3 md:px-8 md:py-5"
+                                                    textSize="text-base"
+                                                />
+                                            )
+                                            : (
+                                                <a href={item.buttonLink} className="font-luckiest text-black font-normal text-xl">
+                                                    {item.buttonText}
+                                                </a>
+                                            )
+                                    )}
                                 </div>
                             </div>
                         ))}

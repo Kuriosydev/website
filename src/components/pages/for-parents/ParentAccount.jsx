@@ -1,3 +1,4 @@
+import YellowButton from "@/components/buttons/YellowButton";
 import CircularCard from "@/components/cards/CircularCard";
 import Heading from "@/components/texts/Heading";
 
@@ -33,9 +34,7 @@ export default function ParentAccount({
 
                 {buttonText &&
                     <div className="w-full flex flex-col items-center justify-center mt-20">
-                        <button className={`${buttonColor || "bg-[#FFCE49]"} text-black font-bold py-4 px-8 rounded-xl`}>
-                            {buttonText}
-                        </button>
+                        <YellowButton text={buttonText}/>
                     </div>
                 }
             </div>

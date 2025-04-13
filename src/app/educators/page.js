@@ -1,5 +1,9 @@
 import Banner from "@/components/pages/educators/Banner";
+import Curriculam from "@/components/pages/educators/Curriculam";
 import EducatorTestimonials from "@/components/pages/educators/EducatorTestimonials";
+import HowWork from "@/components/pages/educators/HowWork";
+import OneClickLogin from "@/components/pages/educators/OneClickLogin";
+import WhyProdigy from "@/components/pages/educators/WhyProdigy";
 import Faq from "@/components/pages/Faq";
 import ResourceBlog from "@/components/pages/for-parents/ResourceBlog";
 import JoinUs from "@/components/pages/home/sections/JoinUs";
@@ -125,6 +129,10 @@ export default function Educators() {
             />
             <Banner />
             <EducatorTestimonials />
+            <HowWork />
+            <OneClickLogin />
+            <Curriculam />
+            <WhyProdigy />
             <ResourceBlog
                 heading="Parent resources from our blog"
                 bgImgSrc="/images/resource_blog.png"

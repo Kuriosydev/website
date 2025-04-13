@@ -29,7 +29,7 @@ export default function ResourceBlog({
                     </div>
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                    <div className="relative md:absolute flex flex-col md:flex-row items-center justify-center">
+                    <div className="relative md:absolute flex flex-col md:flex-row items-center justify-center px-14 md:px-0">
                         {resourceCards?.map((resorce, index) =>
                             <ResourceCard
                                 key={index}
