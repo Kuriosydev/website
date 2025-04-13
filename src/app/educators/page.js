@@ -1,4 +1,5 @@
 import Banner from "@/components/pages/educators/Banner";
+import EducatorTestimonials from "@/components/pages/educators/EducatorTestimonials";
 import Faq from "@/components/pages/Faq";
 import ResourceBlog from "@/components/pages/for-parents/ResourceBlog";
 import JoinUs from "@/components/pages/home/sections/JoinUs";
@@ -123,6 +124,7 @@ export default function Educators() {
                 buttonStyles="mr-2 px-6 py-2 md:px-8 md:py-2.5"
             />
             <Banner />
+            <EducatorTestimonials />
             <ResourceBlog
                 heading="Parent resources from our blog"
                 bgImgSrc="/images/resource_blog.png"

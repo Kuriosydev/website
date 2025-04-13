@@ -1,6 +1,12 @@
 import Faq from "@/components/pages/Faq";
+import AppStores from "@/components/pages/for-parents/AppStores";
 import Banner from "@/components/pages/for-parents/Banner";
+import KidsFeature from "@/components/pages/for-parents/KidsFeature";
+import ParentAccount from "@/components/pages/for-parents/ParentAccount";
+import ParentTestimonals from "@/components/pages/for-parents/ParentTestimonals";
+import Prodigy from "@/components/pages/for-parents/Prodigy";
 import ResourceBlog from "@/components/pages/for-parents/ResourceBlog";
+import Statictics from "@/components/pages/for-parents/Statictics";
 import JoinUs from "@/components/pages/home/sections/JoinUs";
 import SecondaryHeader from "@/Layouts/SecondaryHeader";
 
@@ -99,6 +105,29 @@ const faqs = [
     }
 ];
 
+const cards = [
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "Parent portal",
+        description: "See instant data on your child's progress, all in one place.",
+    },
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "Monthly report card",
+        description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
+    },
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "Curriculum Progress report",
+        description: "Find out which grade-level math skills your child has mastered from their curriculum.",
+    },
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "More powerful parent tools",
+        description: "Members get even more ways to support learning. Set Goals for your child, send in-game Cheers, print custom Practice Sheets and more!",
+    }
+];
+
 export default function ForParents() {
     return (
         <>
@@ -109,6 +138,17 @@ export default function ForParents() {
                 buttonStyles="mr-2 px-6 py-2 md:px-8 md:py-5"
             />
             <Banner />
+            <Statictics />
+            <ParentTestimonals />
+            <KidsFeature />
+            <AppStores />
+            <Prodigy />
+            <ParentAccount
+                heading="Support your child's math learning with a Kurixel parent account"
+                buttonText="Get a parent account now"
+                buttonColor="bg-[#FFCE49]"
+                cards={cards}
+            />
             <ResourceBlog
                 heading="Parent resources from our blog"
                 bgImgSrc="/images/resource_blog.png"

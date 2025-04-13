@@ -37,10 +37,11 @@ export default function About() {
                 />
             </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-center w-full h-full mt-10 px-10 md:px-16 text-xs">
-                <div className="flex flex-col items-start justify-start w-full h-full">
+            <div className="flex flex-col md:flex-row items-center justify-center w-full h-full mt-10 px-10 sm:px-6 md:px-16 gap-8">
+                {/* Left Column */}
+                <div className="flex flex-col items-start justify-start w-full md:w-1/2 h-full">
                     <div className="font-bold text-base md:text-2xl md:leading-14">Take Kurixel with you anywhere.</div>
-                    <div className="w-auto mt-1">
+                    <div className="w-full mt-1">
                         {features?.map((feature, index) =>
                             <Feature
                                 key={index}
@@ -65,26 +66,27 @@ export default function About() {
                             />
                         )}
                     </div>
-                    <div className="font-bold text-base md:text-2xl md:leading-14">Download Now</div>
+                    <div className="font-bold text-base md:text-2xl md:leading-14 mt-4 md:mt-6">Download Now</div>
                     <StoreButton />
                 </div>
-                <div className="relative flex flex-col items-center justify-center w-full h-full mt-8 md:mt-0">
-                    <img src="/images/2149554978 1.png" alt="Tablet on Stone" className="w-full h-full object-contain" />
-
-                    <div className="absolute h-[23.7rem] left-[42px] md:left-[83px] top-0 mt-[0.37rem] md:mt-[0.72rem] w-[70%] md:w-[71.7%] rotate-[0.5deg] justify-center items-center pointer-events-none z-50">
-                        {/* <img
-                            src="/images/game_screen_stone.png"
-                            alt="Game Screenshot on tab"
-                            className="w-full h-full object-cover"
-                        /> */}
-                        <VideoPreview
-                            src="/videos/preview.mp4"
-                            controls={false}
-                            autoPlay={true}
-                            muted={true}
-                            loop={true}
-                            wrapperClass="w-auto md:w-full h-full rounded-2xl" 
+                <div className="w-full md:w-1/2 max-w-3xl">
+                    <div className="relative w-full pt-[66.25%]">
+                        <img
+                            src="/images/2149554978 1.png"
+                            alt="Tablet on Stone"
+                            className="absolute top-0 left-0 w-full h-full object-contain"
                         />
+
+                        <div className="absolute top-[2%] left-[18%] w-[60%] h-[70%] rotate-[0.7deg] rounded-xl overflow-hidden z-50">
+                            <VideoPreview
+                                src="/videos/preview.mp4"
+                                controls={false}
+                                autoPlay={true}
+                                muted={true}
+                                loop={true}
+                                wrapperClass="w-full h-full "
+                            />
+                        </div>
                     </div>
                 </div>
 

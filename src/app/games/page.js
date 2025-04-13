@@ -1,6 +1,11 @@
 import Faq from "@/components/pages/Faq";
+import ParentAccount from "@/components/pages/for-parents/ParentAccount";
 import ResourceBlog from "@/components/pages/for-parents/ResourceBlog";
 import Banner from "@/components/pages/games/Banner";
+import Dashboard from "@/components/pages/games/Dashboard";
+import GameFeature from "@/components/pages/games/GameFeature";
+import GamePreview from "@/components/pages/games/GamePreview";
+import ProdigyWorld from "@/components/pages/games/ProdigyWorld";
 import JoinUs from "@/components/pages/home/sections/JoinUs";
 import SecondaryHeader from "@/Layouts/SecondaryHeader";
 
@@ -88,6 +93,30 @@ const faqs = [
     }
 ];
 
+
+const cards = [
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "Parent portal",
+        description: "See instant data on your child's progress, all in one place.",
+    },
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "Monthly report card",
+        description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
+    },
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "Curriculum Progress report",
+        description: "Find out which grade-level math skills your child has mastered from their curriculum.",
+    },
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "More powerful parent tools",
+        description: "Members get even more ways to support learning. Set Goals for your child, send in-game Cheers, print custom Practice Sheets and more!",
+    }
+];
+
 export default function Games() {
     return (
         <>
@@ -98,6 +127,19 @@ export default function Games() {
                 buttonStyles="px-6 py-2 md:px-8 md:py-2.5"
             />
             <Banner />
+            <GameFeature />
+            <GamePreview />
+            <ParentAccount
+                heading="Support your child's math learning with a Kurixel parent account"
+                cards={cards}
+                bgColor="bg-white"
+            />
+            <ParentAccount
+                heading="Parents, say goodbye to homework hassles"
+                cards={cards}
+            />
+            <Dashboard />
+            <ProdigyWorld />
             <ResourceBlog
                 heading="Parent resources from our blog"
                 bgImgSrc="/images/resource_blog2.png"
@@ -116,10 +158,9 @@ export default function Games() {
                 faqAnswerFontSize="text-lg"
                 faqAnswerFontWeight="font-medium"
                 faqAnswerColor="text-white"
-                customStyles=""
+                customStyles="pb-12"
             />
             <JoinUs
-                sectionStyle={"mt-8"}
                 heading={"JOIN THE KURIXEL EXPLORERS CLUB"}
                 headingColor={"text-black"}
                 headingStyle={"md:mt-10"}
