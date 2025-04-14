@@ -1,5 +1,4 @@
-import Footer from "@/Layouts/Footer";
-import Header from "@/Layouts/Header";
+import AppLayout from "@/Layouts/AppLayout";
 import { Montserrat } from "next/font/google";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -34,11 +33,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
       </head>
       <body className={`${montserrat.variable} antialiased min-h-screen flex flex-col overflow-x-hidden`}>
-        <Header />
-        <main className="flex-1 w-full ">
-          {children}
-        </main>
-        <Footer />
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );

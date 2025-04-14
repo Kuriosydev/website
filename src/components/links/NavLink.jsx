@@ -2,19 +2,19 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function NavLink({ href, text, onClick, isMobile, isFooter, className }) {
+export default function NavLink({ href, text, onClick, isMobile, isFooter, className, textColor = "text-white", borderColor = "border-white " }) {
     const pathname = usePathname();
 
     const isActive = pathname === href;
 
     const baseClass = isFooter
-        ? "text-white font-medium hover:text-gray-700"
+        ? `${textColor} font-medium hover:text-gray-700`
         : isMobile
-            ? "block mb-5 text-lg text-white no-underline"
-            : "no-underline md:text-lg font-medium tracking-[1px] text-white cursor-pointer";
+            ? `block mb-5 text-lg ${textColor} no-underline`
+            : `no-underline md:text-lg font-medium tracking-[1px] ${textColor} cursor-pointer`;
 
     const activeClass = isActive && !isMobile && !isFooter
-        ? "border-b-[0.2rem] border-white pb-[2px]"
+        ? `border-b-[0.2rem] ${borderColor} pb-[2px]`
         : "";
 
     return (

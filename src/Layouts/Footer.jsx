@@ -1,6 +1,7 @@
 import SocialIcons from "@/components/icons/SocialIcons";
 import BulletList from "@/components/lists/BulletList";
 import SiteLogo from "@/components/logo/SiteLogo";
+import Link from "next/link";
 
 const quickLinksList = [
   { href: "#", text: "Home" },
@@ -13,8 +14,8 @@ const quickLinksList = [
 const supportList = [
   { href: "#", text: "Contact Us" },
   { href: "#", text: "Help Center" },
-  { href: "#", text: "Privacy Policy" },
-  { href: "#", text: "Terms & Services" },
+  { href: "/privacy-policy", text: "Privacy Policy" },
+  { href: "/terms-of-use", text: "Terms & Services" },
 ];
 
 export default function Footer() {
@@ -23,11 +24,13 @@ export default function Footer() {
 
 
       <div className="absolute inset-0 z-10 bg-[rgba(91,7,7,1)]">
-        <img
-          src="/images/ca0ad6cbee22479a434887931d2b542c.png"
-          alt="Footer Background"
-          className="w-full h-full object-cover opacity-15 absolute inset-0 "
-        />
+        <Link href="/">
+          <img
+            src="/images/ca0ad6cbee22479a434887931d2b542c.png"
+            alt="Footer Background"
+            className="w-full h-full object-cover opacity-15 absolute inset-0 "
+          />
+        </Link>
       </div>
 
 
