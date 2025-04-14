@@ -39,12 +39,12 @@ export default function Footer() {
 
         <div className="w-full sm:w-1/2 md:w-1/5 mt-4 sm:mt-6 md:mt-0">
           <h3 className="text-white font-bold text-lg sm:text-xl">QUICK LINKS</h3>
-          <BulletList lists={quickLinksList} bullet={true} bulletColor={"white"} isFooter={true} />
+          <BulletList lists={quickLinksList} bullet={true} bulletColor="white" isFooter={true} />
         </div>
 
         <div className="w-full sm:w-1/2 md:w-1/5 mt-4 sm:mt-6 md:mt-0">
           <h3 className="text-white font-bold text-lg sm:text-xl">SUPPORT</h3>
-          <BulletList lists={supportList} bullet={true} bulletColor={"white"} isFooter={true} />
+          <BulletList lists={supportList} bullet={true} bulletColor="white" isFooter={true} />
         </div>
 
         <div className="w-full sm:w-3/4 md:w-1/5 flex flex-col items-center justify-center mt-8 sm:mt-10 md:mt-12 md:mr-8">

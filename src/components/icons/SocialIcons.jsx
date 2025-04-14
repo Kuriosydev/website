@@ -3,7 +3,8 @@ export default function SocialIcons({ socialName, socialLink, socialIcon, color,
         facebook: "fa-brands fa-facebook-f",
         twitter: "fa-brands fa-x-twitter",
         instagram: "fa-brands fa-instagram",
-        youtube: "fa-brands fa-youtube"
+        youtube: "fa-brands fa-youtube",
+        pinterest: "fa-brands fa-pinterest",
     };
 
     const iconClass = socialIcons[socialName] || socialIcon;

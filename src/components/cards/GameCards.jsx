@@ -2,7 +2,7 @@ import ImageButtons from "../buttons/ImageButtons";
 import Heading from "../texts/Heading";
 import VideoPreview from "../videos/VideoPreview";
 
-export default function GameCards({ type, data }) {
+export default function GameCards({ type, data, customDivClass = "flex flex-wrap items-center justify-center gap-12 mx-auto" }) {
 
 
     const renderScenario = () => {
@@ -126,7 +126,7 @@ export default function GameCards({ type, data }) {
                 );
             case 'video':
                 return (
-                    <div className="flex flex-wrap items-center justify-center gap-12 mx-auto">
+                    <div className={`${customDivClass}`}>
                         {data.map((item, index) => (
                             <div key={index} className="max-w-xs bg-transparent rounded-lg ">
                                 <VideoPreview

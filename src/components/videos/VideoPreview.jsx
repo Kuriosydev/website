@@ -7,7 +7,10 @@ export default function VideoPreview({
     autoPlay = true,
     muted = true,
     loop = true,
-    wrapperClass = 'w-full h-full', // Default to full dimensions
+    wrapperClass = 'w-full h-full',
+    position = "object-cover",
+    videoWidth = 'w-full',
+    videoHeight = 'h-full'
 }) {
     if (!src) return null;
 
@@ -19,7 +22,7 @@ export default function VideoPreview({
                 autoPlay={autoPlay}
                 muted={muted}
                 loop={loop}
-                className="w-full h-full object-cover"
+                className={`${videoWidth} ${videoHeight} ${position}`}
             />
         </div>
     );

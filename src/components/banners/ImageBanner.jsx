@@ -5,7 +5,7 @@ import VideoPreview from "../videos/VideoPreview";
 export default function ImageBanner({ col, bgColor }) {
   return (
     <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-40`}>
-      <div className="w-full min-h-auto md:min-h-[42.2rem] relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
+      <div className="w-full min-h-auto md:max-h-[42.2rem] relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
         {col === 1 &&
           <div className="flex flex-col w-full h-auto items-center justify-center">
             <div className="absolute top-0 md:-left-28 h-auto hidden md:block">
@@ -74,6 +74,57 @@ export default function ImageBanner({ col, bgColor }) {
                 wrapperClass="w-auto md:w-[150%] h-full pr-8 md:pr-0 rounded-2xl" // Custom height, full width
               />
 
+            </div>
+          </div>
+        }
+
+        {col === 3 &&
+          <div className="flex flex-col md:flex-row w-full h-auto items-center justify-center md:items-start md:justify-start gap-4 md:ml-12 md:mt-8">
+            <div className="w-full md:w-5/12 full flex flex-col text-left text-xl px-9 md:pl-28">
+              <div className="absolute top-20 md:-left-20 h-auto hidden md:block">
+                <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[70%] h-full object-cover" />
+              </div>
+              <Heading
+                text="BREAKING NEWS"
+                fontFamily="font-luckiest"
+                fontSize="text-5xl md:text-7xl"
+                fontWeight="font-normal"
+                textAlign="text-center md:text-left"
+                letterSpacing="md:tracking-wider"
+                textColor="text-[#8F0E00]"
+                customStyle="mt-10"
+              />
+              <div className="font-medium text-center md:text-left text-base md:text-3xl mt-10 md:px-0">
+                Math Kurixel officially launches on May 26, 2025!
+              </div>
+            </div>
+            <div className="w-full md:w-3/12 flex flex-col text-center md:text-left text-xl h-auto md:h-[27rem] px-14 md:px-0">
+              <VideoPreview
+                src="/videos/news_banner_vid_2.mp4"
+                controls={false}
+                autoPlay={true}
+                muted={true}
+                loop={true}
+                wrapperClass="w-full h-full rounded-2xl"
+                position="object-fill py-8 md:py-0"
+              />
+              <div className="hidden md:block absolute bottom-14 px-8 h-auto w-96 items-center justify-center text-left text-white text-lg font-medium tracking-tight">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              </div>
+            </div>
+            <div className="w-full md:w-4/12 flex flex-col text-center md:text-left text-xl h-[27rem] px-14 md:px-0">
+              <VideoPreview
+                src="/videos/news_banner_vid_2.mp4"
+                controls={false}
+                autoPlay={true}
+                muted={true}
+                loop={true}
+                wrapperClass="w-full h-full rounded-2xl"
+                position="object-fill py-8 md:py-0"
+              />
+              <div className="hidden md:block absolute bottom-14 px-8 h-auto w-96 items-center justify-center text-left text-white text-lg font-medium tracking-tight">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              </div>
             </div>
           </div>
         }
