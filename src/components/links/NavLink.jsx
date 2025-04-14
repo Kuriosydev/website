@@ -1,10 +1,12 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
-export default function NavLink({ href, text, onClick, isMobile, isFooter, className, textColor = "text-white", borderColor = "border-white " }) {
+export default function NavLink({ href, text, onClick, isMobile, isFooter, className, textColor = "text-white", borderColor = "border-white ", dropdown }) {
     const pathname = usePathname();
-
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [isSubMenuDropdownOpen, setSubMenuDropdownOpen] = useState(false);
     const isActive = pathname === href;
 
     const baseClass = isFooter
@@ -14,10 +16,81 @@ export default function NavLink({ href, text, onClick, isMobile, isFooter, class
             : `no-underline md:text-lg font-medium tracking-[1px] ${textColor} cursor-pointer`;
 
     const activeClass = isActive && !isMobile && !isFooter
-        ? `border-b-[0.2rem] ${borderColor} pb-[2px]`
+        ? `border-b-[0.2rem] ${borderColor} py-2`
         : "";
 
-    return (
+    const handleClick = (e) => {
+        if (dropdown?.length > 0) {
+            // e.preventDefault(); // prevent navigation
+            setDropdownOpen(prev => !prev);
+        }
+        if (onClick) onClick(e);
+    };
+
+    const handleSubMenuClick = (e) => {
+        // e.preventDefault(); // prevent navigation
+        setSubMenuDropdownOpen(prev => !prev);
+    };
+
+    return dropdown?.length > 0 ? (
+        <>
+            <Link
+                href={href}
+                onClick={handleClick}
+                className={`${className || ""} ${baseClass} ${activeClass}`}
+            >
+                <span>
+                    {text}
+                    <i className='fa fa-chevron-down text-base text-white px-4'></i>
+                </span>
+            </Link>
+
+            {isDropdownOpen && (
+                <div className='flex flex-col items-start justify-between text-white'>
+                    <ul className='px-4'>
+                        {dropdown.map((item, index) => (
+                            <li className='py-1' key={index}>
+                                <Link
+                                    href={item?.href}
+                                    onClick={handleSubMenuClick}
+                                    className={`${item?.styles || ""} ${activeClass}`}
+                                >
+                                    {item?.dropdown ? (
+                                        <>
+                                            <span>
+                                                {item?.name}
+                                                <i className='fa fa-chevron-down text-xs text-white px-4'></i>
+                                            </span>
+
+                                            {isSubMenuDropdownOpen && (
+                                                <div className='flex flex-col items-start justify-between text-white'>
+                                                    <ul className='px-4'>
+                                                        {item?.childrens?.map((subitem, row) => (
+                                                            <li className='py-1' key={row}>
+                                                                <Link
+                                                                    href={subitem?.href}
+                                                                    onClick={subitem?.onClick}
+                                                                    className={`${subitem?.styles || ""} ${activeClass}`}
+                                                                >
+                                                                    {subitem?.name}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            )}
+                                        </>
+                                    ) : (
+                                        <>{item?.name}</>
+                                    )}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </>
+    ) : (
         <Link
             href={href}
             onClick={onClick}

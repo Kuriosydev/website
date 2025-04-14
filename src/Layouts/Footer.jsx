@@ -12,10 +12,11 @@ const quickLinksList = [
 ];
 
 const supportList = [
-  { href: "#", text: "Contact Us" },
+  { href: "/contact-us", text: "Contact Us" },
   { href: "#", text: "Help Center" },
   { href: "/privacy-policy", text: "Privacy Policy" },
   { href: "/terms-of-use", text: "Terms & Services" },
+  { href: "/complies", text: "Terms & Services" },
 ];
 
 export default function Footer() {

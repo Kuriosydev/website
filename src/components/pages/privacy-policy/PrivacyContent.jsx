@@ -34,7 +34,7 @@ export default function PrivacyContent() {
                                 <li className="list-disc py-1">This Privacy Policy describes the way in which Prodigy Education Inc. (“Prodigy,” “we” or “us”) collects, uses, discloses, and safeguards personal information of students (collectively “Student Users” or “you”) when they use Prodigy’s games, such as Prodigy Math and Prodigy English, available at play.prodigygame.com (collectively, the “Games”).</li>
                             </ul>
                         </div>
-                        <div className="w-3/12 pl-20">
+                        <div className="w-3/12 md:pl-20">
                             <div className="py-4 w-auto h-auto md:w-1/2 md:h-1/2 rounded-full">
                                 <img src="/images/ferpa.webp" alt="FERPA Logo" className="w-full h-full object-fill rounded fill" />
                             </div>
