@@ -5,7 +5,7 @@ const playIcon = 'fa-solid fa-play';
 export default function Intro() {
 	return (
 		<section className="w-full h-auto">
-			<div className="w-full min-h-96 relative overflow-hidden ">
+			<div className="w-full min-h-full relative overflow-hidden ">
 				<img
 					src="/images/ca0ad6cbee22479a434887931d2b542c_bg.png"
 					alt="Millie & Max Background"
@@ -37,9 +37,6 @@ export default function Intro() {
 						</div>
 					</div>
 				</div>
-
-
-
 			</div>
 		</section>
 	)

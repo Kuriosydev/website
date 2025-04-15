@@ -30,16 +30,17 @@ export default function UpdatesEvents({ isImage = true, bgColor }) {
                 <Heading
                     text="LATEST UPDATES & EVENTS"
                     fontFamily="font-luckiest"
-                    fontSize="text-5xl md:text-7xl"
+                    fontSize="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
                     fontWeight="font-bold"
                     textAlign="text-center"
-                    letterSpacing="md:tracking-wider"
+                    letterSpacing="tracking-wide sm:tracking-wider"
                     textColor="text-[#8F0E00]"
-                    customStyle="mt-10 px-4 md:px-64"
+                    customStyle="mt-10 px-4 md:px-32 lg:px-64"
                 />
             </div>
-            <div className="flex flex-col items-center justify-center mt-16 ">
-                <div className="flex flex-col md:flex-row items-center justify-center mt-4">
+
+            <div className="flex flex-col items-center justify-center mt-12 px-4 sm:px-6 md:px-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-10">
                     {events?.map((event, index) => (
                         <EventCard
                             key={index}
@@ -47,18 +48,23 @@ export default function UpdatesEvents({ isImage = true, bgColor }) {
                             link={event.link}
                             title={event.title}
                             description={event.description}
-                            className="mx-4"
+                            className="w-full"
                         />
                     ))}
                 </div>
             </div>
-            {isImage ?
-                <div className="relative w-full h-auto md:-mt-48 items-center justify-center  opacity-25">
-                    <img src="/images/updates_background.png" alt="Updates and events Background" className="w-full h-full object-cover" />
-                </div>
-                : <div className="relative w-full h-auto pb-8 md:pb-16"></div>
-            }
 
+            {isImage ? (
+                <div className="relative w-full h-auto md:-mt-48 flex items-center justify-center opacity-25 mt-10">
+                    <img
+                        src="/images/updates_background.png"
+                        alt="Updates and events Background"
+                        className="w-full h-auto object-contain"
+                    />
+                </div>
+            ) : (
+                <div className="relative w-full h-auto pb-8 md:pb-16"></div>
+            )}
         </section>
-    )
+    );
 }

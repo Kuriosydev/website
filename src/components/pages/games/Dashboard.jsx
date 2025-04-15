@@ -1,6 +1,13 @@
-import ImageButtons from "@/components/buttons/ImageButtons";
+import BulletList from "@/components/lists/BulletList";
 import Heading from "@/components/texts/Heading";
 import VideoPreview from "@/components/videos/VideoPreview";
+
+const listData = [
+    { text: "Built for Play. Designed for Growth." },
+    { text: "Build math confidence through puzzles, quests, and battles." },
+    { text: "Strengthen language skills by creating, crafting, and storytelling." },
+    { text: "Stay curious with new content that adapts to their pace and progress." },
+];
 
 export default function Dashboard() {
     return (
@@ -8,7 +15,7 @@ export default function Dashboard() {
             <div className="flex flex-col items-center justify-center w-full h-full px-4 md:px-16">
                 <div className="py-10">
                     <Heading
-                        text="One dashboard. Two subjects."
+                        text="One Account. Endless Adventures."
                         fontFamily="font-luckiest"
                         fontSize="text-4xl md:text-6xl lg:text-7xl"
                         fontWeight="font-bold"
@@ -20,29 +27,18 @@ export default function Dashboard() {
                 </div>
 
                 <div className="text-lg font-medium text-center max-w-4xl mb-10">
-                    Get access to all of Kurixel's tools and insights for Kurixel Math and Kurixel English when you sign up for one account.
+                    Kurixel transforms screen time into quest time. Unlock a universe of learning with a single Kurixel dashboard.
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-between w-full gap-10 py-10">
+                <div className="flex flex-col md:flex-row items-start justify-between w-full gap-10 py-10">
                     <div className="flex flex-col items-start justify-between w-full md:w-1/2 gap-6 md:pr-24">
-                        <Heading
-                            text="Kurixel English"
-                            fontFamily="font-luckiest"
-                            fontSize="text-2xl md:text-4xl"
-                            fontWeight="font-normal"
-                            textAlign="text-left"
-                            letterSpacing="md:tracking-wider"
-                            textColor="text-[#8F0E00]"
-                        />
-                        <p className="text-lg font-medium text-left">
-                            Inspire kids to create their own unique world with this brand-new life simulation game. Aligned to Common Core reading and language standards for 1st to 6th grade, every question answered gives players more energy to gather resources, complete goals and stay creative.
-                        </p>
-                        <ImageButtons
-                            text="Create A Free Account"
-                            source="/images/Group.png"
-                            alt="Create A Free Account"
-                            className="my-2 px-6 py-3 md:px-8 md:py-5"
-                            textSize="text-base"
+                        <BulletList
+                            lists={listData}
+                            bullet={true}
+                            isFooter={false}
+                            isLink={false}
+                            textClasses="font-semibold text-sm sm:text-base md:text-xl"
+                            liClass="py-4"
                         />
                     </div>
 

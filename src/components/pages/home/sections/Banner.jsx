@@ -72,14 +72,14 @@ export default function Banner() {
       </div>
 
       <div className="flex flex-row justify-between w-full absolute -mt-30 md:-mt-48 z-10">
-        <div className="flex flex-col -ml-6 md:ml-0">
+        <div className="flex flex-col -ml-6 md:ml-0 aspect-auto">
           <img
             src="/images/millie.png"
             alt="Millie"
-            className="h-auto w-full"
+            className="h-auto w-full aspect-auto"
           />
         </div>
-        <div className="flex flex-col items-end mr-0 md:mr-2 mt-64 md:mt-[9.4rem]">
+        <div className="flex flex-col items-end mr-0 md:mr-2 mt-64 md:mt-[9.4rem] aspect-[3/4]">
           <img
             src="/images/max.png"
             alt="Max"

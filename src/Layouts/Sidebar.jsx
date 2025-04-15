@@ -136,7 +136,7 @@ export default function Sidebar({ isOpen, onClose }) {
     return (
         <div
             ref={sidebarRef}
-            className={`fixed top-0 right-0 w-[250px] h-full bg-[var(--navbar-bg)] shadow-lg z-[10000] p-5 box-border transition-all duration-500 md:hidden ${isOpen ? "right-0 opacity-100" : "right-[-250px] opacity-0 pointer-events-none"
+            className={`overflow-y-scroll fixed top-0 right-0 w-[250px] h-full bg-[var(--navbar-bg)] shadow-lg z-[10000] p-5 box-border transition-all duration-500 md:hidden ${isOpen ? "right-0 opacity-100" : "right-[-250px] opacity-0 pointer-events-none"
                 }`}
         >
             <div className="flex items-center justify-center z-[6] mb-4">

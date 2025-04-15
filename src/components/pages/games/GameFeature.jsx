@@ -5,7 +5,7 @@ import VideoPreview from "@/components/videos/VideoPreview";
 const gameFeature1 = [
   {
     imgSrc: "/images/Ellipse.png",
-    heading: "Explore an ever-expanding world",
+    heading: "Discover a World of Endless Adventures new skills, new quests, nonstop fun",
     description: "filled with new adventures",
   },
   {
@@ -23,7 +23,7 @@ const gameFeature1 = [
 const gameFeature2 = [
   {
     imgSrc: "/images/Ellipse.png",
-    heading: "Parent portal",
+    heading: "Discover a World of Endless Adventures new skills, new quests, nonstop fun",
     description: "See instant data on your child's progress, all in one place.",
   },
   {
@@ -44,7 +44,7 @@ export default function GameFeature() {
       <div className="w-full h-full relative overflow-hidden pb-14 md:py-10">
         <div className="flex flex-row flex-wrap items-center justify-center">
           <Heading
-            text="There's lots to explore in the world of Prodigy Math, and behind every adventure is curriculum-aligned math practice."
+            text="Solve. Explore. Conquer."
             fontFamily="font-luckiest"
             fontSize="text-2xl md:text-5xl"
             fontWeight="font-normal"
@@ -55,10 +55,10 @@ export default function GameFeature() {
           />
         </div>
         <div className="flex flex-row flex-wrap items-center justify-center text-lg font-medium px-10 md:py-8 md:px-96 text-center">
-          With new challenges around every corner, students must answer adaptive math questions to win battles and complete quests.
+          In the world of Kurixel, curiosity leads the way. Every quest, puzzle, and battle is powered by curriculum-aligned math practice. With surprises at every turn, students solve problems to unlock new worlds, conquer challenges, and level up all while building real math skills.
         </div>
         <div className="flex flex-row flex-wrap items-center justify-center md:mt-0 mt-12 md:px-0 px-10">
-          <div className="flex flex-row flex-wrap items-center justify-center w-full md:w-3/12 pl-4 md:pl-20 pr-4 md:pr-8">
+          <div className="hidden flex-row flex-wrap items-center justify-center w-full md:w-3/12 pl-4 md:pl-20 pr-4 md:pr-8">
             {gameFeature1?.map((gameFeature, index) => (
               <CircularCard key={index} {...gameFeature} textColor="text-black" isRow={true} />
             ))}
