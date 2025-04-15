@@ -28,18 +28,18 @@ const resourceCards = [
 
 const testimonials = [
     {
-        comment: "Kurixel is a great way to get kids who don't like math into math.",
-        author: "Ensley Guerrero",
+        comment: "Kurixel is an amazing tool for getting kids who usually don't enjoy math to actually engage with it.",
+        author: "E. Guerrero",
         authorImage: "/images/author1.png"
     },
     {
-        comment: "I love that Kurixel is fun for students. ",
-        author: "Karina Vega",
+        comment: "I love how Kurixel makes math fun and exciting for students.",
+        author: "K. Vega",
         authorImage: "/images/author2.png"
     },
     {
-        comment: "Kurixel is a great way to get kids who don't like math into math.",
-        author: "Journey Vaughn",
+        comment: "Kurixel has really helped my students who usually find math frustrating. It’s so rewarding to see them engaged and feeling more confident.",
+        author: "J. Vaughn",
         authorImage: "/images/author3.png"
     }
 ];

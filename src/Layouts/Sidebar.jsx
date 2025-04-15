@@ -141,7 +141,7 @@ export default function Sidebar({ isOpen, onClose }) {
         >
             <div className="flex items-center justify-center z-[6] mb-4">
                 <ImageButtons
-                    text="JOIN US"
+                    text="Log In"
                     source={ButtonImage}
                     alt="Join Us Background"
                     className="px-6 py-2 md:px-8 md:py-5"

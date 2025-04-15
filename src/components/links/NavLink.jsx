@@ -59,7 +59,7 @@ export default function NavLink({
             </Link>
 
             {isDropdownOpen && (
-                <ul className={`${isRelative ? "px-4" : "absolute top-full left-0 mt-2 bg-[#FFCE49] backdrop-blur-[10px] text-white rounded-md shadow-lg z-50 w-48 py-2"}`}>
+                <ul className={`${isRelative ? "px-4" : "absolute top-full left-0 mt-2 bg-[#FFCE49] backdrop-blur-[10px] text-white rounded-md shadow-lg z-50 w-64 py-2"}`}>
                     {dropdown.map((item, index) => {
                         // Check if the dropdown item or its sub-menu should be active
                         const isDropdownItemActive = pathname === item?.href || pathname.startsWith(item?.href + '/');

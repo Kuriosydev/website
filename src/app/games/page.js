@@ -160,6 +160,7 @@ export default function Games() {
                 faqAnswerColor="text-white"
                 customStyles="pb-12"
                 description="Got questions? We've got answers! Whether you're a parent, a learner, or just curious about what makes Kurixel so magical, explore below to learn more."
+                descriptionClasses="text-white"
             />
             <JoinUs
                 heading={"JOIN THE KURIXEL EXPLORERS CLUB"}

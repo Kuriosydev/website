@@ -7,6 +7,7 @@ export default function Faq({
     heading,
     headingColor,
     description,
+    descriptionClasses = "text-left mt-12 font-medium text-lg",
     faqs,
     faqQuestionColor,
     faqQuestionFontFamily,
@@ -24,7 +25,7 @@ export default function Faq({
         <section className={`w-full h-auto ${bgColor} relative overflow-hidden`}>
             <div className={`${customStyles} w-full h-full px-12 md:px-16 mt-12 md:mt-0`}>
                 <div className="flex flex-row">
-                    <div className="flex flex-col items-center justify-center w-1/2">
+                    <div className="flex flex-col items-center justify-center w-1/2 gap-4">
                         <Heading
                             text={heading}
                             fontFamily="font-luckiest"
@@ -37,7 +38,7 @@ export default function Faq({
                         />
 
                         {description &&
-                            <div className="text-left mt-12 font-medium text-lg">
+                            <div className={`${descriptionClasses} md:py-4 py-2`}>
                                 {description}
                             </div>
                         }

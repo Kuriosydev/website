@@ -12,24 +12,25 @@ const menu = [
     },
     {
         href: "#",
-        name: "Features",
-        styles: "mr-5 md:mr-8",
-        dropdown: true,
-        childrens: []
-    },
-    {
-        href: "#",
         name: "Curriculam",
         styles: "mr-5 md:mr-8",
         dropdown: true,
-        childrens: []
-    },
-    {
-        href: "/educators/research",
-        name: "Research",
-        styles: "mr-5 md:mr-8",
-        dropdown: false,
-        childrens: []
+        childrens: [
+            {
+                href: "/educators/curriculam/math",
+                name: "Math",
+                styles: "mr-5 md:mr-8",
+                dropdown: false,
+                childrens: []
+            },
+            {
+                href: "/educators/overview/english-language-arts",
+                name: "English Language Arts",
+                styles: "mr-5 md:mr-8",
+                dropdown: false,
+                childrens: []
+            },
+        ]
     },
     {
         href: "#",
@@ -39,14 +40,7 @@ const menu = [
         childrens: []
     },
     {
-        href: "/educators/administrators",
-        name: "Administrators",
-        styles: "mr-5 md:mr-8",
-        dropdown: false,
-        childrens: []
-    },
-    {
-        href: "/support",
+        href: "/contact-us",
         name: "Support",
         styles: "mr-5 md:mr-8",
         dropdown: false,

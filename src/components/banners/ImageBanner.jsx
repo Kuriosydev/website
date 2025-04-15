@@ -31,36 +31,32 @@ export default function ImageBanner({ col, bgColor }) {
         }
 
         {col === 2 &&
-          <div className="flex flex-col md:flex-row w-full h-auto items-center justify-center md:items-start md:justify-start">
+          <div className="flex flex-col md:flex-row w-full h-full items-center justify-center md:items-start md:justify-start">
             <div className="w-full md:w-2/3 full flex flex-col text-left text-xl px-9 md:pl-28">
-              <div className="absolute top-0 md:-left-28 h-auto hidden md:block">
+              <div className="absolute top-0 md:-left-28 h-auto hidden md:block ">
                 <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[80%] h-full object-cover" />
               </div>
               <Heading
-                text="Make math an exciting adventure"
+                text="Learning That Feels Like Play. Adventure That Sparks Growth."
                 fontFamily="font-luckiest"
-                fontSize="text-5xl md:text-7xl"
+                fontSize="text-2xl md:text-5xl"
                 fontWeight="font-normal"
                 textAlign="text-center md:text-left"
                 letterSpacing="md:tracking-wider"
                 textColor="text-[#8F0E00]"
                 customStyle="mt-10"
               />
-              <div className="font-medium text-center md:text-left text-base md:text-lg mt-10 md:px-0">
-                Adaptive math practice meets engaging game-based learning with Kurixel Math. As students explore an exciting fantasy world, parents and teachers can support their learning and make it more effective than ever.
+              <div className="font-medium text-center lg:text-left text-base md:text-lg mt-6 z-50">
+                <p className="py-4 md:py-2">Welcome to Kurixel where imagination, exploration, and education collide! We transform traditional learning into action-packed adventures kids love. Designed for Grades 1-8 to help learners build real skills while having real fun.</p>
+                <p className="py-4 md:py-2">No boring drills. No pressure. Just pure discovery.
+                  Play Anywhere. Level Up Every Day.</p>
               </div>
-              <div className="flex flex-col md:flex-row items-center justify-start mt-8 md:mt-14">
+              <div className="flex flex-col md:flex-row items-center justify-start mt-8 md:mt-8">
                 <ImageButtons
                   text="Teachers, sign up now"
                   source="/images/Group.png"
                   alt="Teachers, sign up now Background"
                   className=' md:mr-12 px-6 py-2 md:px-8 md:py-5'
-                />
-                <ImageButtons
-                  text="Parents, sign up now"
-                  source="/images/Group.png"
-                  alt="Parents, sign up now Background"
-                  className=' mt-6 md:mt-0 md:mr-12 px-6 py-2 md:px-8 md:py-5'
                 />
               </div>
             </div>
