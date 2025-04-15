@@ -26,8 +26,8 @@ export default function JoinUs({
     return (
         <section className={`w-full h-auto ${sectionBackGroundColor} ${sectionStyle}`}>
             {/* Heading */}
-            <div className="flex flex-col md:flex-row w-full h-full px-12 pb-12">
-                <div className="flex flex-col mt-12 md:mt-6 w-full md:w-1/2">
+            <div className="flex flex-col md:flex-row w-full h-full px-6 sm:px-8 md:px-12 pb-12">
+                <div className="flex flex-col mt-8 md:mt-6 w-full md:w-1/2">
                     <Heading
                         text={heading}
                         fontFamily="font-luckiest"
@@ -43,23 +43,21 @@ export default function JoinUs({
                         {subHeading}
                     </div>
 
-
-
-                    {list &&
+                    {list && (
                         <>
                             <div className="font-bold text-xl md:text-2xl mt-4 md:mt-8">Why Join?</div>
                             <div>
                                 <BulletList lists={list} bullet={listBullet} bulletColor={listBulletColor} isFooter={false} isLink={false} className={listStyles} />
                             </div>
                         </>
-                    }
-
+                    )}
                 </div>
-                <div className="flex flex-col mt-12 md:mt-16 w-full md:w-1/2">
+
+                {/* Right section with JoinUsForm and SocialIcons */}
+                <div className="flex flex-col mt-8 md:mt-16 w-full md:w-1/2">
                     <JoinUsForm />
-                    <div className="w-full flex flex-col mt-8 md:ml-24">
-                        <div className=" text-base font-medium ">Connect with fellow explorers:</div>
-                        <div className="flex gap-4 sm:gap-[1vw] mt-4 sm:mt-[2vh] ">
+                    <div className="w-full flex flex-col mt-6 md:mt-8 lg:ml-24">
+                        <div className="flex gap-4 sm:gap-[1vw] mt-4 sm:mt-[2vh]">
                             <SocialIcons socialName="instagram" socialLink="#" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
                             <SocialIcons socialName="facebook" socialLink="#" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
                             <SocialIcons socialName="twitter" socialLink="#" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
@@ -67,8 +65,7 @@ export default function JoinUs({
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-    )
+    );
 }

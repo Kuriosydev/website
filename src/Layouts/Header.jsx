@@ -21,14 +21,14 @@ export default function Header() {
         <nav className="hidden md:flex items-center" id="navbar">
           <NavLink href="/games" text="Games" className='md:mr-12' />
           <NavLink href="/educators" text="Educators" className='md:mr-12' />
-          <NavLink href="/for-parents" text="For Parents" className='md:mr-12' />
+          <NavLink href="/parents" text="Parents" className='md:mr-12' />
           <NavLink href="/news" text="News" className='md:mr-12' />
           <div className="flex items-center justify-center z-[6]">
             <ImageButtons
-              text="Help And Support"
+              text="Log In"
               source="/images/Group.png"
-              alt="Help And Support Background"
-              className='mr-12 px-6 py-2 md:px-8 md:py-5'
+              alt="Log In Background"
+              className='mr-12 px-6 py-2 md:px-8 md:py-1  '
             />
           </div>
           <ThemeToggle />

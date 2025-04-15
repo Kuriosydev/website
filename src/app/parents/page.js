@@ -1,12 +1,13 @@
 import Faq from "@/components/pages/Faq";
-import Banner from "@/components/pages/games/Banner";
-import Dashboard from "@/components/pages/games/Dashboard";
-import GameFeature from "@/components/pages/games/GameFeature";
-import GamePreview from "@/components/pages/games/GamePreview";
-import ProdigyWorld from "@/components/pages/games/ProdigyWorld";
 import JoinUs from "@/components/pages/home/sections/JoinUs";
+import AppStores from "@/components/pages/parents/AppStores";
+import Banner from "@/components/pages/parents/Banner";
+import KidsFeature from "@/components/pages/parents/KidsFeature";
 import ParentAccount from "@/components/pages/parents/ParentAccount";
+import ParentTestimonals from "@/components/pages/parents/ParentTestimonals";
+import Prodigy from "@/components/pages/parents/Prodigy";
 import ResourceBlog from "@/components/pages/parents/ResourceBlog";
+import Statictics from "@/components/pages/parents/Statictics";
 import SecondaryHeader from "@/Layouts/SecondaryHeader";
 
 const whyJoin = [
@@ -18,28 +19,39 @@ const whyJoin = [
 
 const menu = [
     {
-        href: "#",
-        name: "Maths",
-        styles: "mr-5 md:mr-12",
-        dropdown: true
-    },
-    {
-        href: "/games/english",
-        name: "Maths",
-        styles: "mr-5 md:mr-12",
-        dropdown: false
+        href: "/parents/overview",
+        name: "Overview",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
     },
     {
         href: "#",
-        name: "Memberships",
-        styles: "mr-5 md:mr-12",
-        dropdown: true
+        name: "Membership",
+        styles: "mr-5 md:mr-8",
+        dropdown: true,
+        childrens: []
+    },
+    {
+        href: "/parents/research",
+        name: "Research",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
+    },
+    {
+        href: "#",
+        name: "Resources",
+        styles: "mr-5 md:mr-8",
+        dropdown: true,
+        childrens: []
     },
     {
         href: "/support",
         name: "Support",
-        styles: "mr-5 md:mr-12",
-        dropdown: false
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
     },
 ];
 
@@ -93,7 +105,6 @@ const faqs = [
     }
 ];
 
-
 const cards = [
     {
         imgSrc: "/images/Ellipse.png",
@@ -117,48 +128,45 @@ const cards = [
     }
 ];
 
-export default function Games() {
+export default function ForParents() {
     return (
         <>
             <SecondaryHeader
-                pageName="Games"
+                pageName="Parents"
                 menu={menu}
                 buttonText="Buy Membership"
-                buttonStyles="px-6 py-2 md:px-8 md:py-2.5"
+                buttonStyles="mr-2 px-6 py-2 md:px-8 md:py-5"
             />
             <Banner />
-            <GameFeature />
-            <GamePreview />
+            <Statictics />
+            <ParentTestimonals />
+            <KidsFeature />
+            <AppStores />
+            <Prodigy />
             <ParentAccount
                 heading="Support your child's math learning with a Kurixel parent account"
-                cards={cards}
-                bgColor="bg-white"
-            />
-            <ParentAccount
-                heading="Parents, say goodbye to homework hassles"
+                buttonText="Get a parent account now"
+                buttonColor="bg-[#FFCE49]"
                 cards={cards}
             />
-            <Dashboard />
-            <ProdigyWorld />
             <ResourceBlog
                 heading="Parent resources from our blog"
-                bgImgSrc="/images/resource_blog2.png"
+                bgImgSrc="/images/resource_blog.png"
                 resourceCards={resourceCards}
             />
             <Faq
-                bgColor="bg-[#8F0E00]"
                 heading="Frequently Asked Questions"
-                headingColor="text-white"
+                headingColor="text-[#8F0E00]"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
                 faqs={faqs}
                 buttonText="More FAQ"
-                faqQuestionColor="text-white"
+                faqQuestionColor="text-[#8F0E00]"
                 faqQuestionFontFamily="font-luckiest"
                 faqQuestionFontSize=" text-3xl"
                 faqQuestionFontWeight="font-normal"
                 faqAnswerFontSize="text-lg"
                 faqAnswerFontWeight="font-medium"
-                faqAnswerColor="text-white"
-                customStyles="pb-12"
+                customStyles=""
             />
             <JoinUs
                 heading={"JOIN THE KURIXEL EXPLORERS CLUB"}

@@ -22,7 +22,7 @@ export default function JoinUsForm() {
                 <label htmlFor="remember" className="ms-2 text-sm font-medium">I'm ready to receive special missions and rewards from KURIXEL Studios</label>
             </div>
             <ImageButtons
-                text={'Join The adventure'}
+                text={'Join the Adventure'}
                 source="/images/Group.png"
                 alt={'Join The adventure Button'}
                 className="mt-8 px-6 py-2 md:px-8 md:py-5"

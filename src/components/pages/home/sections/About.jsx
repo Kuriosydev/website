@@ -23,8 +23,8 @@ const features = [
 
 export default function About() {
     return (
-        <section className="w-auto h-auto my-2 z-50">
-            <div className="flex flex-col items-center justify-center w-auto h-auto">
+        <section className="w-full h-auto my-2 z-50">
+            <div className="flex flex-col items-center justify-center w-full h-auto">
                 <Heading
                     text="Play Anywhere, Learn Everywhere!"
                     fontFamily="font-luckiest"
@@ -33,14 +33,14 @@ export default function About() {
                     textAlign="text-center"
                     letterSpacing="md:tracking-wider"
                     textColor="text-[#8F0E00]"
-                    customStyle="mt-10 px-4 md:px-64"
+                    customStyle="mt-10 px-4 sm:px-12 md:px-64"
                 />
             </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-center w-full h-full mt-10 px-10 sm:px-6 md:px-16 gap-8">
+            <div className="flex flex-col md:flex-row items-center justify-center w-full h-auto mt-10 px-4 sm:px-6 md:px-16 gap-8">
                 {/* Left Column */}
                 <div className="flex flex-col items-start justify-start w-full md:w-1/2 h-full">
-                    <div className="font-bold text-base md:text-2xl md:leading-14">Take Kurixel with you anywhere.</div>
+                    <div className="font-bold text-base sm:text-xl md:text-2xl md:leading-14">Take Kurixel with you anywhere.</div>
                     <div className="w-full mt-1">
                         {features?.map((feature, index) =>
                             <Feature
@@ -49,26 +49,27 @@ export default function About() {
                                 imgAlt={feature?.heading}
                                 heading={feature?.heading}
                                 headingColor={"text-white"}
-                                headingSize={"text-base md:text-2xl"}
+                                headingSize={"text-base sm:text-xl md:text-2xl"}
                                 headingWeight={"font-bold"}
                                 headingSpacing={"tracking-wide"}
                                 headingStyle={"md:leading-14"}
                                 text={feature?.text}
                                 textColor={"text-white"}
-                                textSize={"text-xs md:text-base"}
+                                textSize={"text-xs sm:text-sm md:text-base"}
                                 textWeight={"font-normal"}
                                 textSpacing={"md:tracking-wide"}
                                 textStyle={"md:leading-7"}
                                 bgColor={"bg-[#8F0E00]"}
                                 border={"border-2 border-[#8F0E00]"}
                                 borderRounded={"rounded-2xl md:rounded-3xl"}
-                                otherClasses={"my-3 md:my-4"}
+                                otherClasses={"my-3 sm:my-4 md:my-6"}
                             />
                         )}
                     </div>
-                    <div className="font-bold text-base md:text-2xl md:leading-14 mt-4 md:mt-6">Download Now</div>
+                    <div className="font-bold text-base sm:text-xl md:text-2xl md:leading-14 mt-4 sm:mt-6 md:mt-8">Download Now</div>
                     <StoreButton />
                 </div>
+                {/* Right Column */}
                 <div className="w-full md:w-1/2 max-w-3xl">
                     <div className="relative w-full pt-[66.25%]">
                         <img
@@ -84,13 +85,12 @@ export default function About() {
                                 autoPlay={true}
                                 muted={true}
                                 loop={true}
-                                wrapperClass="w-full h-full "
+                                wrapperClass="w-full h-full"
                             />
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-    )
+    );
 }

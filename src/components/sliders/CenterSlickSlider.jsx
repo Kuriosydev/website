@@ -8,7 +8,7 @@ export default function CenterSlickSlider({ sliderRef }) {
    const settings = {
       centerMode: true,
       infinite: true,
-      centerPadding: "20%",
+      centerPadding: "20%", // will be overridden in CSS
       slidesToShow: 1,
       speed: 500,
       arrows: false,
@@ -21,16 +21,16 @@ export default function CenterSlickSlider({ sliderRef }) {
    ];
 
    return (
-      <div className="w-full md:w-[110%] h-full z-50">
+      <div className="w-full mx-auto h-full z-50">
          <Slider ref={sliderRef} {...settings}>
             {images.map((src, idx) => (
                <div key={idx} className="px-2 group">
-                  <div className="relative h-64 md:h-[31.75rem] w-full overflow-hidden rounded-xl border-8 border-white transition-all duration-300 slick-slide-inner">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl border-8 border-white transition-all duration-300 slick-slide-inner">
                      <Image
                         src={src}
                         alt={`Screenshot ${idx + 1}`}
                         fill
-                        className="object-fill"
+                        className="object-cover"
                      />
                      <div className="absolute inset-0 bg-white/50 opacity-100 transition-opacity duration-300 pointer-events-none overlay" />
                   </div>

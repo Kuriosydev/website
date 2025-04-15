@@ -7,7 +7,9 @@ export default function NavLink({ href, text, onClick, isMobile, isFooter, class
     const pathname = usePathname();
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const [isSubMenuDropdownOpen, setSubMenuDropdownOpen] = useState(false);
-    const isActive = pathname === href;
+
+    // Check if the pathname is equal to the current href or starts with the href (for parent/child)
+    const isActive = pathname === href || pathname.startsWith(href + '/');
 
     const baseClass = isFooter
         ? `${textColor} font-medium hover:text-gray-700`
@@ -21,14 +23,14 @@ export default function NavLink({ href, text, onClick, isMobile, isFooter, class
 
     const handleClick = (e) => {
         if (dropdown?.length > 0) {
-            // e.preventDefault(); // prevent navigation
+            // Toggle the parent dropdown menu
             setDropdownOpen(prev => !prev);
         }
         if (onClick) onClick(e);
     };
 
     const handleSubMenuClick = (e) => {
-        // e.preventDefault(); // prevent navigation
+        // Toggle the child submenu dropdown
         setSubMenuDropdownOpen(prev => !prev);
     };
 
@@ -48,44 +50,53 @@ export default function NavLink({ href, text, onClick, isMobile, isFooter, class
             {isDropdownOpen && (
                 <div className='flex flex-col items-start justify-between text-white'>
                     <ul className='px-4'>
-                        {dropdown.map((item, index) => (
-                            <li className='py-1' key={index}>
-                                <Link
-                                    href={item?.href}
-                                    onClick={handleSubMenuClick}
-                                    className={`${item?.styles || ""} ${activeClass}`}
-                                >
-                                    {item?.dropdown ? (
-                                        <>
-                                            <span>
-                                                {item?.name}
-                                                <i className='fa fa-chevron-down text-xs text-white px-4'></i>
-                                            </span>
+                        {dropdown.map((item, index) => {
+                            // Check if the dropdown item or its sub-menu should be active
+                            const isDropdownItemActive = pathname === item?.href || pathname.startsWith(item?.href + '/');
 
-                                            {isSubMenuDropdownOpen && (
-                                                <div className='flex flex-col items-start justify-between text-white'>
-                                                    <ul className='px-4'>
-                                                        {item?.childrens?.map((subitem, row) => (
-                                                            <li className='py-1' key={row}>
-                                                                <Link
-                                                                    href={subitem?.href}
-                                                                    onClick={subitem?.onClick}
-                                                                    className={`${subitem?.styles || ""} ${activeClass}`}
-                                                                >
-                                                                    {subitem?.name}
-                                                                </Link>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
-                                            )}
-                                        </>
-                                    ) : (
-                                        <>{item?.name}</>
-                                    )}
-                                </Link>
-                            </li>
-                        ))}
+                            return (
+                                <li className='py-1' key={index}>
+                                    <Link
+                                        href={item?.href}
+                                        onClick={handleSubMenuClick}
+                                        className={`${item?.styles || ""} ${isDropdownItemActive ? activeClass : ""}`}
+                                    >
+                                        {item?.dropdown ? (
+                                            <>
+                                                <span>
+                                                    {item?.name}
+                                                    <i className='fa fa-chevron-down text-xs text-white px-4'></i>
+                                                </span>
+
+                                                {isSubMenuDropdownOpen && (
+                                                    <div className='flex flex-col items-start justify-between text-white'>
+                                                        <ul className='px-4'>
+                                                            {item?.childrens?.map((subitem, row) => {
+                                                                // Check if the sub-item should be active
+                                                                const isSubItemActive = pathname === subitem?.href || pathname.startsWith(subitem?.href + '/');
+                                                                return (
+                                                                    <li className='py-1' key={row}>
+                                                                        <Link
+                                                                            href={subitem?.href}
+                                                                            onClick={subitem?.onClick}
+                                                                            className={`${subitem?.styles || ""} ${isSubItemActive ? activeClass : ""}`}
+                                                                        >
+                                                                            {subitem?.name}
+                                                                        </Link>
+                                                                    </li>
+                                                                );
+                                                            })}
+                                                        </ul>
+                                                    </div>
+                                                )}
+                                            </>
+                                        ) : (
+                                            <>{item?.name}</>
+                                        )}
+                                    </Link>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </div>
             )}

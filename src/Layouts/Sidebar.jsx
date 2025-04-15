@@ -78,7 +78,7 @@ const gameSubMenu = [
 
 const parentSubMenu = [
     {
-        href: "/for-parents/overview",
+        href: "/parents/overview",
         name: "Overview",
         styles: "mr-5 md:mr-8",
         dropdown: false,
@@ -92,7 +92,7 @@ const parentSubMenu = [
         childrens: []
     },
     {
-        href: "/for-parents/research",
+        href: "/parents/research",
         name: "Research",
         styles: "mr-5 md:mr-8",
         dropdown: false,
@@ -149,7 +149,7 @@ export default function Sidebar({ isOpen, onClose }) {
             </div>
             <NavLink href="/games" text="Games" isMobile={true} dropdown={gameSubMenu} />
             <NavLink href="/educators" text="Educators" isMobile={true} dropdown={educatorSubMenu} />
-            <NavLink href="/for-parents" text="For Parents" isMobile={true} dropdown={parentSubMenu} />
+            <NavLink href="/parents" text="Parents" isMobile={true} dropdown={parentSubMenu} />
             <NavLink href="/news" text="News" isMobile={true} />
             <ThemeToggle />
         </div>

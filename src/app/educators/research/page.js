@@ -1,77 +1,11 @@
-import Faq from "@/components/pages/Faq";
-import AppStores from "@/components/pages/for-parents/AppStores";
-import Banner from "@/components/pages/for-parents/Banner";
-import KidsFeature from "@/components/pages/for-parents/KidsFeature";
-import ParentAccount from "@/components/pages/for-parents/ParentAccount";
-import ParentTestimonals from "@/components/pages/for-parents/ParentTestimonals";
-import Prodigy from "@/components/pages/for-parents/Prodigy";
-import ResourceBlog from "@/components/pages/for-parents/ResourceBlog";
-import Statictics from "@/components/pages/for-parents/Statictics";
-import JoinUs from "@/components/pages/home/sections/JoinUs";
-import SecondaryHeader from "@/Layouts/SecondaryHeader";
+import EducatorTestimonials from "@/components/pages/educators/EducatorTestimonials";
+import EducatorLayout from "../EducatorLayout";
 
 const whyJoin = [
     { text: "Be the first to try new levels." },
     { text: "Unlock members-only outfits and power-ups." },
     { text: "Get behind-the-scenes insights." },
     { text: "Participate in exclusive contests and challenges" },
-];
-
-const menu = [
-    {
-        href: "/for-parents/overview",
-        name: "Overview",
-        styles: "mr-5 md:mr-8",
-        dropdown: false,
-        childrens: []
-    },
-    {
-        href: "#",
-        name: "Membership",
-        styles: "mr-5 md:mr-8",
-        dropdown: true,
-        childrens: []
-    },
-    {
-        href: "/for-parents/research",
-        name: "Research",
-        styles: "mr-5 md:mr-8",
-        dropdown: false,
-        childrens: []
-    },
-    {
-        href: "#",
-        name: "Resources",
-        styles: "mr-5 md:mr-8",
-        dropdown: true,
-        childrens: []
-    },
-    {
-        href: "/support",
-        name: "Support",
-        styles: "mr-5 md:mr-8",
-        dropdown: false,
-        childrens: []
-    },
-];
-
-
-const resourceCards = [
-    {
-        text: "A Parent's Guide to Kurixel: Goals, Reports, Memberships",
-        linkText: "Learn More",
-        link: "#",
-    },
-    {
-        text: "Is a Kurixel Membership Worth It?",
-        linkText: "Learn More",
-        link: "#",
-    },
-    {
-        text: "What Is Prodigy? Your Top Questions, Answered!",
-        linkText: "Learn More",
-        link: "#",
-    }
 ];
 
 const faqs = [
@@ -105,77 +39,28 @@ const faqs = [
     }
 ];
 
-const cards = [
+const testimonials = [
     {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Parent portal",
-        description: "See instant data on your child's progress, all in one place.",
+        comment: "Kurixel is a great way to get kids who don't like math into math.",
+        author: "Ensley Guerrero",
+        authorImage: "/images/author1.png"
     },
     {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Monthly report card",
-        description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
+        comment: "I love that Kurixel is fun for students. ",
+        author: "Karina Vega",
+        authorImage: "/images/author2.png"
     },
     {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Curriculum Progress report",
-        description: "Find out which grade-level math skills your child has mastered from their curriculum.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "More powerful parent tools",
-        description: "Members get even more ways to support learning. Set Goals for your child, send in-game Cheers, print custom Practice Sheets and more!",
+        comment: "Kurixel is a great way to get kids who don't like math into math.",
+        author: "Journey Vaughn",
+        authorImage: "/images/author3.png"
     }
 ];
 
-export default function ForParents() {
+export default function Research() {
     return (
-        <>
-            <SecondaryHeader
-                pageName="Parents"
-                menu={menu}
-                buttonText="Buy Membership"
-                buttonStyles="mr-2 px-6 py-2 md:px-8 md:py-5"
-            />
-            <Banner />
-            <Statictics />
-            <ParentTestimonals />
-            <KidsFeature />
-            <AppStores />
-            <Prodigy />
-            <ParentAccount
-                heading="Support your child's math learning with a Kurixel parent account"
-                buttonText="Get a parent account now"
-                buttonColor="bg-[#FFCE49]"
-                cards={cards}
-            />
-            <ResourceBlog
-                heading="Parent resources from our blog"
-                bgImgSrc="/images/resource_blog.png"
-                resourceCards={resourceCards}
-            />
-            <Faq
-                heading="Frequently Asked Questions"
-                headingColor="text-[#8F0E00]"
-                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
-                faqs={faqs}
-                buttonText="More FAQ"
-                faqQuestionColor="text-[#8F0E00]"
-                faqQuestionFontFamily="font-luckiest"
-                faqQuestionFontSize=" text-3xl"
-                faqQuestionFontWeight="font-normal"
-                faqAnswerFontSize="text-lg"
-                faqAnswerFontWeight="font-medium"
-                customStyles=""
-            />
-            <JoinUs
-                heading={"JOIN THE KURIXEL EXPLORERS CLUB"}
-                headingColor={"text-black"}
-                headingStyle={"md:mt-10"}
-                subHeading={"Get insider perks, secret rewards, and early access to new games."}
-                subHeadingStyle={"items-start justify-start mt-4 md:mt-8"}
-                list={whyJoin}
-            />
-        </>
+        <EducatorLayout>
+            <EducatorTestimonials heading="Here's what teachers are saying" testimonials={testimonials} />
+        </EducatorLayout>
     )
 }

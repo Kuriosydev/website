@@ -23,7 +23,7 @@ export default function Banner() {
             <span className="block">AN ADVENTURE!</span>
           </h1>
           <p className="mt-4 font-medium text-[18px] leading-[22px] tracking-[0] text-black text-center break-keep">
-            Where play meets adventure. Learn, explore, and level up in the coolest way possible
+            Where play meets adventure. Learn, explore, and level up in the coolest way possible!
           </p>
           <div className="flex flex-col md:flex-row mt-8">
             <ImageButtons
@@ -35,7 +35,7 @@ export default function Banner() {
             />
             <ImageButtons
               text="Download"
-              source={"images/Group.png"}
+              source={"/images/Group.png"}
               alt="Download Background"
               icon={downloadIcon}
               className="mt-4 md:mt-0 px-6 py-2 md:px-8 md:py-5"

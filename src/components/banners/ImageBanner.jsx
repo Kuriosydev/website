@@ -5,7 +5,7 @@ import VideoPreview from "../videos/VideoPreview";
 export default function ImageBanner({ col, bgColor }) {
   return (
     <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-40`}>
-      <div className="w-full min-h-auto md:max-h-[42.2rem] relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
+      <div className="w-full md:max-h-auto relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
         {col === 1 &&
           <div className="flex flex-col w-full h-auto items-center justify-center">
             <div className="absolute top-0 md:-left-28 h-auto hidden md:block">
@@ -21,7 +21,7 @@ export default function ImageBanner({ col, bgColor }) {
                 textAlign="text-center"
                 letterSpacing="md:tracking-wider"
                 textColor="text-[#8F0E00]"
-                customStyle="mt-10 px-24 md:px-80"
+                customStyle="mt-10 px-6 sm:px-10 md:px-24 lg:px-40 xl:px-80"
               />
               <div className="font-medium text-center text-base md:text-lg mt-10 px-8 md:px-0">
                 Support your child as they discover a new learning journey with Kurixel.

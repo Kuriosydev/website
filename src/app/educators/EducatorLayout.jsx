@@ -1,66 +1,59 @@
 import Faq from "@/components/pages/Faq";
-import Banner from "@/components/pages/games/Banner";
-import Dashboard from "@/components/pages/games/Dashboard";
-import GameFeature from "@/components/pages/games/GameFeature";
-import GamePreview from "@/components/pages/games/GamePreview";
-import ProdigyWorld from "@/components/pages/games/ProdigyWorld";
 import JoinUs from "@/components/pages/home/sections/JoinUs";
-import ParentAccount from "@/components/pages/parents/ParentAccount";
-import ResourceBlog from "@/components/pages/parents/ResourceBlog";
 import SecondaryHeader from "@/Layouts/SecondaryHeader";
-
-const whyJoin = [
-    { text: "Be the first to try new levels." },
-    { text: "Unlock members-only outfits and power-ups." },
-    { text: "Get behind-the-scenes insights." },
-    { text: "Participate in exclusive contests and challenges" },
-];
 
 const menu = [
     {
-        href: "#",
-        name: "Maths",
-        styles: "mr-5 md:mr-12",
-        dropdown: true
-    },
-    {
-        href: "/games/english",
-        name: "Maths",
-        styles: "mr-5 md:mr-12",
-        dropdown: false
+        href: "/educators/overview",
+        name: "Overview",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
     },
     {
         href: "#",
-        name: "Memberships",
-        styles: "mr-5 md:mr-12",
-        dropdown: true
+        name: "Features",
+        styles: "mr-5 md:mr-8",
+        dropdown: true,
+        childrens: []
+    },
+    {
+        href: "#",
+        name: "Curriculam",
+        styles: "mr-5 md:mr-8",
+        dropdown: true,
+        childrens: []
+    },
+    {
+        href: "/educators/research",
+        name: "Research",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
+    },
+    {
+        href: "#",
+        name: "Resources",
+        styles: "mr-5 md:mr-8",
+        dropdown: true,
+        childrens: []
+    },
+    {
+        href: "/educators/administrators",
+        name: "Administrators",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
     },
     {
         href: "/support",
         name: "Support",
-        styles: "mr-5 md:mr-12",
-        dropdown: false
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
     },
 ];
 
-
-const resourceCards = [
-    {
-        text: "A Parent's Guide to Kurixel: Goals, Reports, Memberships",
-        linkText: "Learn More",
-        link: "#",
-    },
-    {
-        text: "Is a Kurixel Membership Worth It?",
-        linkText: "Learn More",
-        link: "#",
-    },
-    {
-        text: "What Is Prodigy? Your Top Questions, Answered!",
-        linkText: "Learn More",
-        link: "#",
-    }
-];
 
 const faqs = [
     {
@@ -93,81 +86,51 @@ const faqs = [
     }
 ];
 
-
-const cards = [
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Parent portal",
-        description: "See instant data on your child's progress, all in one place.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Monthly report card",
-        description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Curriculum Progress report",
-        description: "Find out which grade-level math skills your child has mastered from their curriculum.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "More powerful parent tools",
-        description: "Members get even more ways to support learning. Set Goals for your child, send in-game Cheers, print custom Practice Sheets and more!",
-    }
+const whyJoin = [
+    { text: "Be the first to try new levels." },
+    { text: "Unlock members-only outfits and power-ups." },
+    { text: "Get behind-the-scenes insights." },
+    { text: "Participate in exclusive contests and challenges" },
 ];
 
-export default function Games() {
+
+
+const EducatorLayout = ({ children, faq = false, joinus = false }) => {
     return (
         <>
             <SecondaryHeader
-                pageName="Games"
+                pageName="Educators"
                 menu={menu}
-                buttonText="Buy Membership"
-                buttonStyles="px-6 py-2 md:px-8 md:py-2.5"
+                buttonText="Sign Up"
+                buttonStyles="mr-2 px-6 py-2 md:px-8 md:py-2.5"
             />
-            <Banner />
-            <GameFeature />
-            <GamePreview />
-            <ParentAccount
-                heading="Support your child's math learning with a Kurixel parent account"
-                cards={cards}
-                bgColor="bg-white"
-            />
-            <ParentAccount
-                heading="Parents, say goodbye to homework hassles"
-                cards={cards}
-            />
-            <Dashboard />
-            <ProdigyWorld />
-            <ResourceBlog
-                heading="Parent resources from our blog"
-                bgImgSrc="/images/resource_blog2.png"
-                resourceCards={resourceCards}
-            />
-            <Faq
-                bgColor="bg-[#8F0E00]"
-                heading="Frequently Asked Questions"
-                headingColor="text-white"
-                faqs={faqs}
-                buttonText="More FAQ"
-                faqQuestionColor="text-white"
-                faqQuestionFontFamily="font-luckiest"
-                faqQuestionFontSize=" text-3xl"
-                faqQuestionFontWeight="font-normal"
-                faqAnswerFontSize="text-lg"
-                faqAnswerFontWeight="font-medium"
-                faqAnswerColor="text-white"
-                customStyles="pb-12"
-            />
-            <JoinUs
-                heading={"JOIN THE KURIXEL EXPLORERS CLUB"}
-                headingColor={"text-black"}
-                headingStyle={"md:mt-10"}
-                subHeading={"Get insider perks, secret rewards, and early access to new games."}
-                subHeadingStyle={"items-start justify-start mt-4 md:mt-8"}
-                list={whyJoin}
-            />
+            {children}
+            {faq &&
+                <Faq
+                    heading="Frequently Asked Questions"
+                    headingColor="text-[#8F0E00]"
+                    faqs={faqs}
+                    faqQuestionColor="text-[#8F0E00]"
+                    faqQuestionFontFamily="font-luckiest"
+                    faqQuestionFontSize=" text-3xl"
+                    faqQuestionFontWeight="font-normal"
+                    faqAnswerFontSize="text-lg"
+                    faqAnswerFontWeight="font-medium"
+                    customStyles=""
+                />
+            }
+            {joinus &&
+                <JoinUs
+                    heading={"JOIN THE KURIXEL EXPLORERS CLUB"}
+                    headingColor={"text-black"}
+                    headingStyle={"md:mt-10"}
+                    subHeading={"Get insider perks, secret rewards, and early access to new games."}
+                    subHeadingStyle={"items-start justify-start mt-4 md:mt-8"}
+                    list={whyJoin}
+                />
+            }
         </>
     )
 }
+
+export default EducatorLayout
