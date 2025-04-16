@@ -9,8 +9,8 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                 {
                     col === 2
                         ?
-                        <div className="flex flex-col md:flex-row w-full h-auto items-center justify-center md:items-start md:justify-start">
-                            <div className="w-full md:w-2/3 full flex flex-col text-left text-xl px-9 md:pl-12">
+                        <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row  w-full h-auto items-center justify-center md:items-start md:justify-start">
+                            <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 flex flex-col text-left text-xl px-9 md:pl-12">
                                 <Heading
                                     text="Turn Math Into an Epic Quest"
                                     fontFamily="font-luckiest"
@@ -39,14 +39,14 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                                     />
                                 </div>
                             </div>
-                            <div className="w-full md:w-2/4 flex flex-col text-center md:text-left text-xl ml-0 md:ml-16 pl-6 md:px-0 mt-12 md:mt-0">
+                            <div className="w-full sm:w-full md:w-full lg:w-5/12 xl:w-5/12 flex flex-col items-center justify-center  text-xl px-4 sm:px-6 md:px-8 lg:px-18 xl:px-20 mt-12 md:mt-12 lg:mt-0 xl:mt-0">
                                 <VideoPreview
                                     src="/videos/news_banner_vid_2.mp4"
                                     controls={false}
                                     autoPlay={true}
                                     muted={true}
                                     loop={true}
-                                    wrapperClass="w-auto md:w-[150%] h-full pr-8 md:pr-0 rounded-2xl" // Custom height, full width
+                                    wrapperClass="w-auto sm:w-auto md:w-full lg:w-[150%] xl:w-[150%] h-full rounded-4xl" 
                                 />
 
                             </div>

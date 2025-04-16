@@ -5,7 +5,7 @@ import VideoPreview from "../videos/VideoPreview";
 export default function ImageBanner({ col, bgColor }) {
   return (
     <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-40`}>
-      <div className="w-full md:max-h-auto relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
+      <div className="w-full max-h-full relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
         {col === 1 &&
           <div className="flex flex-col w-full h-auto items-center justify-center">
             <div className="absolute top-0 md:-left-28 h-auto hidden md:block">
@@ -31,24 +31,24 @@ export default function ImageBanner({ col, bgColor }) {
         }
 
         {col === 2 &&
-          <div className="flex flex-col md:flex-row w-full h-full items-center justify-center md:items-start md:justify-start">
-            <div className="w-full md:w-2/3 full flex flex-col text-left text-xl px-9 md:pl-28">
-              <div className="absolute top-0 md:-left-28 h-auto hidden md:block ">
+          <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row w-full h-full items-center justify-center md:items-start md:justify-start">
+            <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 flex flex-col items-center justify-center text-left text-xl ">
+              <div className="absolute top-0 md:-left-28 h-auto hidden lg:block xl:block -z-10">
                 <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[80%] h-full object-cover" />
               </div>
               <Heading
                 text="Learning That Feels Like Play. Adventure That Sparks Growth."
                 fontFamily="font-luckiest"
-                fontSize="text-2xl md:text-5xl"
-                fontWeight="font-normal"
-                textAlign="text-center md:text-left"
-                letterSpacing="md:tracking-wider"
+                fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                fontWeight="font-bold"
+                textAlign="text-center sm:text-center md:text-left lg:text-left xl:text-left"
+                letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
                 textColor="text-[#8F0E00]"
-                customStyle="mt-10"
+                customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-20"
               />
-              <div className="font-medium text-center lg:text-left text-base md:text-lg mt-6 z-50">
-                <p className="py-4 md:py-2">Welcome to Kurixel where imagination, exploration, and education collide! We transform traditional learning into action-packed adventures kids love. Designed for Grades 1-8 to help learners build real skills while having real fun.</p>
-                <p className="py-4 md:py-2">No boring drills. No pressure. Just pure discovery.
+              <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-lg xl:text-lg font-medium px-8 sm:px-10 md:px-20 lg:px-20 xl:px-20 text-justify sm:text-justify md:text-justify lg:text-left xl:text-left">
+                <p className="py-2 sm:py-2 md:py-2 lg:py-2 xl:py-2">Welcome to Kurixel where imagination, exploration, and education collide! We transform traditional learning into action-packed adventures kids love. Designed for Grades 1-8 to help learners build real skills while having real fun.</p>
+                <p className="py-2 sm:py-2 md:py-2 lg:py-2 xl:py-2">No boring drills. No pressure. Just pure discovery.
                   Play Anywhere. Level Up Every Day.</p>
               </div>
               <div className="flex flex-col md:flex-row items-center justify-start mt-8 md:mt-8">
@@ -56,18 +56,18 @@ export default function ImageBanner({ col, bgColor }) {
                   text="Teachers, sign up now"
                   source="/images/Group.png"
                   alt="Teachers, sign up now Background"
-                  className=' md:mr-12 px-6 py-2 md:px-8 md:py-5'
+                  className=' px-10 py-4 sm:py-4 md:px-8 md:py-6 lg:py-8 xl:py-10'
                 />
               </div>
             </div>
-            <div className="w-full md:w-2/4 flex flex-col text-center md:text-left text-xl ml-0 md:ml-16 pl-6 md:px-0 mt-12 md:mt-0">
+            <div className="w-full sm:w-full md:w-full lg:w-5/12 xl:w-5/12 flex flex-col items-center justify-center  text-xl px-4 sm:px-10 md:px-20 lg:px-0 mt-12 md:mt-12 lg:mt-0 xl:mt-0 ml-0 sm:ml-0 md:ml-0 lg:ml-18 xl:ml-20">
               <VideoPreview
                 src="/videos/news_banner_vid_2.mp4"
                 controls={false}
                 autoPlay={true}
                 muted={true}
                 loop={true}
-                wrapperClass="w-auto md:w-[150%] h-full pr-8 md:pr-0 rounded-2xl" // Custom height, full width
+                wrapperClass="w-auto sm:w-auto md:w-full lg:w-[150%] xl:w-[150%] h-full rounded-4xl"
               />
 
             </div>

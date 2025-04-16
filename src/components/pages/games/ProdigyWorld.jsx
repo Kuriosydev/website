@@ -14,48 +14,48 @@ const listData = [
 export default function ProdigyWorld() {
     return (
         <section className={`w-full h-auto bg-white relative overflow-hidden`}>
-            <div className="w-full h-full relative overflow-hidden py-10 md:py-14">
-                <div className="flex flex-row flex-wrap items-start justify-between md:-ml-44">
-                    <div className="w-5/12 hidden md:flex flex-col">
+            <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
+                <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start justify-between gap-1 sm:gap-1 md:gap-2 lg:gap-10 xl:gap-14">
+                    <div className="w-full sm:w-full md:w-full lg:w-5/12 xl:w-5/12 flex flex-col px-6 sm:px-8 md:px-10 lg:px-0 xl:px-0 py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 -ml-0 sm:-ml-0 md:ml-0 lg:-ml-40 xl:-ml-40">
                         <VideoPreview
                             src="/videos/news_banner_vid_2.mp4"
                             controls={false}
                             autoPlay={true}
                             muted={true}
                             loop={true}
-                            wrapperClass="w-full md:w-full h-full rounded-2xl"
+                            wrapperClass="w-full h-full rounded-4xl"
                         />
                     </div>
 
-                    <div className="w-full md:w-7/12 flex flex-col gap-8">
+                    <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 flex flex-col gap-1 sm:gap-2 md:gap-3 lg:gap-4 xl:gap-5">
                         <Heading
                             text="What Makes Kurixel Different?"
                             fontFamily="font-luckiest"
-                            fontSize="text-2xl md:text-6xl"
+                            fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl"
                             fontWeight="font-normal"
                             textAlign="text-left"
-                            letterSpacing=""
+                            letterSpacing="tracking-normal sm:tracking-normal md:tracking-wide lg:tracking-wider"
                             textColor="text-[#8F0E00]"
-                            customStyle=" px-10 md:px-10"
+                            customStyle="py-4 sm:py-5 md:py-6 lg:py-0 xl:py-0 px-4 sm:px-10 md:px-20 lg:px-0"
                         />
 
-                        <div className="font-medium text-left text-base md:text-lg px-14">
+                        <div className="font-medium text-left text-base md:text-lg py-2 sm:py-2 md:py-2 lg:py-0 xl:py-0 px-10 sm:px-10 md:px-20 lg:px-0">
                             <BulletList
                                 lists={listData}
                                 bullet={true}
                                 isFooter={false}
                                 isLink={false}
-                                textClasses="font-semibold text-sm sm:text-base md:text-xl"
+                                textClasses="font-semibold text-sm sm:text-sm md:text-lg lg:text-lg xl:text-xl"
                                 liClass="py-1"
                             />
                         </div>
 
-                        <div className="w-3/12 ml-8">
+                        <div className="w-full sm:w-full md:w-full lg:w-3/12 xl:w-3/12 text-center sm:text-center md:text-center lg:text-left xl:text-left">
                             <ImageButtons
                                 text="Enter the Game Portal"
                                 source="/images/Group.png"
                                 alt="Enter the Game Portal Background"
-                                className="md:mr-8 px-6 py-2 md:px-8 md:py-5"
+                                className=" px-10 py-4 sm:py-4 md:px-8 md:py-6 lg:py-8 xl:py-10"
                             />
                         </div>
 
