@@ -10,7 +10,7 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                     col === 2
                         ?
                         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row  w-full h-auto items-center justify-center md:items-start md:justify-start">
-                            <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 full flex flex-col text-left text-xl px-9 md:pl-12">
+                            <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 flex flex-col text-left text-xl px-9 md:pl-12">
                                 <Heading
                                     text="Turn Math Into an Epic Quest"
                                     fontFamily="font-luckiest"
