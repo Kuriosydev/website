@@ -1,5 +1,5 @@
 import Faq from "@/components/pages/Faq";
-import JoinUs from "@/components/pages/home/sections/JoinUs";
+import JoinUs from "@/components/pages/home/JoinUs";
 import SecondaryHeader from "@/Layouts/SecondaryHeader";
 
 const menu = [
@@ -33,11 +33,26 @@ const menu = [
         ]
     },
     {
-        href: "#",
+        href: "/educators/resources",
         name: "Resources",
         styles: "mr-5 md:mr-8",
         dropdown: true,
-        childrens: []
+        childrens: [
+            {
+                href: "/educators/resources/dashboard",
+                name: "Dashboard",
+                styles: "mr-5 md:mr-8",
+                dropdown: false,
+                childrens: []
+            },
+            {
+                href: "/educators/resources/assesment",
+                name: "Assesment",
+                styles: "mr-5 md:mr-8",
+                dropdown: false,
+                childrens: []
+            },
+        ]
     },
     {
         href: "/contact-us",

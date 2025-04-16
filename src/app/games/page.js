@@ -4,7 +4,7 @@ import Dashboard from "@/components/pages/games/Dashboard";
 import GameFeature from "@/components/pages/games/GameFeature";
 import GamePreview from "@/components/pages/games/GamePreview";
 import ProdigyWorld from "@/components/pages/games/ProdigyWorld";
-import JoinUs from "@/components/pages/home/sections/JoinUs";
+import JoinUs from "@/components/pages/home/JoinUs";
 import ParentAccount from "@/components/pages/parents/ParentAccount";
 import ResourceBlog from "@/components/pages/parents/ResourceBlog";
 import SecondaryHeader from "@/Layouts/SecondaryHeader";

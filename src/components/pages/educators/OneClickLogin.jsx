@@ -20,8 +20,8 @@ export default function OneClickLogin() {
                     </div>
 
                     <div className="flex flex-col md:flex-row flex-wrap items-center justify-center px-12 md:px-24 md:py-16 gap-8 mx-auto">
-                        <div className="w-80 h-36 rounded-3xl items-center justify-center overflow-hidden bg-gray-50 border-2 border-gray-200">
-                            <img src="/images/clever.png" alt="Login Links" className="w-full h-full object-fill px-16 py-12" />
+                        <div className="w-40 md:w-80 h-18 md:h-36 rounded-2xl md:rounded-3xl items-center justify-center overflow-hidden bg-gray-50 border-2 border-gray-200">
+                            <img src="/images/clever.png" alt="Login Links" className="w-full h-full object-fill md:px-16 md:py-12" />
                         </div>
                         <div className="w-80 h-36 rounded-3xl items-center justify-center overflow-hidden bg-gray-50 border-2 border-gray-200">
                             <img src="/images/google.png" alt="Login Links" className="w-full h-full object-fill px-16 py-7" />

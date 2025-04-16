@@ -1,4 +1,4 @@
-import JoinUs from "../home/sections/JoinUs";
+import JoinUs from "../home/JoinUs";
 
 
 const whyJoin = [

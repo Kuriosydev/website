@@ -44,12 +44,12 @@ export default function Banner() {
         </div>
       </div>
 
-      <div className="flex flex-row justify-between w-full absolute -mt-24 md:-mt-64 z-10">
+      <div className="flex flex-row justify-between w-full absolute -mt-24 sm:-mt-24 md:-mt-64 lg:-mt-80 z-10">
         <div className="flex flex-col">
           <img
             src="/images/1d92109b6ffb112d0c8a513fc366f499.png"
             alt="Left Side Top Bush"
-            className="h-40 md:h-60 sm:h-20 w-auto -mt-36 md:md-0"
+            className="h-40 md:h-60 sm:h-20 w-auto -mt-36 sm:-mt-36 md:mt-0 lg:mt-0"
           />
           <img
             src="/images/gnttt_4.png"
@@ -57,7 +57,7 @@ export default function Banner() {
             className="h-40 md:h-60 sm:h-20 w-auto"
           />
         </div>
-        <div className="flex flex-col items-end mt-24 md:mt-0">
+        <div className="flex flex-col items-end mt-24 sm:mt-24 md:mt-0 lg:mt-0">
           <img
             src="/images/gnttt_5.png"
             alt="Right Side Top Bush"
@@ -67,23 +67,6 @@ export default function Banner() {
             src="/images/gnttt_6.png"
             alt="Right Side Bottom Bush"
             className="h-40 md:h-60 sm:h-20 w-auto"
-          />
-        </div>
-      </div>
-
-      <div className="flex flex-row justify-between w-full absolute -mt-30 md:-mt-48 z-10">
-        <div className="flex flex-col -ml-6 md:ml-0 aspect-auto">
-          <img
-            src="/images/millie.png"
-            alt="Millie"
-            className="h-auto w-full aspect-auto"
-          />
-        </div>
-        <div className="flex flex-col items-end mr-0 md:mr-2 mt-64 md:mt-[9.4rem] aspect-[3/4]">
-          <img
-            src="/images/max.png"
-            alt="Max"
-            className="h-auto w-auto"
           />
         </div>
       </div>

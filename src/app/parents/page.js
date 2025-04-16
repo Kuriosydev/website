@@ -1,5 +1,5 @@
 import Faq from "@/components/pages/Faq";
-import JoinUs from "@/components/pages/home/sections/JoinUs";
+import JoinUs from "@/components/pages/home/JoinUs";
 import AppStores from "@/components/pages/parents/AppStores";
 import Banner from "@/components/pages/parents/Banner";
 import KidsFeature from "@/components/pages/parents/KidsFeature";
