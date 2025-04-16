@@ -1,6 +1,15 @@
 import ImageButtons from "@/components/buttons/ImageButtons";
+import BulletList from "@/components/lists/BulletList";
 import Heading from "@/components/texts/Heading";
 import VideoPreview from "@/components/videos/VideoPreview";
+
+
+const listData = [
+    { text: "Game-first learning: Kids lead the way with choices that matter" },
+    { text: "Real academic alignment: Math and language skills woven into gameplay" },
+    { text: "One login, multiple adventures: Access all subjects from a single dashboard" },
+    { text: "Anytime, anywhere: Learn at home, on the go, or in the classroom" },
+];
 
 export default function ProdigyWorld() {
     return (
@@ -20,7 +29,7 @@ export default function ProdigyWorld() {
 
                     <div className="w-full md:w-7/12 flex flex-col gap-8">
                         <Heading
-                            text="Dive deep into the world of Prodigy Math"
+                            text="What Makes Kurixel Different?"
                             fontFamily="font-luckiest"
                             fontSize="text-2xl md:text-6xl"
                             fontWeight="font-normal"
@@ -30,10 +39,18 @@ export default function ProdigyWorld() {
                             customStyle=" px-10 md:px-10"
                         />
 
-                        <div className="font-medium text-left text-base md:text-lg px-10">
-                            Visit the Kurixel Math Game Portal to be the first to hear about Kurixel Math updates, including featured pets and more. What will you discover?
+                        <div className="font-medium text-left text-base md:text-lg px-14">
+                            <BulletList
+                                lists={listData}
+                                bullet={true}
+                                isFooter={false}
+                                isLink={false}
+                                textClasses="font-semibold text-sm sm:text-base md:text-xl"
+                                liClass="py-1"
+                            />
                         </div>
-                        <div className="w-3/12 ml-10">
+
+                        <div className="w-3/12 ml-8">
                             <ImageButtons
                                 text="Enter the Game Portal"
                                 source="/images/Group.png"

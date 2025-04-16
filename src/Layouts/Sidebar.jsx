@@ -78,7 +78,7 @@ const gameSubMenu = [
 
 const parentSubMenu = [
     {
-        href: "/for-parents/overview",
+        href: "/parents/overview",
         name: "Overview",
         styles: "mr-5 md:mr-8",
         dropdown: false,
@@ -92,7 +92,7 @@ const parentSubMenu = [
         childrens: []
     },
     {
-        href: "/for-parents/research",
+        href: "/parents/research",
         name: "Research",
         styles: "mr-5 md:mr-8",
         dropdown: false,
@@ -136,12 +136,12 @@ export default function Sidebar({ isOpen, onClose }) {
     return (
         <div
             ref={sidebarRef}
-            className={`fixed top-0 right-0 w-[250px] h-full bg-[var(--navbar-bg)] shadow-lg z-[10000] p-5 box-border transition-all duration-500 md:hidden ${isOpen ? "right-0 opacity-100" : "right-[-250px] opacity-0 pointer-events-none"
+            className={`overflow-y-scroll fixed top-0 right-0 w-[250px] h-full bg-[var(--navbar-bg)] shadow-lg z-[10000] p-5 box-border transition-all duration-500 md:hidden ${isOpen ? "right-0 opacity-100" : "right-[-250px] opacity-0 pointer-events-none"
                 }`}
         >
             <div className="flex items-center justify-center z-[6] mb-4">
                 <ImageButtons
-                    text="JOIN US"
+                    text="Log In"
                     source={ButtonImage}
                     alt="Join Us Background"
                     className="px-6 py-2 md:px-8 md:py-5"
@@ -149,7 +149,7 @@ export default function Sidebar({ isOpen, onClose }) {
             </div>
             <NavLink href="/games" text="Games" isMobile={true} dropdown={gameSubMenu} />
             <NavLink href="/educators" text="Educators" isMobile={true} dropdown={educatorSubMenu} />
-            <NavLink href="/for-parents" text="For Parents" isMobile={true} dropdown={parentSubMenu} />
+            <NavLink href="/parents" text="Parents" isMobile={true} dropdown={parentSubMenu} />
             <NavLink href="/news" text="News" isMobile={true} />
             <ThemeToggle />
         </div>

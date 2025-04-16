@@ -1,4 +1,4 @@
-import UpdatesEvents from "../home/sections/UpdatesEvents";
+import UpdatesEvents from "../home/UpdatesEvents";
 
 export default function EventsUpdate() {
   return (

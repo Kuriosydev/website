@@ -12,7 +12,7 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                         <div className="flex flex-col md:flex-row w-full h-auto items-center justify-center md:items-start md:justify-start">
                             <div className="w-full md:w-2/3 full flex flex-col text-left text-xl px-9 md:pl-12">
                                 <Heading
-                                    text="Make math an exciting adventure"
+                                    text="Turn Math Into an Epic Quest"
                                     fontFamily="font-luckiest"
                                     fontSize="text-5xl md:text-7xl"
                                     fontWeight="font-normal"
@@ -22,7 +22,7 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                                     customStyle="mt-10"
                                 />
                                 <div className="font-medium text-center md:text-left text-base md:text-lg mt-10 md:px-0">
-                                    Adaptive math practice meets engaging game-based learning with Kurixel Math. As students explore an exciting fantasy world, parents and teachers can support their learning and make it more effective than ever.
+                                Kurixel turns math into an epic quest where kids explore different worlds, grow their skills, and learn at their own pace. Behind every adventure, smart tools help parents and teachers track progress and keep the journey going strong.
                                 </div>
                                 <div className="flex flex-col md:flex-row items-center justify-start mt-8 md:mt-14">
                                     <ImageButtons

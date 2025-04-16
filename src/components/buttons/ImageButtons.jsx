@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ImageButtons({
@@ -10,7 +11,8 @@ export default function ImageButtons({
     textSize,
     textColor,
     isLink = false,
-    link }) {
+    link
+}) {
     const content = (
         <>
             {icon && (
@@ -21,38 +23,54 @@ export default function ImageButtons({
                     <i className={`${icon} text-sm md:text-xl`}></i>
                 </span>
             )}
-            <span
+            <span className={`text-${textColor || 'white'} text-${textSize || 'base'} font-montserrat break-words whitespace-normal max-w-[140px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[260px] xl:max-w-[300px]`} style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                {text}
+            </span>
+
+            {/* <span
                 className={`text-${textColor || 'white'} text-${textSize || 'base'} font-montserrat whitespace-nowrap`}
                 style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
                 {text}
-            </span>
+            </span> */}
         </>
-    )
+    );
 
-    const baseClasses = `relative inline-flex items-center justify-center border-none bg-center bg-cover bg-no-repeat rounded-md ${className}`;
-    const style = {
-        backgroundImage: `url(${source})`,
-    };
+    const baseClasses = `relative inline-flex items-center justify-center border-none rounded-md overflow-hidden ${className}`;
 
-    return isLink ? (
-        <Link
-            href={link}
+    const Wrapper = isLink ? Link : 'button';
+    const wrapperProps = isLink
+        ? {
+            href: link,
+            role: "button",
+            "aria-label": alt || text,
+        }
+        : {
+            onClick,
+            type: "button",
+            "aria-label": alt || text,
+        };
+
+    return (
+        <Wrapper
+            {...wrapperProps}
             className={baseClasses}
-            style={style}
-            role="button"
-            aria-label={alt || text}
         >
-            {content}
-        </Link>
-    ) : (
-        <button
-            onClick={onClick}
-            className={baseClasses}
-            style={style}
-            aria-label={alt || text}
-        >
-            {content}
-        </button>
+            {/* Image Background (Fully Responsive with Aspect Ratio) */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src={source}
+                    alt={alt || text}
+                    fill
+                    className="object-contain w-full h-full"
+                    priority
+                />
+            </div>
+
+            {/* Content Overlay */}
+            <div className="relative z-10  px-4 py-2 rounded-md flex items-center">
+                {content}
+            </div>
+        </Wrapper>
     );
 }

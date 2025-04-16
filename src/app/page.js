@@ -1,16 +1,16 @@
-import About from '@/components/pages/home/sections/About';
-import Banner from '@/components/pages/home/sections/Banner';
-import GameInfo from '@/components/pages/home/sections/GameInfo';
-import Intro from '@/components/pages/home/sections/Intro';
-import JoinUs from '@/components/pages/home/sections/JoinUs';
-import UpdatesEvents from '@/components/pages/home/sections/UpdatesEvents';
+import About from '@/components/pages/home/About';
+import Banner from '@/components/pages/home/Banner';
+import GameInfo from '@/components/pages/home/GameInfo';
+import Intro from '@/components/pages/home/Intro';
+import JoinUs from '@/components/pages/home/JoinUs';
+import UpdatesEvents from '@/components/pages/home/UpdatesEvents';
 
 
 const whyJoin = [
   { text: "Be the first to try new levels." },
   { text: "Unlock members-only outfits and power-ups." },
   { text: "Get behind-the-scenes insights." },
-  { text: "Participate in exclusive contests and challenges" },
+  { text: "Participate in exclusive contests and challenges." },
 ];
 
 export default function Home() {
