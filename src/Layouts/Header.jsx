@@ -16,19 +16,19 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-black/25 sticky top-0 h-20 text-black flex items-center justify-between duration-300 ease-in-out z-[10000] flex-shrink-0 px-[38px] backdrop-blur-[10px]" id="header">
+      <header className="bg-black/25 sticky top-0 h-20 text-black flex items-center justify-between duration-300 ease-in-out z-[10000] flex-shrink-0 px-4 md:px-8 lg:px-10 backdrop-blur-[10px]" id="header">
         <SiteLogo />
-        <nav className="hidden md:flex items-center" id="navbar">
-          <NavLink href="/games" text="Games" className='md:mr-12' />
-          <NavLink href="/educators" text="Educators" className='md:mr-12' />
-          <NavLink href="/parents" text="Parents" className='md:mr-12' />
-          <NavLink href="/news" text="News" className='md:mr-12' />
+        <nav className="hidden md:flex items-center text-xl" id="navbar">
+          <NavLink href="/games" text="Games" className='mr-2 sm:mr-4 md:mr-4 lg:mr-12 xl:mr-16' />
+          <NavLink href="/educators" text="Educators" className='mr-2 sm:mr-4 md:mr-4 lg:mr-12 xl:mr-16' />
+          <NavLink href="/parents" text="Parents" className='mr-2 sm:mr-4 md:mr-4 lg:mr-12 xl:mr-16' />
+          <NavLink href="/news" text="News" className='mr-2 sm:mr-4 md:mr-4 lg:mr-12 xl:mr-16' />
           <div className="flex items-center justify-center z-[6]">
             <ImageButtons
               text="Log In"
               source="/images/Group.png"
               alt="Log In Background"
-              className='mr-12 px-6 py-2 md:px-8 md:py-1  '
+              className='mr-2 sm:mr-4 md:mr-4 lg:mr-12 xl:mr-16 px-6 py-2 md:px-8 md:py-1  '
             />
           </div>
           <ThemeToggle />
