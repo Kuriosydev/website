@@ -41,39 +41,34 @@ const gameFeature2 = [
 export default function GameFeature() {
   return (
     <section className={`w-full h-auto bg-white relative overflow-hidden`}>
-      <div className="w-full h-full relative overflow-hidden pb-14 md:py-10">
+      <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
         <div className="flex flex-row flex-wrap items-center justify-center">
           <Heading
             text="Solve. Explore. Conquer."
             fontFamily="font-luckiest"
-            fontSize="text-2xl md:text-5xl"
+            fontSize="text-2xl sm:text-3xl md:text-5xl lg:text-7xl"
             fontWeight="font-normal"
             textAlign="text-center"
             letterSpacing="md:tracking-wider"
             textColor="text-[#8F0E00]"
-            customStyle="mt-10 px-10 md:px-44"
+            customStyle="py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-44"
           />
         </div>
-        <div className="flex flex-row flex-wrap items-center justify-center text-lg font-medium px-10 md:py-8 md:px-96 text-center">
+        <div className="flex flex-row flex-wrap items-center justify-center text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10">
           In the world of Kurixel, curiosity leads the way. Every quest, puzzle, and battle is powered by curriculum-aligned math practice. With surprises at every turn, students solve problems to unlock new worlds, conquer challenges, and level up all while building real math skills.
         </div>
-        <div className="flex flex-row flex-wrap items-center justify-center md:mt-0 mt-12 md:px-0 px-10">
-          <div className="hidden flex-row flex-wrap items-center justify-center w-full md:w-3/12 pl-4 md:pl-20 pr-4 md:pr-8">
-            {gameFeature1?.map((gameFeature, index) => (
-              <CircularCard key={index} {...gameFeature} textColor="text-black" isRow={true} />
-            ))}
-          </div>
-          <div className="flex flex-row flex-wrap items-center justify-center w-full md:w-6/12 my-8 md:my-0">
+        <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:lg:flex-row flex-wrap items-center justify-center py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 md:px-0 px-10">
+          <div className="flex flex-row flex-wrap items-center justify-center w-full sm:w-full md:w-full lg:w-6/12 xl:w-6/12 px-2 sm:px-4 md:px-20 lg:px-40 xl:px-12">
             <VideoPreview
               src="/videos/news_banner_vid_2.mp4"
               controls={false}
               autoPlay={true}
               muted={true}
               loop={true}
-              wrapperClass="w-full md:w-full h-full rounded-2xl"
+              wrapperClass="w-full md:w-full h-full rounded-4xl"
             />
           </div>
-          <div className="flex flex-row flex-wrap items-center justify-center w-full md:w-3/12 pl-4 md:pl-8 pr-4 md:pr-20">
+          <div className="flex-col sm:flex-col md:flex-col lg:flex-row xl:lg:flex-row flex-wrap items-center justify-center w-full sm:w-full md:w-full lg:w-3/12 xl:w-3/12 px-2 sm:px-4 md:px-20 lg:px-40 xl:px-12 py-0 sm:py-4 md:py-6 lg:py-8 xl:py-10">
             {gameFeature2?.map((gameFeature, index) => (
               <CircularCard key={index} {...gameFeature} textColor="text-black" isRow={true} />
             ))}

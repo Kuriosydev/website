@@ -23,22 +23,22 @@ export default function Faq({
 }) {
     return (
         <section className={`w-full h-auto ${bgColor} relative overflow-hidden`}>
-            <div className={`${customStyles} w-full h-full px-12 md:px-16 mt-12 md:mt-0`}>
+            <div className={`${customStyles} w-full h-full py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12`}>
                 <div className="flex flex-row">
                     <div className="flex flex-col items-center justify-center w-1/2 gap-4">
                         <Heading
                             text={heading}
                             fontFamily="font-luckiest"
-                            fontSize="text-5xl md:text-7xl"
+                            fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl"
                             fontWeight="font-normal"
                             textAlign="text-left"
-                            letterSpacing="md:tracking-wider"
+                            letterSpacing="tracking-normal sm:tracking-normal md:tracking-wide lg:tracking-wider"
                             textColor={headingColor}
-                            customStyle="ml-20 md:ml-0 md:mr-14 "
+                            customStyle="py-4 sm:py-5 md:py-6 lg:py-0 xl:py-0 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12"
                         />
 
                         {description &&
-                            <div className={`${descriptionClasses} md:py-4 py-2`}>
+                            <div className={`${descriptionClasses} flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 text-left sm:text-left md:text-justify lg:text-center xl:text-center`}>
                                 {description}
                             </div>
                         }
@@ -48,7 +48,7 @@ export default function Faq({
                         <img
                             src={`${bgColor === 'bg-[#FFCE49]' ? "/images/faq_circle.png" : "/images/faq_circle_yellow.png"}`}
                             alt="FAQ Circle"
-                            className="absolute w-auto top-0 -right-20 z-0"
+                            className="absolute w-auto sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-3/8 top-0 -right-20 z-0"
                         />
                         <img
                             src="/images/faq_girl.png"
@@ -57,7 +57,7 @@ export default function Faq({
                         />
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center mt-10 md:mt-20">
+                <div className="flex flex-col items-center justify-center py-10 sm:py-10 md:py-14 lg:py-16 xl:py-20 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10">
                     <Accordian
                         items={faqs}
                         qFontFamily={faqQuestionFontFamily}
