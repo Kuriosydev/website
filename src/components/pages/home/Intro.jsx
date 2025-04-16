@@ -23,7 +23,7 @@ export default function Intro() {
 
 				</div>
 			</div>
-			<div className="w-full max-h-[25rem] sm:max-h-96 md:max-h-96 lg:max-h-96 relative overflow-hidden ">
+			<div className="w-full max-h-[30rem] sm:max-h-96 md:max-h-96 lg:max-h-96 relative overflow-hidden ">
 				<img
 					src="/images/ca0ad6cbee22479a434887931d2b542c_bg.png"
 					alt="Millie & Max Background"

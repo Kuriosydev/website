@@ -23,12 +23,16 @@ export default function ImageButtons({
                     <i className={`${icon} text-sm md:text-xl`}></i>
                 </span>
             )}
-            <span
+            <span className={`text-${textColor || 'white'} text-${textSize || 'base'} font-montserrat break-words whitespace-normal max-w-[140px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[260px] xl:max-w-[300px]`} style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                {text}
+            </span>
+
+            {/* <span
                 className={`text-${textColor || 'white'} text-${textSize || 'base'} font-montserrat whitespace-nowrap`}
                 style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
                 {text}
-            </span>
+            </span> */}
         </>
     );
 

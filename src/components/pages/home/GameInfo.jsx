@@ -42,7 +42,7 @@ export default function GameInfo() {
                      text={button}
                      source="/images/Group.png"
                      alt={button}
-                     className="px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-5"
+                     className="px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-5 lg:px-9 lg:py-6 xl:px-10 xl:py-7"
                      textSize="text-sm sm:text-base"
                   />
                ))}

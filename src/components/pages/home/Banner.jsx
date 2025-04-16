@@ -14,15 +14,16 @@ export default function Banner() {
         />
 
         {/* Optional overlay */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:bg-transparent bg-[rgba(100,100,100,0.1)]" />
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-black/40 sm:bg-transparent" />
 
         {/* Centered content */}
         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-white text-center px-4 w-full max-w-screen-xl mx-auto">
-          <h1 className="text-4xl sm:text-6xl md:text-[87px] leading-tight md:leading-[91px] tracking-wide md:tracking-[0.25rem] font-luckiest font-bold text-[#8A4616] break-words text-center capitalize">
+          <h1 className="text-4xl sm:text-6xl md:text-[87px] leading-tight md:leading-[91px] tracking-wide md:tracking-[0.25rem] font-luckiest font-bold text-white sm:text-[#8A4616] break-words text-center capitalize">
             <span className="block">WHERE LEARNING IS</span>
             <span className="block">AN ADVENTURE!</span>
           </h1>
-          <p className="mt-4 font-medium text-[18px] leading-[22px] tracking-[0] text-black text-center break-keep">
+
+          <p className="mt-4 font-medium text-[18px] leading-[22px] tracking-[0] text-white sm:text-black text-center break-keep">
             Where play meets adventure. Learn, explore, and level up in the coolest way possible!
           </p>
           <div className="flex flex-col md:flex-row mt-8">
