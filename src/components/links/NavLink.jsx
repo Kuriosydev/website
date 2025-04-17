@@ -25,8 +25,8 @@ export default function NavLink({
     const baseClass = isFooter
         ? `${textColor} font-medium hover:text-gray-700`
         : isMobile
-            ? `block mb-5 text-base sm:text-xs md:text-base lg:text-xl xl:text-2xl ${textColor} no-underline`
-            : `no-underline text-base sm:text-xs md:text-base lg:text-xl xl:text-2xl font-medium tracking-[1px] ${textColor} cursor-pointer`;
+            ? `block mb-5 text-base sm:text-xs md:text-base lg:text-lg xl:text-xl ${textColor} no-underline`
+            : `no-underline text-base sm:text-xs md:text-base lg:text-lg xl:text-xl font-medium tracking-[1px] ${textColor} cursor-pointer`;
 
     const activeClass = isActive && !isMobile && !isFooter
         ? `border-b-[0.2rem] ${borderColor} py-2`

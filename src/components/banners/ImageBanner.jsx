@@ -4,26 +4,26 @@ import VideoPreview from "../videos/VideoPreview";
 
 export default function ImageBanner({ col, bgColor }) {
   return (
-    <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-40`}>
+    <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-28 sm:-mt-28 md:-mt-40 lg:-mt-40 xl:-mt-40`}>
       <div className="w-full max-h-full relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
         {col === 1 &&
-          <div className="flex flex-col w-full h-auto items-center justify-center">
-            <div className="absolute top-0 md:-left-28 h-auto hidden md:block">
-              <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[80%] h-full object-cover" />
+          <div className="flex flex-col w-full h-full items-center justify-center">
+            <div className="absolute top-8 md:-left-12 h-full hidden md:block -z-10">
+              <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[100%] h-full object-contain" />
             </div>
 
             <div className="flex flex-col w-full h-auto items-center justify-center">
               <Heading
                 text="When Learning Feels Like Play - Parents Make the Magic Real"
                 fontFamily="font-luckiest"
-                fontSize="text-5xl md:text-7xl"
-                fontWeight="font-normal"
-                textAlign="text-center"
-                letterSpacing="md:tracking-wider"
+                fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                fontWeight="font-bold"
+                textAlign="text-center sm:text-center md:text-center lg:text-center xl:text-center"
+                letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
                 textColor="text-[#8F0E00]"
-                customStyle="mt-10 px-6 sm:px-10 md:px-24 lg:px-40 xl:px-80"
+                customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-20"
               />
-              <div className="font-medium text-center text-base md:text-lg mt-10 px-8 md:px-0">
+              <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center">
                 Support your child as they discover a new learning journey with Kurixel.
               </div>
             </div>
