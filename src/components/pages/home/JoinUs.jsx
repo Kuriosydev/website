@@ -7,13 +7,13 @@ export default function JoinUs({
     sectionBackGroundColor = "bg-[#FFCE49]",
     sectionStyle,
     heading,
-    headingColor = "text-[#8F0E00]",
+    headingColor = "text-[#8F0E00] dark:text-white",
     headingSize = "text-4xl md:text-6xl",
     headingWeight = "font-bold",
     headingSpacing = "tracking-wider",
     headingStyle,
     subHeading,
-    subHeadingColor = "text-black",
+    subHeadingColor = "text-black dark:text-white",
     subHeadingSize = "text-base md:text-2xl",
     subHeadingWeight = "font-medium",
     subHeadingSpacing = "tracking-wide",
@@ -24,7 +24,7 @@ export default function JoinUs({
     listStyles = "font-bold text-base md:text-2xl mt-3 md:mt-6"
 }) {
     return (
-        <section className={`w-full h-auto ${sectionBackGroundColor} ${sectionStyle}`}>
+        <section className={`w-full h-auto ${sectionBackGroundColor} ${sectionStyle} dark:bg-black dark:text-white`}>
             {/* Heading */}
             <div className="flex flex-col md:flex-row w-full h-full px-6 sm:px-8 md:px-12 pb-12">
                 <div className="flex flex-col mt-8 md:mt-6 w-full md:w-1/2">
@@ -47,7 +47,15 @@ export default function JoinUs({
                         <>
                             <div className="font-bold text-xl md:text-2xl mt-4 md:mt-8">Why Join?</div>
                             <div>
-                                <BulletList lists={list} bullet={listBullet} bulletColor={listBulletColor} isFooter={false} isLink={false} className={listStyles} />
+                                <BulletList
+                                    lists={list}
+                                    bullet={listBullet}
+                                    bulletColor={listBulletColor}
+                                    isFooter={false}
+                                    isLink={false}
+                                    className={listStyles}
+                                    ulClass="px-6"
+                                />
                             </div>
                         </>
                     )}

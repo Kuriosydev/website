@@ -23,24 +23,24 @@ const features = [
 
 export default function About() {
     return (
-        <section className="w-full h-auto my-2 z-50">
+        <section className="w-full h-auto z-50 dark:bg-black">
             <div className="flex flex-col items-center justify-center w-full h-auto">
                 <Heading
                     text="Play Anywhere, Learn Everywhere!"
                     fontFamily="font-luckiest"
-                    fontSize="text-5xl md:text-7xl"
-                    fontWeight="font-bold"
+                    fontSize="text-2xl sm:text-3xl md:text-5xl lg:text-7xl"
+                    fontWeight="font-normal"
                     textAlign="text-center"
                     letterSpacing="md:tracking-wider"
-                    textColor="text-[#8F0E00]"
-                    customStyle="mt-10 px-4 sm:px-12 md:px-64"
+                    textColor="text-[#8F0E00] dark:text-[#FFCE49]"
+                    customStyle="py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-44"
                 />
             </div>
 
             <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row items-center justify-center w-full h-auto mt-10 px-4 sm:px-6 md:px-16 gap-8">
                 {/* Left Column */}
                 <div className="flex flex-col items-center sm:items-center md:items-center lg:items-start xl:items-start justify-center sm:justify-center md:justify-center lg:justify-start w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 h-full">
-                    <div className="font-bold text-base sm:text-xl md:text-2xl md:leading-14">Take Kurixel with you anywhere.</div>
+                    <div className="font-bold text-base sm:text-xl md:text-2xl md:leading-14 text-black dark:text-white">Take Kurixel with you anywhere.</div>
                     <div className="w-full mt-1">
                         {features?.map((feature, index) =>
                             <Feature
@@ -48,25 +48,25 @@ export default function About() {
                                 imgSource={feature?.imgSource}
                                 imgAlt={feature?.heading}
                                 heading={feature?.heading}
-                                headingColor={"text-white"}
+                                headingColor={"text-white dark:text-black"}
                                 headingSize={"text-base sm:text-xl md:text-2xl"}
                                 headingWeight={"font-bold"}
                                 headingSpacing={"tracking-wide"}
                                 headingStyle={"md:leading-14"}
                                 text={feature?.text}
-                                textColor={"text-white"}
+                                textColor={"text-white dark:text-black"}
                                 textSize={"text-xs sm:text-sm md:text-base"}
                                 textWeight={"font-normal"}
                                 textSpacing={"md:tracking-wide"}
                                 textStyle={"md:leading-7"}
-                                bgColor={"bg-[#8F0E00]"}
-                                border={"border-2 border-[#8F0E00]"}
+                                bgColor={"bg-[#8F0E00] dark:bg-[#FFCE49]"}
+                                border={"border-2 border-[#8F0E00] dark:border-[#FFCE49]"}
                                 borderRounded={"rounded-2xl md:rounded-3xl"}
                                 otherClasses={"my-3 sm:my-4 md:my-6"}
                             />
                         )}
                     </div>
-                    <div className="font-bold text-base sm:text-xl md:text-2xl md:leading-14 mt-4 sm:mt-6 md:mt-8">Download Now</div>
+                    <div className="font-bold text-base sm:text-xl md:text-2xl md:leading-14 mt-4 sm:mt-6 md:mt-8 text-black dark:text-white">Download Now</div>
                     <StoreButton />
                 </div>
                 {/* Right Column */}

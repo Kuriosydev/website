@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -29,14 +29,14 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
       </head>
       <body
-        className={`${montserrat.variable} antialiased min-h-screen flex flex-col overflow-x-hidden`}
-        suppressHydrationWarning
+        className={`${montserrat.variable} antialiased min-h-screen flex flex-col overflow-x-hidden dark:bg-[#212121] `}
+        suppressHydrationWarning={true}
       >
         <ThemeProvider
           attribute="class"
+          enableSystem={true}
+          disableTransitionOnChange={true}
           defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
           enableColorScheme={false} // Prevent style mismatch on SSR
         >
           <AppLayout>

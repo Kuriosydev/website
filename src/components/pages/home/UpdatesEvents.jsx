@@ -24,9 +24,9 @@ const events = [
 
 export default function UpdatesEvents({ isImage = true, bgColor }) {
     return (
-        <section className={`w-full h-auto mt-8 ${bgColor}`}>
+        <section className={`w-full h-auto  ${bgColor || ""} dark:bg-[#212121]`}>
             {/* Heading */}
-            <div className="flex flex-col mt-2 items-center justify-center w-full h-full">
+            <div className="flex flex-col  items-center justify-center w-full h-full">
                 <Heading
                     text="LATEST UPDATES & EVENTS"
                     fontFamily="font-luckiest"
@@ -34,7 +34,7 @@ export default function UpdatesEvents({ isImage = true, bgColor }) {
                     fontWeight="font-bold"
                     textAlign="text-center"
                     letterSpacing="tracking-wide sm:tracking-wider"
-                    textColor="text-[#8F0E00]"
+                    textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                     customStyle="mt-10 px-4 sm:px-8 md:px-32 lg:px-64"
                 />
             </div>
@@ -61,7 +61,7 @@ export default function UpdatesEvents({ isImage = true, bgColor }) {
 
             {isImage ? (
                 <div className="relative w-full h-auto md:-mt-48 flex items-center justify-center opacity-25 mt-10">
-                    <div className="w-full aspect-[16/9] sm:aspect-[16/9] md:aspect-[21/9] lg:aspect-[21/9] xl:aspect-[21/9]">
+                    <div className="w-full ">
                         <img
                             src="/images/updates_background.png"
                             alt="Updates and events Background"

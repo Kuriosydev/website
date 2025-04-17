@@ -17,13 +17,13 @@ const supportList = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-cover bg-center flex flex-col">
-      <div className="absolute inset-0 z-10 bg-[rgba(91,7,7,1)]">
+    <footer className="relative bg-cover bg-center flex flex-col ">
+      <div className="absolute inset-0 z-10 bg-[rgba(91,7,7,1)] dark:bg-[#212121]">
         <Link href="/">
           <img
             src="/images/ca0ad6cbee22479a434887931d2b542c.png"
             alt="Footer Background"
-            className="w-full h-full object-cover opacity-15 absolute inset-0"
+            className="w-full h-full object-cover opacity-15 absolute inset-0 dark:hidden"
           />
         </Link>
       </div>
@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="relative z-10 h-[10vh] flex justify-center items-center bg-[#5B0707] px-2 sm:px-4 text-center">
+      <div className="relative z-10 h-[10vh] flex justify-center items-center bg-[#5B0707] dark:bg-black px-2 sm:px-4 text-center">
         <div className="flex font-medium text-white text-xs sm:text-sm md:text-base">
           <div className="border-r-2 border-white px-3">&copy; {new Date().getFullYear()} KURIXEL Studios. All rights reserved. </div>
           <div className="font-medium text-white text-xs sm:text-sm md:text-base border-r-2 border-white px-3">
