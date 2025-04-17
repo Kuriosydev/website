@@ -12,12 +12,12 @@ const menu = [
     },
     {
         href: "#",
-        name: "Curriculam",
+        name: "Curriculum",
         styles: "mr-5 md:mr-8",
         dropdown: true,
         childrens: [
             {
-                href: "/educators/curriculam/math",
+                href: "/educators/curriculum/math",
                 name: "Math",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
@@ -33,7 +33,7 @@ const menu = [
         ]
     },
     {
-        href: "/educators/resources",
+        href: "#",
         name: "Resources",
         styles: "mr-5 md:mr-8",
         dropdown: true,
@@ -66,20 +66,12 @@ const menu = [
 
 const faqs = [
     {
-        question: "What kind of learning does Kurixel follow?",
-        answer: "We blend core academic concepts with game-based adventures to make learning feel like play! Our curriculum aligns with widely recognized educational standards while adding a creative twist. Whether it's math missions, science quests, or logic puzzles, every game is crafted to help kids learn by doing—and having fun while they're at it."
+        question: "Why Kurixel?",
+        answer: "Kurixel offers a rich, game-based learning environment that turns academic practice into an interactive adventure. With so many digital tools available, few captivate students the way Kurixel does. It transforms learning into a world of challenges, creativity, and rewards that students actually look forward to."
     },
     {
-        question: "How does Kurixel keep kids safe?",
-        answer: "Your child's safety is our top priority. Kurixel follows strict privacy protocols and secure data practices. We never share personal info, and all interactions are designed with child-safe, COPPA-compliant systems. Our virtual world is fun-first and safe-always."
-    },
-    {
-        question: "Can I use the same account for all Kurixel games?",
-        answer: "Absolutely! One account unlocks everything in the Kurixel universe. Whether you're diving into a math dungeon or crafting your next big invention, your progress follows you across every world."
-    },
-    {
-        question: "Does the learning get more challenging over time?",
-        answer: "Yep! Kurixel's smart progression system tailors the gameplay to your child's level. As players build skills, the game evolves offering new challenges to keep things exciting and just the right amount of tricky."
+        question: "How Does Kurixel Protect Student Privacy?",
+        answer: "Kurixel is committed to safeguarding student data. We follow strict privacy standards, collect only the information necessary to support learning, and never sell or share personal data. Our platform is fully compliant with major student privacy laws, ensuring a secure and trusted learning environment for every user. Is Kurixel Aligned with School, State or National Standards? Yes! Kurixel is built to align with a wide range of educational standards at the school, state, and national levels."
     },
 ];
 
