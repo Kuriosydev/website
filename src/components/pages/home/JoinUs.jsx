@@ -64,7 +64,7 @@ export default function JoinUs({
                 {/* Right section with JoinUsForm and SocialIcons */}
                 <div className="flex flex-col mt-8 md:mt-16 w-full md:w-1/2">
                     <JoinUsForm />
-                    <div className="w-full flex flex-col mt-6 md:mt-8 lg:ml-24">
+                    <div className="w-full flex flex-col mt-6 md:mt-8 lg:ml-24 px-2 sm:px-2 md:px-4 lg:px-8">
                         <div className="flex gap-4 sm:gap-[1vw] mt-4 sm:mt-[2vh]">
                             <SocialIcons socialName="instagram" socialLink="https://www.instagram.com/kurixel/?hl=en" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
                             <SocialIcons socialName="facebook" socialLink="https://www.facebook.com/profile.php?id=61574613231561" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
