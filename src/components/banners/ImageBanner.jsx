@@ -30,7 +30,7 @@ export default function ImageBanner({
                 fontWeight="font-bold"
                 textAlign="text-center sm:text-center md:text-center lg:text-center xl:text-center"
                 letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                textColor="text-[#8F0E00] dark:text-white"
+                textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                 customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-20"
               />
               <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center dark:text-white">
@@ -44,7 +44,8 @@ export default function ImageBanner({
           <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row w-full h-full items-center justify-center md:items-start md:justify-start">
             <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 flex flex-col items-center justify-center text-left text-xl ">
               <div className="absolute top-0 md:-left-28 h-auto hidden lg:block xl:block -z-10">
-                <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[80%] h-full object-cover" />
+                <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[80%] h-full object-cover block dark:hidden" />
+                <img src="/images/dark/left_tree.png" alt="Left Tree Image" className="w-[100%] h-full object-cover hidden dark:block " />
               </div>
               <Heading
                 text={heading}
@@ -53,10 +54,10 @@ export default function ImageBanner({
                 fontWeight="font-bold"
                 textAlign="text-center sm:text-center md:text-left lg:text-left xl:text-left"
                 letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                textColor="text-[#8F0E00]"
+                textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                 customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-20"
               />
-              <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-lg xl:text-lg font-medium px-8 sm:px-10 md:px-20 lg:px-20 xl:px-20 text-justify sm:text-justify md:text-justify lg:text-left xl:text-left">
+              <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-lg xl:text-lg font-medium px-8 sm:px-10 md:px-20 lg:px-20 xl:px-20 text-justify sm:text-justify md:text-justify lg:text-left xl:text-left dark:text-white">
                 {subHeading &&
                   <Heading
                     text={subHeading}
@@ -65,12 +66,12 @@ export default function ImageBanner({
                     fontWeight="font-bold"
                     textAlign="text-center sm:text-center md:text-left lg:text-left xl:text-left"
                     letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                    textColor="text-[#8F0E00]"
+                    textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                     customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 "
                   />
                 }
 
-                <p className="py-2 sm:py-2 md:py-2 lg:py-2 xl:py-2">{description}</p>
+                <p className="py-2 sm:py-2 md:py-2 lg:py-2 xl:py-2 dark:text-white">{description}</p>
 
                 {dropdown &&
                   <select name="">
@@ -115,8 +116,9 @@ export default function ImageBanner({
         {col === 3 &&
           <div className="flex flex-col md:flex-row w-full h-auto items-center justify-center md:items-start md:justify-start gap-4 md:ml-12 md:mt-8">
             <div className="w-full md:w-5/12 full flex flex-col text-left text-xl px-9 md:pl-28">
-              <div className="absolute top-20 md:-left-20 h-auto hidden md:block">
-                <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[70%] h-full object-cover" />
+              <div className="absolute top-20 md:-left-20 h-auto hidden md:block -z-10">
+                <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[70%] h-full object-cover block dark:hidden" />
+                <img src="/images/dark/left_tree.png" alt="Left Tree Image" className="w-[85%] h-full object-cover hidden dark:block" />
               </div>
               <Heading
                 text="BREAKING NEWS"
@@ -125,10 +127,10 @@ export default function ImageBanner({
                 fontWeight="font-normal"
                 textAlign="text-center md:text-left"
                 letterSpacing="md:tracking-wider"
-                textColor="text-[#8F0E00]"
+                textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                 customStyle="mt-10"
               />
-              <div className="font-medium text-center md:text-left text-base md:text-3xl mt-10 md:px-0">
+              <div className="font-medium text-center md:text-left text-base md:text-3xl mt-10 md:px-0 dark:text-white">
                 Math Kurixel officially launches on May 26, 2025!
               </div>
             </div>
@@ -142,9 +144,6 @@ export default function ImageBanner({
                 wrapperClass="w-full h-full rounded-2xl"
                 position="object-fill py-8 md:py-0"
               />
-              <div className="hidden md:block absolute bottom-14 px-8 h-auto w-96 items-center justify-center text-left text-white text-lg font-medium tracking-tight">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-              </div>
             </div>
             <div className="w-full md:w-4/12 flex flex-col text-center md:text-left text-xl h-[27rem] px-14 md:px-0">
               <VideoPreview
@@ -156,9 +155,6 @@ export default function ImageBanner({
                 wrapperClass="w-full h-full rounded-2xl"
                 position="object-fill py-8 md:py-0"
               />
-              <div className="hidden md:block absolute bottom-14 px-8 h-auto w-96 items-center justify-center text-left text-white text-lg font-medium tracking-tight">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-              </div>
             </div>
           </div>
         }

@@ -126,7 +126,7 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                 );
             case 'video':
                 return (
-                    <div className={`${customDivClass}`}>
+                    <div className={`${customDivClass} dark:text-white`}>
                         {data.map((item, index) => (
                             <div key={index} className="max-w-xs bg-transparent rounded-lg ">
                                 <VideoPreview

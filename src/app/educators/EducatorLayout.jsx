@@ -4,7 +4,7 @@ import SecondaryHeader from "@/Layouts/SecondaryHeader";
 
 const menu = [
     {
-        href: "/educators/overview",
+        href: "/educators",
         name: "Overview",
         styles: "mr-5 md:mr-8",
         dropdown: false,
@@ -17,14 +17,14 @@ const menu = [
         dropdown: true,
         childrens: [
             {
-                href: "/educators/curriculum/math",
+                href: "#",
                 name: "Math",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
                 childrens: []
             },
             {
-                href: "/educators/overview/english-language-arts",
+                href: "#",
                 name: "English Language Arts",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
@@ -39,14 +39,14 @@ const menu = [
         dropdown: true,
         childrens: [
             {
-                href: "/educators/resources/dashboard",
+                href: "#",
                 name: "Dashboard",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
                 childrens: []
             },
             {
-                href: "/educators/resources/assesment",
+                href: "#",
                 name: "Assesment",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
@@ -97,15 +97,16 @@ const EducatorLayout = ({ children, faq = false, joinus = false }) => {
             {faq &&
                 <Faq
                     heading="Frequently Asked Questions"
-                    headingColor="text-[#8F0E00]"
+                    headingColor="text-[#8F0E00] dark:text-[#FFCE49]"
                     faqs={faqs}
-                    faqQuestionColor="text-[#8F0E00]"
+                    faqQuestionColor="text-[#8F0E00] dark:text-white"
                     faqQuestionFontFamily="font-luckiest"
                     faqQuestionFontSize=" text-3xl"
                     faqQuestionFontWeight="font-normal"
                     faqAnswerFontSize="text-lg"
                     faqAnswerFontWeight="font-medium"
                     customStyles=""
+                    bgColor="bg-[#FFCE49] dark:bg-[#212121]"
                 />
             }
             {joinus &&

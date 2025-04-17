@@ -25,7 +25,7 @@ export default function Statictics() {
                                 fontWeight="font-normal"
                                 textAlign="text-center"
                                 letterSpacing="md:tracking-wider"
-                                textColor="text-[#8F0E00] dark:text-white"
+                                textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                                 customStyle=""
                             />
                             <div className="text-left font-medium text-lg  dark:text-white">

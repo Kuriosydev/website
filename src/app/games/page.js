@@ -148,7 +148,7 @@ export default function Games() {
             <Faq
                 bgColor="bg-[#8F0E00] dark:bg-[#212121]"
                 heading="Frequently Asked Questions"
-                headingColor="text-white"
+                headingColor="text-white dark:text-[#FFCE49]"
                 faqs={faqs}
                 buttonText="More FAQ"
                 faqQuestionColor="text-white"

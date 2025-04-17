@@ -16,7 +16,7 @@ export default function BlogTwoCols({
     videoSrc,
 }) {
     return (
-        <div className={`flex flex-col md:flex-row items-start justify-between ${bgColor} ${blogCustomClass} gap-8`}>
+        <div className={`flex flex-col md:flex-row items-start justify-between ${bgColor} ${blogCustomClass} gap-8 dark:bg-transparent dark:text-white`}>
             <div className="w-8/12">
                 {
                     imgSrc

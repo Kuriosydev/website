@@ -80,7 +80,7 @@ export default function ParentsLayout({ children, faq = false, joinus = false })
             {faq &&
                 <Faq
                     heading="Frequently Asked Questions"
-                    headingColor="text-[#8F0E00] dark:text-white"
+                    headingColor="text-[#8F0E00] dark:text-[#FFCE49]"
                     description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
                     faqs={faqs}
                     buttonText="More FAQ"

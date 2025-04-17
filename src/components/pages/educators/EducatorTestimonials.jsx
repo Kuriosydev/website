@@ -3,7 +3,7 @@ import Heading from "@/components/texts/Heading";
 
 export default function EducatorTestimonials({ heading, testimonials }) {
     return (
-        <section className="w-full h-auto bg-white relative overflow-hidden">
+        <section className="w-full h-auto bg-white relative overflow-hidden dark:bg-black">
             <div className="w-full h-full relative overflow-hidden pb-10 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-20">
 
                 {heading && (
@@ -15,13 +15,13 @@ export default function EducatorTestimonials({ heading, testimonials }) {
                             fontWeight="font-bold"
                             textAlign="text-center md:text-left lg:text-left xl:text-left"
                             letterSpacing="tracking-wide md:tracking-wide lg:tracking-wider"
-                            textColor="text-[#8F0E00]"
+                            textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                             customStyle="py-4 sm:py-4 md:py-6 lg:py-8 xl:py-10"
                         />
                     </div>
                 )}
 
-                <div className="flex flex-wrap justify-center gap-10 sm:gap-10 md:gap-4 lg:gap-12 xl:gap-12 px-8 sm:px-8 md:px-4 lg:px-6 xl:px-8">
+                <div className="flex flex-wrap justify-center gap-10 sm:gap-10 md:gap-4 lg:gap-12 xl:gap-12 px-8 sm:px-8 md:px-4 lg:px-6 xl:px-8 ">
                     {testimonials?.map((testimonial, index) => (
                         <TestimonialCards key={index} {...testimonial} />
                     ))}

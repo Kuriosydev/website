@@ -18,7 +18,7 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                                     fontWeight="font-normal"
                                     textAlign="text-center md:text-left"
                                     letterSpacing="md:tracking-wider"
-                                    textColor="text-[#8F0E00] dark:text-white"
+                                    textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                                     customStyle="mt-10"
                                 />
                                 <div className="font-medium text-center md:text-left text-base md:text-lg mt-10 md:px-0 dark:text-white">

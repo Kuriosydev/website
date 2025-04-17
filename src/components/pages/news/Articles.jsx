@@ -29,7 +29,7 @@ export default function Articles() {
     const author = { img: "/images/author1.png", name: "Ensley Guerrero", publishedDate: "May 15, 2023", };
 
     return (
-        <section className={`w-full h-auto bg-white relative overflow-hidden`}>
+        <section className={`w-full h-auto bg-white relative overflow-hidden dark:bg-[#212121]`}>
             <div className="w-full h-full relative overflow-hidden py-8 md:py-16 gap-4">
                 <div className="flex flex-row flex-wrap items-start justify-between px-6 md:px-20">
                     <div className="w-2/12 pr-2 md:px-12">
@@ -47,7 +47,7 @@ export default function Articles() {
                             headingFontSize="text-3xl md:text-6xl"
                             headingFontWeight="font-normal"
                             headingTextAlign="text-left"
-                            headingTextColor="text-[#8F0E00]"
+                            headingTextColor="text-[#8F0E00] dark:text-[#FFCE49]"
                             headingCustomStyle=""
                             text="The fancy moon going in little artist painting. Thirty days of lavender in the dreamy light inside. Other perfect oh plants, for and again. I've honey feeling. Caring dreamland projects noteworthy than minimal, their it oh pretty feeling may. Include pink be."
                             author={author}
@@ -60,7 +60,7 @@ export default function Articles() {
                             headingFontSize="text-2xl md:text-4xl"
                             headingFontWeight="font-normal"
                             headingTextAlign="text-left"
-                            headingTextColor="text-[#8F0E00]"
+                            headingTextColor="text-[#8F0E00] dark:text-[#FFCE49]"
                             headingCustomStyle=""
                             text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
                             videoSrc="/videos/news_banner_vid_2.mp4"
@@ -73,7 +73,7 @@ export default function Articles() {
                             headingFontSize="text-2xl md:text-4xl"
                             headingFontWeight="font-normal"
                             headingTextAlign="text-left"
-                            headingTextColor="text-[#8F0E00]"
+                            headingTextColor="text-[#8F0E00] dark:text-[#FFCE49]"
                             headingCustomStyle=""
                             text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
                             imgSrc="/images/image1.png"
@@ -88,7 +88,7 @@ export default function Articles() {
                                 fontWeight="font-normal"
                                 textAlign="text-left"
                                 letterSpacing=""
-                                textColor="text-[#8F0E00]"
+                                textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                                 customStyle=""
                             />
                         </div>
@@ -103,7 +103,7 @@ export default function Articles() {
                             headingFontSize="text-2xl md:text-4xl"
                             headingFontWeight="font-normal"
                             headingTextAlign="text-left"
-                            headingTextColor="text-[#8F0E00]"
+                            headingTextColor="text-[#8F0E00] dark:text-[#FFCE49]"
                             headingCustomStyle=""
                             text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
                             imgSrc="/images/image1.png"
@@ -118,11 +118,11 @@ export default function Articles() {
                                 fontWeight="font-normal"
                                 textAlign="text-left"
                                 letterSpacing=""
-                                textColor="text-[#8F0E00]"
+                                textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                                 customStyle=""
                             />
 
-                            <div className="w-full h-auto text-lg font-normal ">
+                            <div className="w-full h-auto text-lg font-normal dark:text-white">
                                 <p className="py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
                                 <p className="py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
                             </div>

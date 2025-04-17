@@ -16,7 +16,7 @@ export default function Blog({
     imgSrc
 }) {
     return (
-        <div className={`flex flex-col ${bgColor} ${blogCustomClass} gap-8`}>
+        <div className={`flex flex-col ${bgColor} ${blogCustomClass} gap-8 dark:bg-transparent dark:text-white`}>
             <Heading
                 text={heading}
                 fontFamily={headingFontFamily}
@@ -38,7 +38,7 @@ export default function Blog({
                             <img src={author.img} alt="author" className="w-full h-full object-cover rounded-full" />
                         </div>
                         <div className="md:block hidden">
-                            <p className="text-lg text-[#0A1D56] font-bold">{author.name}</p>
+                            <p className="text-lg text-[#0A1D56] font-bold dark:text-white">{author.name}</p>
                             <p className="text-[#667085] text-xs font-bold">{author.publishedDate}</p>
                         </div>
                     </div>
