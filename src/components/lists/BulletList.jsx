@@ -12,7 +12,7 @@ export default function BulletList({
     ulClass
 }) {
     return (
-        <ul className={`mt-4 space-y-2 ${bullet ? "list-disc list-outside" : "list-none"} ${bullet ? `marker:text-${bulletColor}` : ""} ${ulClass} dark:text-white dark:marker:text-white`}>
+        <ul className={`mt-4 space-y-2 ${bullet ? isFooter ? "list-none md:list-disc lg:list-disc xl:list-disc list-outside " : "list-disc list-outside" : "list-none"} ${bullet ? `marker:text-${bulletColor}` : ""} ${ulClass} dark:text-white dark:marker:text-white`}>
             {
                 lists && lists.map((list, index) => (
                     <li

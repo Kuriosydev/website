@@ -13,7 +13,7 @@ const listData = [
 
 export default function ProdigyWorld() {
     return (
-        <section className={`w-full h-auto bg-white relative overflow-hidden`}>
+        <section className={`w-full h-auto bg-white relative overflow-hidden dark:bg-black`}>
             <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
                 <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start justify-between gap-1 sm:gap-1 md:gap-2 lg:gap-10 xl:gap-14">
                     <div className="w-full sm:w-full md:w-full lg:w-5/12 xl:w-5/12 flex flex-col px-6 sm:px-8 md:px-10 lg:px-0 xl:px-0 py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 -ml-0 sm:-ml-0 md:ml-0 lg:-ml-40 xl:-ml-40">
@@ -35,7 +35,7 @@ export default function ProdigyWorld() {
                             fontWeight="font-normal"
                             textAlign="text-left"
                             letterSpacing="tracking-normal sm:tracking-normal md:tracking-wide lg:tracking-wider"
-                            textColor="text-[#8F0E00]"
+                            textColor="text-[#8F0E00] dark:text-white"
                             customStyle="py-4 sm:py-5 md:py-6 lg:py-0 xl:py-0 px-4 sm:px-10 md:px-20 lg:px-0"
                         />
 

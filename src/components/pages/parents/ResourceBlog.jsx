@@ -9,7 +9,7 @@ export default function ResourceBlog({
     resourceCards,
 }) {
     return (
-        <section className={`w-full h-auto ${bgColor} relative overflow-hidden z-10`}>
+        <section className={`w-full h-auto ${bgColor} relative overflow-hidden z-10 dark:bg-[#212121]`}>
             <div className="w-full h-full relative overflow-hidden pb-14 md:pb-64">
                 <div className="flex flex-col items-center justify-center">
                     <div className="relative w-full h-full bg-black/100">

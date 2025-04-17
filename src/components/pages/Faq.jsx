@@ -22,7 +22,7 @@ export default function Faq({
     customStyles,
 }) {
     return (
-        <section className={`w-full h-auto ${bgColor} relative overflow-hidden`}>
+        <section className={`w-full h-auto ${bgColor} relative overflow-hidden `}>
             <div className={`${customStyles} w-full h-full py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12`}>
                 <div className="flex flex-row">
                     <div className="flex flex-col items-center justify-center w-1/2 gap-4">
@@ -38,7 +38,7 @@ export default function Faq({
                         />
 
                         {description &&
-                            <div className={`${descriptionClasses} flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 text-left sm:text-left md:text-justify lg:text-center xl:text-center`}>
+                            <div className={`${descriptionClasses} flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 text-left sm:text-left md:text-justify lg:text-left xl:text-left`}>
                                 {description}
                             </div>
                         }

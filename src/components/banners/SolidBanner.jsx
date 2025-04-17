@@ -4,7 +4,7 @@ import VideoPreview from "../videos/VideoPreview";
 
 export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
     return (
-        <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-40`}>
+        <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-40  dark:bg-[#212121]`}>
             <div className="w-full min-h-auto relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
                 {
                     col === 2
@@ -18,11 +18,11 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                                     fontWeight="font-normal"
                                     textAlign="text-center md:text-left"
                                     letterSpacing="md:tracking-wider"
-                                    textColor="text-[#8F0E00]"
+                                    textColor="text-[#8F0E00] dark:text-white"
                                     customStyle="mt-10"
                                 />
-                                <div className="font-medium text-center md:text-left text-base md:text-lg mt-10 md:px-0">
-                                Kurixel turns math into an epic quest where kids explore different worlds, grow their skills, and learn at their own pace. Behind every adventure, smart tools help parents and teachers track progress and keep the journey going strong.
+                                <div className="font-medium text-center md:text-left text-base md:text-lg mt-10 md:px-0 dark:text-white">
+                                    Kurixel turns math into an epic quest where kids explore different worlds, grow their skills, and learn at their own pace. Behind every adventure, smart tools help parents and teachers track progress and keep the journey going strong.
                                 </div>
                                 <div className="flex flex-col md:flex-row items-center justify-start mt-8 md:mt-14">
                                     <ImageButtons
@@ -46,7 +46,7 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                                     autoPlay={true}
                                     muted={true}
                                     loop={true}
-                                    wrapperClass="w-auto sm:w-auto md:w-full lg:w-[150%] xl:w-[150%] h-full rounded-4xl" 
+                                    wrapperClass="w-auto sm:w-auto md:w-full lg:w-[150%] xl:w-[150%] h-full rounded-4xl"
                                 />
 
                             </div>
