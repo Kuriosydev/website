@@ -36,7 +36,7 @@ export default function ImageButtons({
         </>
     );
 
-    const baseClasses = `relative inline-flex items-center justify-center border-none rounded-md overflow-hidden ${className}`;
+    const baseClasses = `relative inline-flex items-center justify-center border-none rounded-md overflow-hidden ${className} cursor-pointer`;
 
     const Wrapper = isLink ? Link : 'button';
     const wrapperProps = isLink

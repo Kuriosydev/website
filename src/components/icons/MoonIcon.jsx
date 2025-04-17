@@ -1,7 +1,7 @@
 
-export default function MoonIcon({ svgFill, primaryPathFill, secondaryPathFill, opcatity,onClick }) {
+export default function MoonIcon({ svgFill = "none", primaryPathFill, onClick, className = "", secondaryPathFill }) {
     return (
-        <svg onClick={onClick} className={`absolute w-4 h-4 opacity-${opcatity || '100'} transition-opacity duration-300`} xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+        <svg onClick={onClick} className={`absolute w-4 h-4 ${className}`} xmlns="http://www.w3.org/2000/svg" width="19" height="19"
             viewBox="0 0 19 19" fill={svgFill}>
             <path
                 d="M17.802 17.7548L17.3105 17.996C17.2109 18.0449 17.0944 17.9659 17.1135 17.8623L17.2073 17.3513C17.2149 17.3102 17.2003 17.2682 17.1683 17.2391L16.7706 16.8772C16.6901 16.8039 16.7345 16.6761 16.8459 16.6609L17.3954 16.5864C17.4397 16.5804 17.4779 16.5544 17.4977 16.517L17.7434 16.0521C17.7932 15.9579 17.9372 15.9579 17.987 16.0521L18.2327 16.517C18.2525 16.5544 18.2908 16.5804 18.335 16.5864L18.6356 16.6272L18.7148 16.6946C18.8262 16.7097 18.8706 16.8375 18.79 16.9108L18.4857 17.2034C18.4537 17.2325 18.4391 17.2745 18.4466 17.3156L18.551 17.7907C18.57 17.8943 18.4536 17.9732 18.354 17.9243L18.2161 17.896L17.9284 17.7548C17.8888 17.7353 17.8415 17.7353 17.802 17.7548Z"

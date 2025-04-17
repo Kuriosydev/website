@@ -27,20 +27,20 @@ export default function Intro() {
 				<img
 					src="/images/ca0ad6cbee22479a434887931d2b542c_bg.png"
 					alt="Millie & Max Background"
-					className="absolute top-0 left-0 w-full h-full object-cover object-left md:object-center -z-10 opacity-90 bg-[rgba(255,206,73,0.5)]"
+					className="absolute top-0 left-0 w-full h-full object-cover object-left md:object-center -z-10 opacity-90 bg-[rgba(255,206,73,0.5)] dark:bg-[rgba(0,0,0,0.5)] dark:opacity-60"
 				/>
 
 				{/* Optional overlay */}
-				<div className="absolute top-0 left-0 w-full h-full pointer-events-none md:bg-transparent bg-[rgba(100,100,100,0.1)]" />
+				<div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-black/10  dark:bg-black/70" />
 
 				{/* Centered content */}
 				<div className="relative w-full items-center justify-center overflow-hidden aspect-[3/4] sm:aspect-[9/16] md:aspect-[4/3] lg:aspect-[16/9]">
-					<div className="inset-0 z-10 mt-4 md:mt-6 lg:mt-8 flex flex-col justify-center items-center md:justify-center md:items-center text-white px-4 sm:px-6 md:px-4 w-full max-w-[32rem] sm:max-w-[32rem] md:max-w-[20rem] lg:max-w-[30rem] mx-auto">
+					<div className="inset-0 z-10 mt-4 md:mt-6 lg:mt-8 flex flex-col justify-center items-center md:justify-center md:items-center text-white px-4 sm:px-6 md:px-4 w-full max-w-[32rem] sm:max-w-[32rem] md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[40rem] mx-auto">
 						<h1 className="text-center text-3xl sm:text-2xl md:text-4xl lg:text-5xl leading-tight md:leading-12 lg:leading-14 tracking-wide md:tracking-[4px] font-luckiest font-bold text-white break-words capitalize ml-32 sm:ml-16 md:ml-0">
 							<span className="block">Meet Millie & Max!</span>
 						</h1>
 
-						<p className="mt-32 sm:mt-8 md:mt-4 font-semibold text-xs sm:text-sm md:text-base md:leading-[22px] text-black text-left sm:text-center break-words pl-8 pr-30 sm:px-0 md:px-0 lg:px-10">
+						<p className="mt-32 sm:mt-8 md:mt-4 font-semibold text-xs sm:text-sm md:text-base md:leading-[22px] text-black dark:text-white text-left sm:text-center break-words pl-8 pr-30 sm:px-0 md:px-0 lg:px-0 xl:px-0">
 							Millie and Max are your fun-loving, brain-powered chimps guiding you through the Kurixel universe. They love solving puzzles, building crazy gadgets, and taking you on the ultimate learning adventure!
 						</p>
 

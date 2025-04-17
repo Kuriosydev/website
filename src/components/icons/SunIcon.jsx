@@ -1,7 +1,7 @@
 
-export default function SunIcon({ svgFill, primaryPathFill, secondaryPathFill, opcatity, onClick }) {
+export default function SunIcon({ svgFill = "none", primaryPathFill, onClick, className = ""  }) {
     return (
-        <svg onClick={onClick} className={`absolute w-4 h-4 opacity-${opcatity || '100'} transition-opacity duration-300`} xmlns="http://www.w3.org/2000/svg" width="19" height="18"
+        <svg onClick={onClick} className={`absolute w-4 h-4 ${className}`} xmlns="http://www.w3.org/2000/svg" width="19" height="18"
             viewBox="0 0 19 18" fill={svgFill}>
             <g clipPath="url(#clip0_1_300)">
                 <path

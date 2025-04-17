@@ -146,7 +146,7 @@ export default function Games() {
                 resourceCards={resourceCards}
             />
             <Faq
-                bgColor="bg-[#8F0E00]"
+                bgColor="bg-[#8F0E00] dark:bg-[#212121]"
                 heading="Frequently Asked Questions"
                 headingColor="text-white"
                 faqs={faqs}

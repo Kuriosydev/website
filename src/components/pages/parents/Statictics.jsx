@@ -2,22 +2,18 @@ import Heading from "@/components/texts/Heading";
 
 const data = [
     {
-        heading: "2x",
-        description: "Students reported an average of twice the level of math enjoyment in just a few months."
+        heading: "3x",
+        description: "Students were three times more likely to stay engaged in lessons when using Kurixel’s game-based learning."
     },
     {
-        heading: "68%",
-        description: "In one school district, students mastered an average of 68% more math skills per month."
+        heading: "91%",
+        description: "91%** of parents said their child looked forward to learning with Kurixel each week."
     },
-    {
-        heading: "96%",
-        description: "96%** of parents and teachers were satisfied with the educational impact of Prodigy Math."
-    }
 ];
 
 export default function Statictics() {
     return (
-        <section className={`w-full h-auto bg-white relative overflow-hidden`}>
+        <section className={`w-full h-auto bg-white relative overflow-hidden dark:bg-black`}>
             <div className="w-full h-full relative overflow-hidden py-14">
                 <div className="flex flex-row flex-wrap items-center justify-center ">
                     {data?.map((item, index) =>
@@ -29,18 +25,18 @@ export default function Statictics() {
                                 fontWeight="font-normal"
                                 textAlign="text-center"
                                 letterSpacing="md:tracking-wider"
-                                textColor="text-[#8F0E00]"
+                                textColor="text-[#8F0E00] dark:text-white"
                                 customStyle=""
                             />
-                            <div className="text-left font-medium text-lg">
+                            <div className="text-left font-medium text-lg  dark:text-white">
                                 {item.description}
                             </div>
                         </div>
                     )}
                 </div>
-                <div className="flex flex-row flex-wrap items-center justify-center px-10 md:px-0 md:mt-10">
+                <div className="flex flex-row flex-wrap items-center justify-center px-10 md:px-0 md:mt-10  dark:text-white">
                     <div className="text-left font-medium text-lg">
-                        **Based on a survey of parents and a survey of teachers commissioned by Kurixel Education.
+                        **Based on a user experience survey conducted by Kurixel Education.
                     </div>
                 </div>
             </div>

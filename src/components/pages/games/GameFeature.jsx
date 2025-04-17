@@ -40,7 +40,7 @@ const gameFeature2 = [
 
 export default function GameFeature() {
   return (
-    <section className={`w-full h-auto bg-white relative overflow-hidden`}>
+    <section className={`w-full h-auto bg-white relative overflow-hidden dark:bg-black`}>
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
         <div className="flex flex-row flex-wrap items-center justify-center">
           <Heading
@@ -50,11 +50,11 @@ export default function GameFeature() {
             fontWeight="font-normal"
             textAlign="text-center"
             letterSpacing="md:tracking-wider"
-            textColor="text-[#8F0E00]"
+            textColor="text-[#8F0E00] dark:text-white"
             customStyle="py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-44"
           />
         </div>
-        <div className="flex flex-row flex-wrap items-center justify-center text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10">
+        <div className="flex flex-row flex-wrap items-center justify-center text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 dark:text-white">
           In the world of Kurixel, curiosity leads the way. Every quest, puzzle, and battle is powered by curriculum-aligned math practice. With surprises at every turn, students solve problems to unlock new worlds, conquer challenges, and level up all while building real math skills.
         </div>
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:lg:flex-row flex-wrap items-center justify-center py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 md:px-0 px-10">

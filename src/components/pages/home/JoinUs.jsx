@@ -7,13 +7,13 @@ export default function JoinUs({
     sectionBackGroundColor = "bg-[#FFCE49]",
     sectionStyle,
     heading,
-    headingColor = "text-[#8F0E00]",
+    headingColor = "text-[#8F0E00] dark:text-white",
     headingSize = "text-4xl md:text-6xl",
     headingWeight = "font-bold",
     headingSpacing = "tracking-wider",
     headingStyle,
     subHeading,
-    subHeadingColor = "text-black",
+    subHeadingColor = "text-black dark:text-white",
     subHeadingSize = "text-base md:text-2xl",
     subHeadingWeight = "font-medium",
     subHeadingSpacing = "tracking-wide",
@@ -24,7 +24,7 @@ export default function JoinUs({
     listStyles = "font-bold text-base md:text-2xl mt-3 md:mt-6"
 }) {
     return (
-        <section className={`w-full h-auto ${sectionBackGroundColor} ${sectionStyle}`}>
+        <section className={`w-full h-auto ${sectionBackGroundColor} ${sectionStyle} dark:bg-black dark:text-white`}>
             {/* Heading */}
             <div className="flex flex-col md:flex-row w-full h-full px-6 sm:px-8 md:px-12 pb-12">
                 <div className="flex flex-col mt-8 md:mt-6 w-full md:w-1/2">
@@ -47,7 +47,15 @@ export default function JoinUs({
                         <>
                             <div className="font-bold text-xl md:text-2xl mt-4 md:mt-8">Why Join?</div>
                             <div>
-                                <BulletList lists={list} bullet={listBullet} bulletColor={listBulletColor} isFooter={false} isLink={false} className={listStyles} />
+                                <BulletList
+                                    lists={list}
+                                    bullet={listBullet}
+                                    bulletColor={listBulletColor}
+                                    isFooter={false}
+                                    isLink={false}
+                                    className={listStyles}
+                                    ulClass="px-6"
+                                />
                             </div>
                         </>
                     )}
@@ -56,12 +64,12 @@ export default function JoinUs({
                 {/* Right section with JoinUsForm and SocialIcons */}
                 <div className="flex flex-col mt-8 md:mt-16 w-full md:w-1/2">
                     <JoinUsForm />
-                    <div className="w-full flex flex-col mt-6 md:mt-8 lg:ml-24">
+                    <div className="w-full flex flex-col mt-6 md:mt-8 lg:ml-24 px-2 sm:px-2 md:px-4 lg:px-8">
                         <div className="flex gap-4 sm:gap-[1vw] mt-4 sm:mt-[2vh]">
-                            <SocialIcons socialName="instagram" socialLink="#" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
-                            <SocialIcons socialName="facebook" socialLink="#" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
-                            <SocialIcons socialName="twitter" socialLink="#" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
-                            <SocialIcons socialName="youtube" socialLink="#" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
+                            <SocialIcons socialName="instagram" socialLink="https://www.instagram.com/kurixel/?hl=en" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
+                            <SocialIcons socialName="facebook" socialLink="https://www.facebook.com/profile.php?id=61574613231561" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
+                            <SocialIcons socialName="twitter" socialLink="https://x.com/Kurixel" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
+                            <SocialIcons socialName="youtube" socialLink="https://www.youtube.com/channel/UC5LsNMmHWObVbvhzTuQwu0A" color="black" borderColor="black" height="10" width="10" fontSize="lg" />
                         </div>
                     </div>
                 </div>

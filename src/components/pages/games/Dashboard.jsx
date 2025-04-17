@@ -11,7 +11,7 @@ const listData = [
 
 export default function Dashboard() {
     return (
-        <section className="w-full h-auto bg-[#FFCE49]">
+        <section className="w-full h-auto bg-[#FFCE49] dark:bg-[#212121]">
             <div className="flex flex-col items-center justify-center w-full h-full py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
                 <div className="py-10">
                     <Heading
@@ -21,12 +21,12 @@ export default function Dashboard() {
                         fontWeight="font-bold"
                         textAlign="text-center"
                         letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                        textColor="text-[#8F0E00]"
+                        textColor="text-[#8F0E00] dark:text-white"
                         customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-44"
                     />
                 </div>
 
-                <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center">
+                <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center  dark:text-white">
                     Kurixel transforms screen time into quest time. Unlock a universe of learning with a single Kurixel dashboard.
                 </div>
 

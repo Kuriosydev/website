@@ -2,7 +2,7 @@ import ImageButtons from "../buttons/ImageButtons";
 
 export default function JoinUsForm() {
     return (
-        <form className="max-w-xl mx-auto">
+        <form className="max-w-xl mx-auto dark:text-white">
             <div className="mb-5">
                 <label htmlFor="full_name" className="block mb-2 text-base font-medium">Full Name</label>
                 <input type="text" id="full_name" className="bg-gray-50 border border-gray-300 text-gray-500 h-[3.5rem] text-sm rounded-lg block w-full p-2.5 " placeholder="Enter your full name" required />

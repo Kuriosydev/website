@@ -9,7 +9,7 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
         switch (type) {
             case 1:
                 return (
-                    <div className="flex flex-wrap items-center justify-center gap-10">
+                    <div className="flex flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap xl:flex-nowrap items-center justify-center gap-10">
                         {data.map((item, index) => (
                             <div key={index} className="max-w-xs bg-white border border-gray-100 rounded-lg shadow-xl">
                                 <img className="rounded-t-lg p-2" src={item.imageSrc} alt={item.title} />

@@ -14,9 +14,9 @@ export default function GameInfo() {
    const prev = () => sliderRef.current?.slickPrev();
 
    return (
-      <section className="w-full h-auto mt-8 bg-[#FFCE49] relative overflow-hidden">
+      <section className="w-full h-auto bg-[#FFCE49] relative overflow-hidden dark:bg-[#212121]">
          {/* Decorations */}
-         <div className="flex flex-row justify-between w-full absolute -top-10 sm:-top-6 md:-top-20 left-0 right-0 z-10">
+         <div className="flex flex-row justify-between w-full absolute -top-10 sm:-top-6 md:-top-20 left-0 right-0 z-10 dark:hidden">
             <img src="/images/game_sky_left.png" alt="Game Sky Left" className="h-20 sm:h-24 md:h-36 lg:h-44 xl:h-60 w-auto object-contain" />
             <img src="/images/game_sky_right.png" alt="Game Sky Right" className="h-20 sm:h-24 md:h-36 lg:h-44 xl:h-60 w-auto object-contain" />
          </div>
@@ -30,7 +30,7 @@ export default function GameInfo() {
                fontWeight="font-bold"
                textAlign="text-center"
                letterSpacing="md:tracking-wider"
-               textColor="text-[#8F0E00]"
+               textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                customStyle="mt-10 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64"
             />
             <div className="font-bold text-sm sm:text-base md:text-xl leading-snug sm:leading-normal"></div>
@@ -58,7 +58,7 @@ export default function GameInfo() {
          </div>
 
          {/* Subtext */}
-         <div className="font-medium text-sm sm:text-base md:text-xl lg:text-2xl text-center sm:text-left mt-4 px-4 sm:px-6 md:px-16 lg:px-40 xl:px-56">
+         <div className="font-medium dark:text-white text-sm sm:text-base md:text-xl lg:text-2xl text-center sm:text-left mt-4 px-4 sm:px-6 md:px-16 lg:px-40 xl:px-56">
             Explore futuristic cities and enchanted forests.
          </div>
 
@@ -68,7 +68,7 @@ export default function GameInfo() {
          </div>
 
          {/* Background Image Behind Carousel */}
-         <div className="absolute inset-x-0 bottom-0 w-full z-10">
+         <div className="absolute inset-x-0 bottom-0 w-full z-10 dark:hidden">
             <img
                src="/images/game_backgroung.png"
                alt="Game Screenshot Background"

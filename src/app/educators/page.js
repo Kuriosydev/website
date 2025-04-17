@@ -10,19 +10,19 @@ import EducatorLayout from "./EducatorLayout";
 
 const resourceCards = [
     {
-        text: "A Parent's Guide to Kurixel: Goals, Reports, Memberships",
+        text: "Discover creative strategies to boost motivation.",
         linkText: "Learn More",
-        link: "#",
+        link: "/news",
     },
     {
-        text: "Is a Kurixel Membership Worth It?",
+        text: "Make personalized learning easy and effective.",
         linkText: "Learn More",
-        link: "#",
+        link: "/news",
     },
     {
-        text: "What Is Prodigy? Your Top Questions, Answered!",
+        text: "Turn every session into a meaningful checkpoint.",
         linkText: "Learn More",
-        link: "#",
+        link: "/news",
     }
 ];
 
@@ -55,7 +55,7 @@ export default function Educators() {
             <Curriculam />
             <WhyProdigy />
             <ResourceBlog
-                heading="Parent resources from our blog"
+                heading="Teachers Resources"
                 bgImgSrc="/images/resource_blog.png"
                 resourceCards={resourceCards}
             />

@@ -10,7 +10,7 @@ export default function CircularCard({
     return isRow
         ? (
             <div className={`flex flex-row w-full h-full items-start justify-between py-6 md:py-auto gap-4 md:gap-4`}>
-                <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                <div className="w-24 h-24 bg-white  dark:bg-black rounded-full flex items-center justify-center">
                     <img src={imgSrc} alt="Circle image" className="w-full h-full object-contain" />
                 </div>
                 <div className="w-full h-full flex flex-col items-start justify-start">
@@ -21,7 +21,7 @@ export default function CircularCard({
                         fontWeight="font-semibold"
                         textAlign="text-left"
                         letterSpacing=""
-                        textColor="text-black"
+                        textColor="text-black dark:text-white"
                         customStyle=""
                     />
                     <p className={`text-gray-400 text-left text-sm font-medium`}>{description}</p>

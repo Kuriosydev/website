@@ -1,87 +1,8 @@
 @import "tailwindcss";
-
-:root {
-  /* Font */
-  --header-font: 'Luckiest Guy', sans-serif;
-
-  --bg-color: #f8f4f2;
-  --right-bg-color: rgb(248, 244, 242);
-  --navbar-bg: #18272A;
-  --text-color: black;
-  --scrollbar-thumb: rgba(253, 165, 89, 1);
-  --primary-text-color: #8A4616;
-
-  /* Light mode variables */
-  --light-background: #f5f5f5;
-  --light-text: #333;
-  --light-toggle-background: #0b0f77;
-  --light-toggle-button: #ffffff;
-
-  /* Sun/Moon icon colors */
-  --sun-color: #FFC400;
-  --moon-color: #FFE282;
-
-  /* About section */
-  --about-background-color: #FFCE49;
-  --about-header-color: #8F0E00;
-
-  /* Snapshot section */
-  --snapshot-header-color: #5B0707;
-  --snapshot-secondary-header-color: #000000;
-  --snapshot-background-color: #FFCE49;
-  --snapshot_container_background_image: url('/images/19312313_climb_1.png');
-
-  /* Content Section */
-  --content-left-card-bg: #8F0E00;
-  --content-left-icon-bg: #FFDB52;
-}
-
-/* Tailwind Dark Mode */
-.dark {
-  --bg-color: #1e1e1e;
-  --navbar-bg: #333;
-  --text-color: white;
-  --scrollbar-thumb: #888;
-
-  /* Dark mode variables */
-  --dark-background: #c6c6e4;
-  --dark-text: #000000;
-  --dark-toggle-background: #040647;
-  --dark-toggle-button: #4d4dff;
-
-  /* About section */
-  --about-background-color: #000;
-  --about-header-color: #ffffff;
-
-  /* Snapshot section */
-  --snapshot-header-color: #FFCE49;
-  --snapshot-secondary-header-color: #ffffff;
-  --snapshot-background-color: #212121;
-  --snapshot_container_background_image: #212121;
-
-  /* Content Section */
-  --content-left-card-bg: #FFCE49;
-  --content-left-icon-bg: #FFCE49;
-}
-
-/* Apply Background and Text Colors */
-body {
-  font-family: 'Montserrat', sans-serif;
-}
-
-
+@custom-variant dark (&:where(.dark, .dark *));
 
 .font-luckiest {
   font-family: 'Luckiest Guy', cursive;
-}
-
-.font-montserrat {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.custom-image {
-  height: 33.34vh;
-  width: auto;
 }
 
 .slick-slide {
