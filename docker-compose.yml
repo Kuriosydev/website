@@ -2,9 +2,9 @@ version: '3'
 services:
   nextjs-preprod:
     build: .
-    container_name: nextjs_preprod
+    container_name: nextjs_kurixel_main
     restart: unless-stopped
     ports:
-      - "3001:3000"
+      - "3002:3000"
     environment:
       - NODE_ENV=development
