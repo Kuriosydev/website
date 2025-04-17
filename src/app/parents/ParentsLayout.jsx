@@ -11,14 +11,14 @@ const menu = [
         childrens: []
     },
     {
-        href: "#",
+        href: "/parents/membership",
         name: "Membership",
         styles: "mr-5 md:mr-8",
         dropdown: true,
         childrens: []
     },
     {
-        href: "/parents/research",
+        href: "#",
         name: "Research",
         styles: "mr-5 md:mr-8",
         dropdown: false,
@@ -32,7 +32,7 @@ const menu = [
         childrens: []
     },
     {
-        href: "/support",
+        href: "/contact-us",
         name: "Support",
         styles: "mr-5 md:mr-8",
         dropdown: false,
@@ -43,20 +43,20 @@ const menu = [
 
 const faqs = [
     {
-        question: "What kind of learning does Kurixel follow?",
-        answer: "We blend core academic concepts with game-based adventures to make learning feel like play! Our curriculum aligns with widely recognized educational standards while adding a creative twist. Whether it's math missions, science quests, or logic puzzles, every game is crafted to help kids learn by doing—and having fun while they're at it."
+        question: "How can I stay involved in my child’s learning with Kurixel?",
+        answer: "With a free Kurixel parent account, you can track your child’s progress, view monthly report, and celebrate their milestones all from your own dashboard."
     },
     {
-        question: "How does Kurixel keep kids safe?",
-        answer: "Your child's safety is our top priority. Kurixel follows strict privacy protocols and secure data practices. We never share personal info, and all interactions are designed with child-safe, COPPA-compliant systems. Our virtual world is fun-first and safe-always."
+        question: "Will Kurixel really help my child learn, or is it just a game?",
+        answer: "Kurixel is designed by educators to blend real curriculum with engaging gameplay. Every challenge is rooted in skill-building, so while kids are having fun, they’re also mastering math concepts aligned to academic standards."
     },
     {
-        question: "Can I use the same account for all Kurixel games?",
-        answer: "Absolutely! One account unlocks everything in the Kurixel universe. Whether you're diving into a math dungeon or crafting your next big invention, your progress follows you across every world."
+        question: "How much time should my child spend on Kurixel each week?",
+        answer: "Even 10–15 minutes a day can make a meaningful impact. The goal is progress, not pressure."
     },
     {
-        question: "Does the learning get more challenging over time?",
-        answer: "Yep! Kurixel's smart progression system tailors the gameplay to your child's level. As players build skills, the game evolves offering new challenges to keep things exciting and just the right amount of tricky."
+        question: "Is my child’s data safe on Kurixel?",
+        answer: "Yes. We take your family’s privacy seriously. Kurixel is fully compliant with COPPA, FERPA, and other major privacy laws. We never sell personal data, and we only collect what’s needed to enhance your child’s learning experience."
     },
 ];
 
@@ -80,17 +80,18 @@ export default function ParentsLayout({ children, faq = false, joinus = false })
             {faq &&
                 <Faq
                     heading="Frequently Asked Questions"
-                    headingColor="text-[#8F0E00]"
+                    headingColor="text-[#8F0E00] dark:text-white"
                     description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
                     faqs={faqs}
                     buttonText="More FAQ"
-                    faqQuestionColor="text-[#8F0E00]"
+                    faqQuestionColor="text-[#8F0E00] dark:text-white"
                     faqQuestionFontFamily="font-luckiest"
                     faqQuestionFontSize=" text-3xl"
                     faqQuestionFontWeight="font-normal"
                     faqAnswerFontSize="text-lg"
                     faqAnswerFontWeight="font-medium"
                     customStyles=""
+                    bgColor="bg-[#FFCE49] dark:bg-[#212121]"
                 />
             }
             {joinus &&

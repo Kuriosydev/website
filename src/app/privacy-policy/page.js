@@ -1,7 +1,7 @@
-import PrivacyContent from "@/components/pages/privacy-policy/PrivacyContent";
+import PrivacyPolicy from "@/components/pages/privacy-policy/PrivacyPolicy";
 
 export default function page() {
     return (
-        <PrivacyContent />
+        <PrivacyPolicy />
     )
 }

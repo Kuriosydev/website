@@ -4,18 +4,18 @@ import Heading from "@/components/texts/Heading";
 const events = [
     {
         imageSrc: '/images/gamplay_screenshot1.png',
-        link: 'https://www.example.com',
-        title: 'Kurixel Math',
-        description: 'Discover the magic of math! Players embark on a journey filled with quests, battles, spells and rewards. Every battle brings more skill-building math questions for students to solve.',
-        buttonText: "Discover Prodigy Math",
+        link: '#',
+        title: 'Play. Battle. Learn. Repeat.',
+        description: 'Players conquer math challenges, earn rewards, and grow with every quest they complete.',
+        buttonText: "Explore Math",
         buttonLink: "#"
     },
     {
         imageSrc: '/images/gamplay_screenshot1.png',
-        link: 'https://www.example.com',
-        title: 'Kurixel English',
-        description: 'Power your imagination! Create a custom-built world through reading and language practice. Every correct answer gives students more energy to gather supplies and build up your village.',
-        buttonText: "Discover Prodigy Math",
+        link: '#',
+        title: 'Reading, writing, and world-building—together at last',
+        description: "Students grow their vocabulary while shaping a world that's uniquely their own.",
+        buttonText: "Explore English Language Arts",
         buttonLink: "#"
     },
 ];
@@ -26,7 +26,7 @@ export default function Prodigy() {
             <div className="w-full h-full relative overflow-hidden pb-14 md:py-10">
                 <div className="flex flex-col items-center justify-center">
                     <Heading
-                        text="Learning made fun, in more ways than one"
+                        text="Where curiosity meets confidence"
                         fontFamily="font-luckiest"
                         fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
                         fontWeight="font-bold"
@@ -37,7 +37,7 @@ export default function Prodigy() {
                     />
                 </div>
                 <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center  dark:text-white">
-                    Our safe, curriculum-aligned games make online learning an adventure!
+                    Kurixel blends playful adventures with real learning goals—so kids feel safe, supported, and excited to keep exploring.
                 </div>
 
                 <div className="flex flex-col items-center justify-center px-10 md:px-20 mt-5">
