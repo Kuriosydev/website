@@ -79,7 +79,7 @@ const whyJoin = [
     { text: "Be the first to try new levels." },
     { text: "Unlock members-only outfits and power-ups." },
     { text: "Get behind-the-scenes insights." },
-    { text: "Participate in exclusive contests and challenges" },
+    { text: "Participate in exclusive contests and challenges." },
 ];
 
 
@@ -112,7 +112,7 @@ const EducatorLayout = ({ children, faq = false, joinus = false }) => {
             {joinus &&
                 <JoinUs
                     heading={"JOIN THE KURIXEL EXPLORERS CLUB"}
-                    headingColor={"text-black"}
+                    headingColor={"text-black dark:text-[#FFCE49]"}
                     headingStyle={"md:mt-10"}
                     subHeading={"Get insider perks, secret rewards, and early access to new games."}
                     subHeadingStyle={"items-start justify-start mt-4 md:mt-8"}

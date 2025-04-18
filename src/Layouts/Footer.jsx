@@ -50,7 +50,6 @@ export default function Footer() {
 
 
         <div className="w-full sm:w-3/4 md:w-1/5 flex flex-col items-center justify-center mt-8 sm:mt-10 md:mt-12 md:mr-8">
-          <div className="text-white text-sm sm:text-base text-center">Connect with fellow explorers:</div>
           <div className="flex gap-4 sm:gap-[1vw] mt-4 sm:mt-[2vh]">
             <SocialIcons socialName="instagram" socialLink="https://www.instagram.com/kurixel/?hl=en" color="white" borderColor="white" height="10" width="10" fontSize="lg" />
             <SocialIcons socialName="facebook" socialLink="https://www.facebook.com/profile.php?id=61574613231561" color="white" borderColor="white" height="10" width="10" fontSize="lg" />

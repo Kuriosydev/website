@@ -1,25 +1,14 @@
-import Faq from "@/components/pages/Faq";
-import JoinUs from "@/components/pages/home/JoinUs";
-import AppStores from "@/components/pages/parents/AppStores";
-import Banner from "@/components/pages/parents/Banner";
-import KidsFeature from "@/components/pages/parents/KidsFeature";
-import ParentAccount from "@/components/pages/parents/ParentAccount";
-import ParentTestimonals from "@/components/pages/parents/ParentTestimonals";
-import Prodigy from "@/components/pages/parents/Prodigy";
 import ParentsReasearchDataDriven from "@/components/pages/parents/research/ParentsReasearchDataDriven";
 import ParentsResearchBanner from "@/components/pages/parents/research/ParentsResearchBanner";
 import ParentsResearchEngage from "@/components/pages/parents/research/ParentsResearchEngage";
 import ParentsResearchProdigy from "@/components/pages/parents/research/ParentsResearchProdigy";
 import ParentsResearchProdigyEnglish from "@/components/pages/parents/research/ParentsResearchProdigyEnglish";
-import ResourceBlog from "@/components/pages/parents/ResourceBlog";
-import Statictics from "@/components/pages/parents/Statictics";
-import SecondaryHeader from "@/Layouts/SecondaryHeader";
 
 const whyJoin = [
     { text: "Be the first to try new levels." },
     { text: "Unlock members-only outfits and power-ups." },
     { text: "Get behind-the-scenes insights." },
-    { text: "Participate in exclusive contests and challenges" },
+    { text: "Participate in exclusive contests and challenges." },
 ];
 
 const menu = [
@@ -122,13 +111,13 @@ const cards = [
 ];
 
 export default function page() {
-   return (
+    return (
         <>
             <ParentsResearchBanner />
             <ParentsResearchProdigy />
             <ParentsResearchProdigyEnglish />
-            <ParentsReasearchDataDriven/>
-           <ParentsResearchEngage/>
+            <ParentsReasearchDataDriven />
+            <ParentsResearchEngage />
         </>
     )
 }

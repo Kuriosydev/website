@@ -12,7 +12,8 @@ export default function ImageBanner({
   subHeading,
   dropdown,
   buttontext,
-  link
+  link,
+  buttons = []
 }) {
   return (
     <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-28 sm:-mt-28 md:-mt-40 lg:-mt-40 xl:-mt-40 dark:bg-[#001032]`}>
@@ -52,7 +53,7 @@ export default function ImageBanner({
               <Heading
                 text={heading}
                 fontFamily="font-luckiest"
-                fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
+                fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
                 fontWeight="font-bold"
                 textAlign="text-center sm:text-center md:text-center lg:text-left xl:text-left"
                 letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
@@ -64,7 +65,7 @@ export default function ImageBanner({
                   <Heading
                     text={subHeading}
                     fontFamily="font-luckiest"
-                    fontSize="text-xl sm:text-2xl md:text-3xl lg:text-3xl"
+                    fontSize="text-xl sm:text-2xl md:text-2xl lg:text-2xl"
                     fontWeight="font-bold"
                     textAlign="text-center sm:text-center md:text-center lg:text-left xl:text-left"
                     letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
@@ -86,15 +87,28 @@ export default function ImageBanner({
                   </select>
                 }
               </div>
-              <div className="flex flex-col md:flex-row items-center justify-start mt-8 md:mt-8 px-20">
-                <ImageButtons
-                  text={buttontext}
-                  source="/images/Group.png"
-                  alt="Teachers, sign up now Background"
-                  className=' px-10 py-4 sm:py-4 md:px-8 md:py-6 lg:py-8 xl:py-10'
-                  isLink={true}
-                  link={link}
-                />
+              <div className="flex flex-col md:flex-row items-center justify-start mt-2 px-20">
+                {buttons.length > 0
+                  ? buttons?.map((item, index) =>
+                    <ImageButtons
+                      key={index}
+                      text={item.text}
+                      source="/images/Group.png"
+                      alt="Teachers, sign up now Background"
+                      className={item.className}
+                      isLink={true}
+                      link={item.link}
+                    />
+                  ) : <ImageButtons
+                    text={buttontext}
+                    source="/images/Group.png"
+                    alt="Teachers, sign up now Background"
+                    className=' px-10 py-4 sm:py-4 md:px-8 md:py-6 lg:py-8 xl:py-10'
+                    isLink={true}
+                    link={link}
+                  />
+                }
+
               </div>
             </div>
             <div className="w-full sm:w-full md:w-full lg:w-5/12 xl:w-5/12 flex flex-col items-center justify-center  text-xl px-4 sm:px-10 md:px-20 lg:px-0 mt-12 md:mt-12 lg:mt-0 xl:mt-0 ml-0 sm:ml-0 md:ml-0 lg:ml-18 xl:ml-20">
