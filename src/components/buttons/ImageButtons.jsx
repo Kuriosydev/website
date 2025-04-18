@@ -11,7 +11,8 @@ export default function ImageButtons({
     textSize,
     textColor,
     isLink = false,
-    link
+    link,
+    isSubmit = false
 }) {
     const content = (
         <>
@@ -55,6 +56,7 @@ export default function ImageButtons({
         <Wrapper
             {...wrapperProps}
             className={baseClasses}
+            {...isSubmit && { type: "submit" }}
         >
             {/* Image Background (Fully Responsive with Aspect Ratio) */}
             <div className="absolute inset-0 z-0">

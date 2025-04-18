@@ -1,3 +1,4 @@
+import QueryProvider from "@/hooks/query/QueryProvider";
 import AppLayout from "@/Layouts/AppLayout";
 import ThemeProvider from "@/theme/ThemeProvider";
 import { Montserrat } from "next/font/google";
@@ -39,9 +40,11 @@ export default function RootLayout({ children }) {
           defaultTheme="system"
           enableColorScheme={false} // Prevent style mismatch on SSR
         >
-          <AppLayout>
-            {children}
-          </AppLayout>
+          <QueryProvider>
+            <AppLayout>
+              {children}
+            </AppLayout>
+          </QueryProvider>
         </ThemeProvider>
       </body>
     </html>
