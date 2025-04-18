@@ -43,7 +43,7 @@ export default function Portal() {
         </div>
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center sm:items-center md:items-center lg:items-start xl:items-start justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 px-4 sm:px-4 md:px-6 lg:px-8 xl:px-8 py-4 sm:py-4 md:py-8">
-            <img src="/images/group 257.png" alt="creative gameplay image" className="w-full h-full object-contain" />
+            <img src="/images/group257.png" alt="creative gameplay image" className="w-full h-full object-contain" />
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 px-4 sm:px-4 md:px-6 lg:px-8 xl:px-8 py-4 sm:py-4 md:py-8">
             {gameFeature2?.map((gameFeature, index) => (

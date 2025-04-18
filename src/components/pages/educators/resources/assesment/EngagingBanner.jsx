@@ -87,7 +87,7 @@ export default function EngagingBanner() {
             </nav>
           </div>
           <div className="w-full items-end justify-end sm:w-full md:w-full lg:w-1/2 xl:w-1/2 px-4 sm:px-4 md:px-6 lg:px-8 xl:px-8 py-4 sm:py-4 md:py-8">
-            <img src="/images/image 20.png" alt="creative gameplay image" className="w-4/5 h-4/5 object-contain" />
+            <img src="/images/image20.png" alt="creative gameplay image" className="w-4/5 h-4/5 object-contain" />
           </div>
         </div>
       </div>
