@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.font-luckiest {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.slick-slide {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  height: 21rem;
+}
+
+.slick-center {
+  opacity: 1 !important;
+}
+
+.slick-center .overlay {
+  opacity: 0 !important;
+}
+
+.slick-slide .slick-slide-inner {
+  transform: scale(0.75);
+  transition: transform 0.3s ease-in-out;
+}
+
+.slick-center .slick-slide-inner {
+  transform: scale(1);
+}
+
+
