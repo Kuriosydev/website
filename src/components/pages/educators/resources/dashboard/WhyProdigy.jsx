@@ -7,7 +7,7 @@ const events = [
         title: 'Boosting Confidence Through Creativity',
         description: "",
         buttonText: "Learn More",
-        buttonLink: "#",
+        buttonLink: "/news",
         isImageButton: false
     },
     {
@@ -16,7 +16,7 @@ const events = [
         title: 'The Magic of Meeting Students Where They Are',
         description: "",
         buttonText: "Learn More",
-        buttonLink: "#",
+        buttonLink: "/news",
         isImageButton: false
     },
 ];
