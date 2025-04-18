@@ -21,7 +21,7 @@ export default function Dashboard() {
                         fontWeight="font-bold"
                         textAlign="text-center"
                         letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                        textColor="text-[#8F0E00] dark:text-white"
+                        textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                         customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-44"
                     />
                 </div>

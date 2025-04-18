@@ -35,7 +35,7 @@ export default function ProdigyWorld() {
                             fontWeight="font-normal"
                             textAlign="text-left"
                             letterSpacing="tracking-normal sm:tracking-normal md:tracking-wide lg:tracking-wider"
-                            textColor="text-[#8F0E00] dark:text-white"
+                            textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                             customStyle="py-4 sm:py-5 md:py-6 lg:py-0 xl:py-0 px-4 sm:px-10 md:px-20 lg:px-0"
                         />
 

@@ -1,4 +1,6 @@
+import CurriculamCoverage from "@/components/pages/educators/curriculum/maths/CurriculamCoverage";
 import MathCurriculumBanner from "@/components/pages/educators/curriculum/maths/MathCurriculumBanner";
+import TeachersAccount from "@/components/pages/educators/curriculum/maths/TeachersAccount";
 import ViewCurriculam from "@/components/pages/educators/curriculum/maths/ViewCurriculam";
 import EducatorTestimonials from "@/components/pages/educators/EducatorTestimonials";
 import EducatorLayout from "../../EducatorLayout";
@@ -25,7 +27,9 @@ export default function MathCurriculum() {
     return (
         <EducatorLayout joinus={true}>
             <MathCurriculumBanner />
-            <ViewCurriculam/>
+            <CurriculamCoverage />
+            <ViewCurriculam />
+            <TeachersAccount />
             <EducatorTestimonials heading="Here's what teachers are saying" testimonials={testimonials} />
         </EducatorLayout>
     )

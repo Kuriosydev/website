@@ -8,48 +8,87 @@ import ResourceBlog from "@/components/pages/parents/ResourceBlog";
 import Statictics from "@/components/pages/parents/Statictics";
 import ParentsLayout from "./ParentsLayout";
 
+const whyJoin = [
+    { text: "Be the first to try new levels." },
+    { text: "Unlock members-only outfits and power-ups." },
+    { text: "Get behind-the-scenes insights." },
+    { text: "Participate in exclusive contests and challenges" },
+];
+
+const menu = [
+    {
+        href: "/parents/overview",
+        name: "Overview",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
+    },
+    {
+        href: "#",
+        name: "Membership",
+        styles: "mr-5 md:mr-8",
+        dropdown: true,
+        childrens: []
+    },
+    {
+        href: "/parents/research",
+        name: "Research",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
+    },
+    {
+        href: "#",
+        name: "Resources",
+        styles: "mr-5 md:mr-8",
+        dropdown: true,
+        childrens: []
+    },
+    {
+        href: "/support",
+        name: "Support",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
+    },
+];
+
 
 const resourceCards = [
     {
-        text: "A Parent's Guide to Kurixel: Goals, Reports, Memberships",
+        text: "Simple tips to keep learning fun, focused, and stress-free.",
         linkText: "Learn More",
         link: "#",
     },
     {
-        text: "Is a Kurixel Membership Worth It?",
+        text: "Discover ways to support your child’s growth mindset at home.",
         linkText: "Learn More",
         link: "#",
     },
     {
-        text: "What Is Prodigy? Your Top Questions, Answered!",
+        text: "Ways to Celebrate Your Child’s Progress",
         linkText: "Learn More",
         link: "#",
     }
 ];
 
 
-
 const cards = [
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Parent portal",
-        description: "See instant data on your child's progress, all in one place.",
+        heading: "Parent Dashboard",
+        description: "Real-time insights, right at your fingertips",
     },
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Monthly report card",
-        description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
+        heading: "Monthly Report",
+        description: "A clear snapshot, delivered to your inbox",
     },
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Curriculum Progress report",
-        description: "Find out which grade-level math skills your child has mastered from their curriculum.",
+        heading: "Progress Tracking",
+        description: "Know exactly where they stand",
     },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "More powerful parent tools",
-        description: "Members get even more ways to support learning. Set Goals for your child, send in-game Cheers, print custom Practice Sheets and more!",
-    }
 ];
 
 export default function ForParents() {
@@ -62,13 +101,13 @@ export default function ForParents() {
             <AppStores />
             <Prodigy />
             <ParentAccount
-                heading="Support your child's math learning with a Kurixel parent account"
-                buttonText="Get a parent account now"
+                heading="Stay connected to your child’s learning"
+                buttonText="Create your parent account"
                 buttonColor="bg-[#FFCE49]"
                 cards={cards}
             />
             <ResourceBlog
-                heading="Parent resources from our blog"
+                heading="Parent Resources"
                 bgImgSrc="/images/resource_blog.png"
                 resourceCards={resourceCards}
             />

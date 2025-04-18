@@ -35,7 +35,7 @@ const engagingAssessments2 = [
 
 export default function Curriculam() {
     return (
-        <section className={`w-full h-auto bg-[#8F0E00] relative overflow-hidden`}>
+        <section className={`w-full h-auto bg-[#8F0E00] relative overflow-hidden dark:bg-[#212121]`}>
             <div className="text-white w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 gap-8">
                 <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row flex-wrap items-center justify-center px-8 sm:px-8 md:px-12 lg:px-24 xl:px-24">
                     <div className="w-full sm:w-full md:w-full lg:w-5/12 xl:w-5/12 items-center justify-center py-10 md:py-0">
@@ -49,11 +49,12 @@ export default function Curriculam() {
                             fontWeight="font-bold"
                             textAlign="text-left sm:text-left md:text-left lg:text-left xl:text-left"
                             letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                            textColor="text-white"
+                            textColor="text-white dark:text-[#FFCE49]"
                             customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-0 "
                         />
-                        <div className="text-left font-medium text-lg lg:pr-24 py-4">
-                            Integrates seamlessly with Clever and Google Classroom making sign-ins a breeze for students and teachers.                        </div>
+                        <div className="text-left font-medium text-lg lg:pr-24 py-4 dark:text-white">
+                            Integrates seamlessly with Clever and Google Classroom making sign-ins a breeze for students and teachers.
+                        </div>
                         <div className="flex flex-row flex-wrap items-center justify-start gap-10 py-4">
                             <YellowButton text="Explore Kurixel's Math Pathways" />
                             <YellowButton text="Explore Kurixel's Language Journeys" />
@@ -68,10 +69,10 @@ export default function Curriculam() {
                         fontWeight="font-bold"
                         textAlign="text-left sm:text-left md:text-left lg:text-left xl:text-left"
                         letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                        textColor="text-white"
+                        textColor="text-white dark:text-[#FFCE49]"
                         customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-0 "
                     />
-                    <div className="text-center font-medium text-lg py-4 md:py-4">
+                    <div className="text-center font-medium text-lg py-4 md:py-4 dark:text-white">
                         Unleash the power of Kurixel's educator tools to personalize learning and boost classroom outcomes.
                     </div>
                 </div>
@@ -84,7 +85,7 @@ export default function Curriculam() {
                             fontWeight="font-bold"
                             textAlign="text-left sm:text-left md:text-left lg:text-left xl:text-left"
                             letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                            textColor="text-white"
+                            textColor="text-white dark:text-[#FFCE49]"
                             customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-4 "
                         />
                         <div className="flex flex-col md:flex-row items-center justify-center gap-12 px-8 sm:px-8 md:px-10 lg:px-20 xl:px-20">
@@ -108,7 +109,7 @@ export default function Curriculam() {
                                     fontWeight="font-normal"
                                     textAlign="text-left"
                                     letterSpacing=""
-                                    textColor="text-white"
+                                    textColor="text-white dark:text-[#FFCE49]"
                                 />
                             </span>
                             <img src="/images/white_left_arrow.png" alt="White Left Arrow" className="w-8 h-4 object-cover ml-2" />
@@ -124,7 +125,7 @@ export default function Curriculam() {
                             fontWeight="font-bold"
                             textAlign="text-left sm:text-left md:text-left lg:text-left xl:text-left"
                             letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                            textColor="text-white"
+                            textColor="text-white dark:text-[#FFCE49]"
                             customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-4 "
                         />
                         <div className="flex flex-col md:flex-row items-center justify-center gap-12 px-8 sm:px-8 md:px-10 lg:px-20 xl:px-20">
@@ -148,7 +149,7 @@ export default function Curriculam() {
                                     fontWeight="font-normal"
                                     textAlign="text-left"
                                     letterSpacing=""
-                                    textColor="text-white"
+                                    textColor="text-white dark:text-[#FFCE49]"
                                 />
                             </span>
                             <img src="/images/white_left_arrow.png" alt="White Left Arrow" className="w-8 h-4 object-cover ml-2" />

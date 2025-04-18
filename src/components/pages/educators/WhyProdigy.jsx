@@ -30,7 +30,7 @@ const listData = [
 
 export default function WhyProdigy() {
     return (
-        <section className={`w-full h-auto bg-white relative overflow-hidden`}>
+        <section className={`w-full h-auto bg-white relative overflow-hidden dark:bg-black`}>
             <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
                 <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:lg:flex-row  flex-wrap items-start justify-between mx-auto px-10 md:px-24">
                     <div className="w-full sm:w-full md:w-full lg:w-4/12 xl:w-4/12 flex flex-col gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-10 md:py-0">
@@ -41,7 +41,7 @@ export default function WhyProdigy() {
                             fontWeight="font-bold"
                             textAlign="text-left sm:text-center md:text-left lg:text-left xl:text-left"
                             letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-                            textColor="text-[#8F0E00]"
+                            textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                             customStyle="py-2 sm:py-2 md:py-2 lg:py-7 xl:py-8"
                         />
                         <div className="font-medium text-left text-base md:text-lg py-2 sm:py-2 md:py-0 lg:py-0 xl:py-0 ">

@@ -6,44 +6,60 @@ import ButtonImage from '../../public/images/Group.png';
 
 const educatorSubMenu = [
     {
-        href: "/educators/overview",
+        href: "/educators",
         name: "Overview",
+        styles: "mr-5 md:mr-8",
         dropdown: false,
         childrens: []
     },
     {
         href: "#",
-        name: "Features",
+        name: "Curriculum",
+        styles: "mr-5 md:mr-8",
         dropdown: true,
-        childrens: []
-    },
-    {
-        href: "#",
-        name: "Curriculam",
-        dropdown: true,
-        childrens: []
-    },
-    {
-        href: "/educators/research",
-        name: "Research",
-        dropdown: false,
-        childrens: []
+        childrens: [
+            {
+                href: "#",
+                name: "Math",
+                styles: "mr-5 md:mr-8",
+                dropdown: false,
+                childrens: []
+            },
+            {
+                href: "#",
+                name: "English Language Arts",
+                styles: "mr-5 md:mr-8",
+                dropdown: false,
+                childrens: []
+            },
+        ]
     },
     {
         href: "#",
         name: "Resources",
+        styles: "mr-5 md:mr-8",
         dropdown: true,
-        childrens: []
+        childrens: [
+            {
+                href: "#",
+                name: "Dashboard",
+                styles: "mr-5 md:mr-8",
+                dropdown: false,
+                childrens: []
+            },
+            {
+                href: "#",
+                name: "Assesment",
+                styles: "mr-5 md:mr-8",
+                dropdown: false,
+                childrens: []
+            },
+        ]
     },
     {
-        href: "/educators/administrators",
-        name: "Administrators",
-        dropdown: false,
-        childrens: []
-    },
-    {
-        href: "/support",
+        href: "/contact-us",
         name: "Support",
+        styles: "mr-5 md:mr-8",
         dropdown: false,
         childrens: []
     },
@@ -52,33 +68,45 @@ const educatorSubMenu = [
 const gameSubMenu = [
     {
         href: "#",
-        name: "Maths",
+        name: "Subjects",
         styles: "mr-5 md:mr-12",
-        dropdown: true
-    },
-    {
-        href: "/games/english",
-        name: "Maths",
-        styles: "mr-5 md:mr-12",
-        dropdown: false
+        dropdown: true,
+        childrens: [
+            {
+                href: "#",
+                name: "Maths",
+                styles: "mr-5 md:mr-12",
+                dropdown: false,
+                childrens: []
+            },
+            {
+                href: "#",
+                name: "English Language Arts",
+                styles: "mr-5 md:mr-12",
+                dropdown: false,
+                childrens: []
+            },
+        ]
     },
     {
         href: "#",
         name: "Memberships",
         styles: "mr-5 md:mr-12",
-        dropdown: true
+        dropdown: true,
+        childrens: []
     },
     {
-        href: "/support",
+        href: "/contact-us",
         name: "Support",
         styles: "mr-5 md:mr-12",
-        dropdown: false
+        dropdown: false,
+        childrens: []
     },
 ];
 
 const parentSubMenu = [
     {
-        href: "/parents/overview",
+        href: "/parents",
         name: "Overview",
         styles: "mr-5 md:mr-8",
         dropdown: false,
@@ -92,7 +120,7 @@ const parentSubMenu = [
         childrens: []
     },
     {
-        href: "/parents/research",
+        href: "#",
         name: "Research",
         styles: "mr-5 md:mr-8",
         dropdown: false,
@@ -106,7 +134,7 @@ const parentSubMenu = [
         childrens: []
     },
     {
-        href: "/support",
+        href: "/contact-us",
         name: "Support",
         styles: "mr-5 md:mr-8",
         dropdown: false,

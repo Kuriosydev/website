@@ -4,7 +4,7 @@ export default function CircularCard({
     imgSrc,
     heading,
     description,
-    textColor = "text-white",
+    textColor = "text-white ",
     isRow = false
 }) {
     return isRow
@@ -21,10 +21,10 @@ export default function CircularCard({
                         fontWeight="font-semibold"
                         textAlign="text-left"
                         letterSpacing=""
-                        textColor="text-black dark:text-white"
+                        textColor="text-black dark:text-[#FFCE49]"
                         customStyle=""
                     />
-                    <p className={`text-gray-400 text-left text-sm font-medium`}>{description}</p>
+                    <p className={`text-gray-400 text-left text-sm font-medium dark:text-white`}>{description}</p>
                 </div>
             </div>
         )
@@ -46,7 +46,7 @@ export default function CircularCard({
                     />
                 </div>
                 <div className="w-full h-full flex flex-col items-start justify-start">
-                    <p className={`${textColor} text-center sm:text-center md:text-left lg:text-left xl:text-left text-base`}>{description}</p>
+                    <p className={`${textColor} text-center sm:text-center md:text-left lg:text-left xl:text-left text-base dark:text-white`}>{description}</p>
                 </div>
             </div>
         )

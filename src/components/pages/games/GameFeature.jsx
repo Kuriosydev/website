@@ -50,7 +50,7 @@ export default function GameFeature() {
             fontWeight="font-normal"
             textAlign="text-center"
             letterSpacing="md:tracking-wider"
-            textColor="text-[#8F0E00] dark:text-white"
+            textColor="text-[#8F0E00] dark:text-[#FFCE49]"
             customStyle="py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-44"
           />
         </div>

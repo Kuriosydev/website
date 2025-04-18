@@ -7,7 +7,7 @@ export default function Faq({
     heading,
     headingColor,
     description,
-    descriptionClasses = "text-left mt-12 font-medium text-lg",
+    descriptionClasses = "text-left mt-12 font-medium text-lg dark:text-white",
     faqs,
     faqQuestionColor,
     faqQuestionFontFamily,

@@ -20,7 +20,7 @@ export default function Feature({
     otherClasses
 }) {
     const baseClasses = `flex p-2 items-center justify-center w-full h-auto ${bgColor} ${border} ${borderRounded} ${otherClasses}`;
-    const imageContainerClasses = `flex flex-col items-center justify-center ${imgSource ? "w-32 h-20" : "w-8 h-8"} md:my-2 md:ml-4 rounded-xl md:rounded-2xl bg-[#FFCE49] dark:bg-[#8F0E00]`;
+    const imageContainerClasses = `flex flex-col items-center justify-center ${imgSource ? "w-32 h-20" : "w-8 h-8"} md:my-2 md:ml-4 rounded-xl md:rounded-2xl bg-[#FFCE49]`;
     const textContainerClasses = `flex flex-col items-start justify-center w-full h-full ml-4 py-4`;
     const headingClasses = `${headingSize} ${headingColor} ${headingWeight} ${headingSpacing} ${headingStyle}`;
     const textClasses = `${textSize} md:leading-7 ${textColor} ${textWeight} ${textSpacing} ${textStyle} md:-mt-4`;
@@ -52,7 +52,7 @@ export default function Feature({
                         {text}
                     </div>
                 </div>
-                <div className={`flex items-center justify-center w-full h-20 md:h-24 rounded-xl md:rounded-none bg-[#FFCE49] dark:bg-[#8F0E00]`}>
+                <div className={`flex items-center justify-center w-full h-20 md:h-24 rounded-xl md:rounded-none bg-[#FFCE49] `}>
                     {imgSource && <img src={imgSource} alt={imgAlt} className="p-2 w-auto h-auto max-h-full max-w-full" />}
                 </div>
             </div>

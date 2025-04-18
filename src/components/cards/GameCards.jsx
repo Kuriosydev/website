@@ -9,9 +9,9 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
         switch (type) {
             case 1:
                 return (
-                    <div className="flex flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap xl:flex-nowrap items-center justify-center gap-10">
+                    <div className="flex flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap xl:flex-nowrap items-center justify-center gap-10 rounded-2xl">
                         {data.map((item, index) => (
-                            <div key={index} className="max-w-xs bg-white border border-gray-100 rounded-lg shadow-xl">
+                            <div key={index} className="max-w-xs bg-white border border-gray-100 rounded-lg shadow-xl dark:border-transparent">
                                 <img className="rounded-t-lg p-2" src={item.imageSrc} alt={item.title} />
                                 <div className="p-5">
                                     <h5 className="mb-2 text-xl font-bold tracking-tight">{item.title}</h5>
@@ -74,13 +74,13 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                 );
             case 4:
                 return (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start justify-start text-left">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start justify-start text-left rounded-2xl">
                         {data.map((item, index) => (
-                            <div key={index} className="bg-white flex flex-col">
+                            <div key={index} className="bg-white flex flex-col rounded-2xl">
                                 <img className="rounded-t-lg p-2 w-full object-cover" src={item.imageSrc} alt={item.title} />
                                 <div className="p-5 flex-grow">
                                     <Heading
-                                        text="Learning made fun, in more ways than one"
+                                        text={item.title}
                                         fontFamily="font-luckiest"
                                         fontSize="text-2xl md:text-5xl"
                                         fontWeight="font-normal"
@@ -126,7 +126,7 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                 );
             case 'video':
                 return (
-                    <div className={`${customDivClass}`}>
+                    <div className={`${customDivClass} dark:text-white`}>
                         {data.map((item, index) => (
                             <div key={index} className="max-w-xs bg-transparent rounded-lg ">
                                 <VideoPreview

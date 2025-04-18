@@ -4,15 +4,15 @@ import SiteLogo from "@/components/logo/SiteLogo";
 import Link from "next/link";
 
 const quickLinksList = [
-  { href: "#", text: "Game" },
-  { href: "#", text: "About Us" },
-  { href: "#", text: "News" },
-  { href: "#", text: "Join Us" },
+  { href: "/games", text: "Game" },
+  { href: "/", text: "About Us" },
+  { href: "/news", text: "News" },
+  { href: "/contact-us", text: "Join Us" },
 ];
 
 const supportList = [
   { href: "/contact-us", text: "Contact Us" },
-  { href: "#", text: "Help Center" },
+  { href: "/contact-us", text: "Help Center" },
 ];
 
 export default function Footer() {
