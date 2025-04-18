@@ -44,10 +44,25 @@ const testimonials = [
     }
 ];
 
+const faqs = [
+    {
+        question: "Why Kurixel?",
+        answer: "Kurixel offers a rich, game-based learning environment that turns academic practice into an interactive adventure. With so many digital tools available, few captivate students the way Kurixel does. It transforms learning into a world of challenges, creativity, and rewards that students actually look forward to."
+    },
+    {
+        question: "How Does Kurixel Protect Student Privacy?",
+        answer: "Kurixel is committed to safeguarding student data. We follow strict privacy standards, collect only the information necessary to support learning, and never sell or share personal data. Our platform is fully compliant with major student privacy laws, ensuring a secure and trusted learning environment for every user."
+    },
+    {
+        question: "Is Kurixel Aligned with School, State or National Standards?",
+        answer: "Yes! Kurixel is built to align with a wide range of educational standards at the school, state, and national levels."
+    },
+];
+
 
 export default function Educators() {
     return (
-        <EducatorLayout faq={true} joinus={true}>
+        <EducatorLayout faq={true} joinus={true} faqs={faqs}>
             <Banner />
             <EducatorTestimonials testimonials={testimonials} />
             <HowWork />
