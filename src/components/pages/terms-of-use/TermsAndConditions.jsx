@@ -245,7 +245,7 @@ export default function TermsAndConditions() {
                                 />
 
                                 <div className="">
-                                    If you have questions or concerns about these Terms, please contact us at <Link href="/contact-us">Kurixel Inc.</Link>
+                                    If you have questions or concerns about these Terms, please contact us at <Link href="/contact-us" className="text-blue-600">Kurixel Inc.</Link>
                                 </div>
                             </li>
                         </ol>

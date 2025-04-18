@@ -5,12 +5,12 @@ export default function ParentsResearchEngage() {
   return (
     <section className="w-full h-auto bg-[#8F0E00] relative overflow-hidden dark:bg-black">
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16">
-        <div className="text-white flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8">
+        <div className="text-white text-left flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8">
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8 px-10">
             <img
               src="/images/reserach3.png"
               alt="creative gameplay image"
-              className="w-full h-full object-cover"
+              className="w-3/4 h-3/4 object-cover"
             />
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8 px-10">

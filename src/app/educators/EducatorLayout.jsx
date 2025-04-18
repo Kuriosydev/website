@@ -47,7 +47,7 @@ const menu = [
             },
             {
                 href: "/educators/resources/assesment",
-                name: "Assesment",
+                name: "Assessments",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
                 childrens: []

@@ -251,7 +251,7 @@ export default function PrivacyPolicy() {
                                 />
 
                                 <div className="">
-                                    If you have any questions about this Privacy Policy or wish to exercise your rights, please contact <Link href="/contact-us">Kurixel Inc.</Link>
+                                    If you have any questions about this Privacy Policy or wish to exercise your rights, please contact <Link href="/contact-us" className="text-blue-600">Kurixel Inc.</Link>
                                 </div>
                             </li>
                             <li className="px-2 py-1 sm:py-1 md:py-3 lg:py-4">

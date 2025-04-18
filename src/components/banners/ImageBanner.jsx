@@ -110,7 +110,7 @@ export default function ImageBanner({
                   />
                 }
               </div>
-              <div className="text-base text-white font-medium px-20">
+              <div className="text-base text-white font-medium px-20 hidden">
                 {textAfterButton}
               </div>
             </div>
