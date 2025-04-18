@@ -3,6 +3,7 @@ import ParentsResearchBanner from "@/components/pages/parents/research/ParentsRe
 import ParentsResearchEngage from "@/components/pages/parents/research/ParentsResearchEngage";
 import ParentsResearchProdigy from "@/components/pages/parents/research/ParentsResearchProdigy";
 import ParentsResearchProdigyEnglish from "@/components/pages/parents/research/ParentsResearchProdigyEnglish";
+import ParentsLayout from "../ParentsLayout";
 
 const whyJoin = [
     { text: "Be the first to try new levels." },
@@ -112,12 +113,12 @@ const cards = [
 
 export default function page() {
     return (
-        <>
+        <ParentsLayout>
             <ParentsResearchBanner />
             <ParentsResearchProdigy />
             <ParentsResearchProdigyEnglish />
             <ParentsReasearchDataDriven />
             <ParentsResearchEngage />
-        </>
+        </ParentsLayout>
     )
 }
