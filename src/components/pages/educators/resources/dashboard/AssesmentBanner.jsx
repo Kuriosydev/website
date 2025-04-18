@@ -7,7 +7,7 @@ export default function AssesmentBanner() {
       bgColor={"bg-[#FFCE49]"}
       heading="Uncover Learning Gaps "
       description="Instantly see which skills they’ve mastered, where they’re still growing, and which topics may need a little extra support."
-      imgsrc="/images/frame (1).png"
+      imgsrc="/images/frame1.png"
       buttons={[
         {
           text: "Start free as a teacher",

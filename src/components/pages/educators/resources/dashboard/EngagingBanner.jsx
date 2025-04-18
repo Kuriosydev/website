@@ -73,11 +73,11 @@ export default function EngagingBanner() {
         </div>
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center sm:items-center md:items-center lg:items-center xl:items-center justify-center sm:justify-center md:justify-center lg:justify-center xl:justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 px-4 sm:px-4 md:px-6 lg:px-8 xl:px-8 py-4 sm:py-4 md:py-8">
-            <nav className="flex flex-col py-4">
+            <nav className="flex flex-col py-4 text-xl">
               {menuItems.map((item) => (
                 <div key={item.id} className="border-b border-gray-100 last:border-b-0">
                   <button
-                    className={`flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-left ${expandedItem === item.id
+                    className={`flex items-center justify-between w-full px-4 py-3 font-medium text-left ${expandedItem === item.id
                       ? 'text-gray-900 bg-gray-50'
                       : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                       }`}
@@ -92,8 +92,7 @@ export default function EngagingBanner() {
                   </button>
 
                   {expandedItem === item.id && (
-                    <div className="px-4 py-3 bg-gray-50 text-sm text-gray-700">
-                      <p className="mb-2 font-semibold">{item.label}</p>
+                    <div className="px-4 py-3 bg-gray-50 text-lg text-gray-700">
                       <p>{item.description}</p>
                     </div>
                   )}

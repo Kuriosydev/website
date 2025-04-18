@@ -5,7 +5,7 @@ export default function ParentsResearchBanner() {
       col={2}
       bgColor={"bg-[#FFCE49]"}
       heading="Kurixel makes a real difference"
-      subHeading="When learning feels like play, students stay motivated, build confidence, and make meaningful progress and that’s exactly what Kurixel is designed to do."
+      description="When learning feels like play, students stay motivated, build confidence, and make meaningful progress and that’s exactly what Kurixel is designed to do."
       imgsrc="/images/image 8.png"
       buttons={[
         {
