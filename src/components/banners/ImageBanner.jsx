@@ -11,9 +11,11 @@ export default function ImageBanner({
   vidSrc,
   subHeading,
   dropdown,
+  buttontext,
+  link
 }) {
   return (
-    <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-28 sm:-mt-28 md:-mt-40 lg:-mt-40 xl:-mt-40 `}>
+    <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-28 sm:-mt-28 md:-mt-40 lg:-mt-40 xl:-mt-40 dark:bg-[#001032]`}>
       <div className="w-full max-h-full relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
         {col === 1 &&
           <div className="flex flex-col w-full h-full items-center justify-center">
@@ -41,8 +43,8 @@ export default function ImageBanner({
         }
 
         {col === 2 &&
-          <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row w-full h-full items-center justify-center md:items-start md:justify-start">
-            <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 flex flex-col items-center justify-center text-left text-xl ">
+          <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row w-full h-full items-center justify-center md:items-start md:justify-start px-6 md:px-8 lg:px-12 xl:px-12">
+            <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 flex flex-col items-center sm:items-center md:items-center lg:items-start xl:items-start justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start text-left text-xl ">
               <div className="absolute top-0 md:-left-28 h-auto hidden lg:block xl:block -z-10">
                 <img src="/images/left_tree.png" alt="Left Tree Image" className="w-[80%] h-full object-cover block dark:hidden" />
                 <img src="/images/dark/left_tree.png" alt="Left Tree Image" className="w-[100%] h-full object-cover hidden dark:block " />
@@ -50,21 +52,21 @@ export default function ImageBanner({
               <Heading
                 text={heading}
                 fontFamily="font-luckiest"
-                fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                 fontWeight="font-bold"
-                textAlign="text-center sm:text-center md:text-left lg:text-left xl:text-left"
+                textAlign="text-center sm:text-center md:text-center lg:text-left xl:text-left"
                 letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
                 textColor="text-[#8F0E00] dark:text-[#FFCE49]"
-                customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-20"
+                customStyle="py-2 sm:py-2 md:py-6 lg:py-4 xl:py-4 px-4 sm:px-10 md:px-20 lg:px-20"
               />
-              <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-lg xl:text-lg font-medium px-8 sm:px-10 md:px-20 lg:px-20 xl:px-20 text-justify sm:text-justify md:text-justify lg:text-left xl:text-left dark:text-white">
+              <div className="flex flex-row flex-wrap items-center sm:items-center md:items-center lg:items-start xl:items-start justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start text-base sm:text-base md:text-lg lg:text-lg xl:text-lg font-medium px-8 sm:px-10 md:px-20 lg:px-20 xl:px-20 text-justify sm:text-justify md:text-justify lg:text-left xl:text-left dark:text-white">
                 {subHeading &&
                   <Heading
                     text={subHeading}
                     fontFamily="font-luckiest"
                     fontSize="text-xl sm:text-2xl md:text-3xl lg:text-3xl"
                     fontWeight="font-bold"
-                    textAlign="text-center sm:text-center md:text-left lg:text-left xl:text-left"
+                    textAlign="text-center sm:text-center md:text-center lg:text-left xl:text-left"
                     letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
                     textColor="text-[#8F0E00] dark:text-[#FFCE49]"
                     customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 "
@@ -74,8 +76,8 @@ export default function ImageBanner({
                 <p className="py-2 sm:py-2 md:py-2 lg:py-2 xl:py-2 dark:text-white">{description}</p>
 
                 {dropdown &&
-                  <select name="">
-                    <option value="">Select Country</option>
+                  <select name="" className="bg-white text-black px-4 py-2 rounded-lg w-1/2">
+                    <option value="">Select Grade Level</option>
                     {
                       dropdown.map((item, index) =>
                         <option key={index} value={item.value}>{item.name}</option>
@@ -84,19 +86,21 @@ export default function ImageBanner({
                   </select>
                 }
               </div>
-              <div className="flex flex-col md:flex-row items-center justify-start mt-8 md:mt-8">
+              <div className="flex flex-col md:flex-row items-center justify-start mt-8 md:mt-8 px-20">
                 <ImageButtons
-                  text="Teachers, sign up now"
+                  text={buttontext}
                   source="/images/Group.png"
                   alt="Teachers, sign up now Background"
                   className=' px-10 py-4 sm:py-4 md:px-8 md:py-6 lg:py-8 xl:py-10'
+                  isLink={true}
+                  link={link}
                 />
               </div>
             </div>
             <div className="w-full sm:w-full md:w-full lg:w-5/12 xl:w-5/12 flex flex-col items-center justify-center  text-xl px-4 sm:px-10 md:px-20 lg:px-0 mt-12 md:mt-12 lg:mt-0 xl:mt-0 ml-0 sm:ml-0 md:ml-0 lg:ml-18 xl:ml-20">
               {
                 imgsrc &&
-                <img src={imgsrc} alt="image" className="w-auto sm:w-auto md:w-full lg:w-full xl:w-full h-full" />
+                <img src={imgsrc} alt="image" className="w-auto sm:w-auto md:w-full lg:w-full xl:w-[90%] h-full" />
               }
               {
                 vidSrc &&

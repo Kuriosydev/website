@@ -17,14 +17,14 @@ const menu = [
         dropdown: true,
         childrens: [
             {
-                href: "#",
+                href: "/educators/curriculum/maths",
                 name: "Math",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
                 childrens: []
             },
             {
-                href: "#",
+                href: "/educators/curriculum/english",
                 name: "English Language Arts",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
@@ -39,14 +39,14 @@ const menu = [
         dropdown: true,
         childrens: [
             {
-                href: "#",
+                href: "/educators/resources/dashboard",
                 name: "Dashboard",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
                 childrens: []
             },
             {
-                href: "#",
+                href: "/educators/resources/assesment",
                 name: "Assesment",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,

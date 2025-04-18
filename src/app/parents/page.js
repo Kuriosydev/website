@@ -8,6 +8,51 @@ import ResourceBlog from "@/components/pages/parents/ResourceBlog";
 import Statictics from "@/components/pages/parents/Statictics";
 import ParentsLayout from "./ParentsLayout";
 
+const whyJoin = [
+    { text: "Be the first to try new levels." },
+    { text: "Unlock members-only outfits and power-ups." },
+    { text: "Get behind-the-scenes insights." },
+    { text: "Participate in exclusive contests and challenges" },
+];
+
+const menu = [
+    {
+        href: "/parents/overview",
+        name: "Overview",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
+    },
+    {
+        href: "#",
+        name: "Membership",
+        styles: "mr-5 md:mr-8",
+        dropdown: true,
+        childrens: []
+    },
+    {
+        href: "/parents/research",
+        name: "Research",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
+    },
+    {
+        href: "#",
+        name: "Resources",
+        styles: "mr-5 md:mr-8",
+        dropdown: true,
+        childrens: []
+    },
+    {
+        href: "/support",
+        name: "Support",
+        styles: "mr-5 md:mr-8",
+        dropdown: false,
+        childrens: []
+    },
+];
+
 
 const resourceCards = [
     {
@@ -26,7 +71,6 @@ const resourceCards = [
         link: "#",
     }
 ];
-
 
 
 const cards = [

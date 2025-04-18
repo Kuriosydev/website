@@ -9,7 +9,6 @@ export default function TestimonialCards({
                         md:w-3/12 md:px-8 md:py-8 
                         lg:w-80 lg:px-10 lg:py-10 
                         xl:w-96 xl:px-12 xl:py-12">
-
             <div className="text-left font-medium text-base mt-4 
                             sm:text-base sm:mt-4 
                             md:text-lg md:mt-6 

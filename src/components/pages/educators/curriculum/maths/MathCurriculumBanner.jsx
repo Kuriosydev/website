@@ -2,20 +2,36 @@ import ImageBanner from "@/components/banners/ImageBanner";
 
 const countryDropdown = [
     {
-        name: "India",
-        value: "IND"
+        name: "1",
+        value: "1"
     },
     {
-        name: "Australia",
-        value: "AUS"
+        name: "2",
+        value: "2"
     },
     {
-        name: "England",
-        value: "ENG"
+        name: "3",
+        value: "3"
     },
     {
-        name: "Srilanka",
-        value: "SL"
+        name: "4",
+        value: "4"
+    },
+    {
+        name: "5",
+        value: "5"
+    },
+    {
+        name: "6",
+        value: "6"
+    },
+    {
+        name: "7",
+        value: "7"
+    },
+    {
+        name: "8",
+        value: "8"
     }
 ]
 
@@ -24,10 +40,12 @@ export default function MathCurriculumBanner() {
         <ImageBanner
             col={2}
             bgColor={"bg-[#FFCE49]"}
-            heading="Math Skills & Curriculum Standards"
-            subHeading="Prodigy Math Game features more than 1,500 mathematical skills, aligned with curriculum standards for grades 1 to 8."
+            heading="Aligned Math Skills"
+            subHeading="Fully aligned curriculum standards"
             imgsrc="/images/maths_curr_banner.png"
             dropdown={countryDropdown}
+            buttontext="View Curriculum"
+            link="/educators/curriculum"
         />
     )
 }

@@ -11,21 +11,21 @@ const menu = [
         childrens: []
     },
     {
-        href: "#",
+        href: "/parents/membership",
         name: "Membership",
         styles: "mr-5 md:mr-8",
         dropdown: true,
         childrens: []
     },
     {
-        href: "#",
+        href: "/parents/research",
         name: "Research",
         styles: "mr-5 md:mr-8",
         dropdown: false,
         childrens: []
     },
     {
-        href: "#",
+        href: "/parents/resources",
         name: "Resources",
         styles: "mr-5 md:mr-8",
         dropdown: true,

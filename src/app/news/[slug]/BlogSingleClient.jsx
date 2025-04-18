@@ -75,7 +75,7 @@ export default function BlogSingleClient({ id }) {
                                 }
 
                                 {blog?.content && blog?.content?.map((row, index) =>
-                                    <div className="w-full font-normal text-justify text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl py-4">
+                                    <div key={index} className="w-full font-normal text-justify text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl py-4">
                                         <Heading
                                             text={row?.heading}
                                             fontFamily="font-luckiest"

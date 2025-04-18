@@ -1,4 +1,3 @@
-
 export default function StoreButton() {
     return (
         <div className="flex flex-col items-center justify-center my-4">

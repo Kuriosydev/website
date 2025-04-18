@@ -9,6 +9,8 @@ export default function Banner() {
             description="Welcome to Kurixel where imagination, exploration, and education collide! We transform traditional learning into action-packed adventures kids love. Designed for Grades 1-8 to help learners build real skills while having real fun. No boring drills. No pressure. Just pure discovery.
                   Play Anywhere. Level Up Every Day."
             vidSrc="/videos/news_banner_vid_2.mp4"
+            buttontext="Teachers, sign up now"
+            link="#"
         />
 
     )
