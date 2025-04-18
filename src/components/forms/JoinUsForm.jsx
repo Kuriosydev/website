@@ -35,6 +35,7 @@ export default function JoinUsForm() {
         onSubmit: async (values) => {
             try {
                 const response = await emailMutation.mutateAsync(values);
+                formik.resetForm();
                 setMessage(response);
             } catch (error) {
                 console.error("Error sending email:", error);
