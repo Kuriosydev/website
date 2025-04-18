@@ -39,8 +39,10 @@ export default function ImageButtons({
 
     const baseClasses = `relative inline-flex items-center justify-center border-none rounded-md overflow-hidden ${className} cursor-pointer`;
 
-    const Wrapper = isLink ? Link : 'button';
-    const wrapperProps = isLink
+    const isValidLink = isLink && typeof link === "string";
+
+    const Wrapper = isValidLink ? Link : 'button';
+    const wrapperProps = isValidLink
         ? {
             href: link,
             role: "button",
@@ -48,17 +50,12 @@ export default function ImageButtons({
         }
         : {
             onClick,
-            type: "button",
+            type: isSubmit ? "submit" : "button",
             "aria-label": alt || text,
         };
 
     return (
-        <Wrapper
-            {...wrapperProps}
-            className={baseClasses}
-            {...isSubmit && { type: "submit" }}
-        >
-            {/* Image Background (Fully Responsive with Aspect Ratio) */}
+        <Wrapper {...wrapperProps} className={baseClasses}>
             <div className="absolute inset-0 z-0">
                 <Image
                     src={source}
@@ -68,11 +65,10 @@ export default function ImageButtons({
                     priority
                 />
             </div>
-
-            {/* Content Overlay */}
-            <div className="relative z-10  px-4 py-2 rounded-md  items-center">
+            <div className="relative z-10 px-4 py-2 rounded-md items-center">
                 {content}
             </div>
         </Wrapper>
     );
+
 }
