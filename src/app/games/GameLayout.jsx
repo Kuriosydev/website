@@ -18,7 +18,7 @@ const menu = [
         childrens: [
             {
                 href: "/games",
-                name: "Maths",
+                name: "Math",
                 styles: "mr-5 md:mr-12",
                 dropdown: false,
                 childrens: []
