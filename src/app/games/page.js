@@ -29,27 +29,15 @@ const resourceCards = [
 
 
 
-
 const cards = [
+
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Parent portal",
-        description: "See instant data on your child's progress, all in one place.",
+        heading: "Earn Epic Rewards",
     },
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Monthly report card",
-        description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Curriculum Progress report",
-        description: "Find out which grade-level math skills your child has mastered from their curriculum.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "More powerful parent tools",
-        description: "Members get even more ways to support learning. Set Goals for your child, send in-game Cheers, print custom Practice Sheets and more!",
+        heading: "Team Up, and Play",
     }
 ];
 
