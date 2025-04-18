@@ -8,7 +8,7 @@ export default function OneClickLogin() {
                     <Heading
                         text="Seamless Login"
                         fontFamily="font-luckiest"
-                        fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                        fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                         fontWeight="font-bold"
                         textAlign="text-center sm:text-center md:text-center lg:text-center xl:text-center"
                         letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"

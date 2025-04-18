@@ -36,12 +36,12 @@ const testimonials = [
 export default function Assessments() {
   const cards = [
     {
-      imgSrc: "/images/Ellipse.png",
+      imgSrc: "/images/circular_assessment.jpg",
       heading: "Learning That Feels Like Play",
       description: "Say goodbye to worksheets that get tossed aside. Kurixel turns skill-building into epic quests, where students engage deeply without even realizing they're practicing.",
     },
     {
-      imgSrc: "/images/Ellipse.png",
+      imgSrc: "/images/circular_assessment2.jpg",
       heading: "Aligned With What You Already Teach",
       description: "Every learning moment is thoughtfully designed to match your curriculum goals, so you can reinforce key reading and language skills while students explore and create.",
     },

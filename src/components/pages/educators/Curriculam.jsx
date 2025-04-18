@@ -45,7 +45,7 @@ export default function Curriculam() {
                         <Heading
                             text="Built for Classrooms. Backed by Curriculum."
                             fontFamily="font-luckiest"
-                            fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                            fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                             fontWeight="font-bold"
                             textAlign="text-left sm:text-left md:text-left lg:text-left xl:text-left"
                             letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
@@ -65,7 +65,7 @@ export default function Curriculam() {
                     <Heading
                         text="Your Teacher Dashboard, Supercharged"
                         fontFamily="font-luckiest"
-                        fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                        fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                         fontWeight="font-bold"
                         textAlign="text-left sm:text-left md:text-left lg:text-left xl:text-left"
                         letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"

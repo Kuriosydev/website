@@ -84,7 +84,7 @@ const faqs = [
     },
     {
         question: "Does the learning get more challenging over time?",
-        answer: "Yep! Kurixel's smart progression system tailors the gameplay to your child's level. As players build skills, the game evolves offering new challenges to keep things exciting and just the right amount of tricky."
+        answer: "Yep! Kurixel's smart progression system tailors the gameplay to your child's level. As players build skills, the game evolves offering new challenges to keep things exciting and just the right amount of challanges."
     },
 ];
 

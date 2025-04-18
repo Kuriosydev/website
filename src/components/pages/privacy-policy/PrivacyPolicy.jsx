@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
                     <Heading
                         text="Privacy Policy"
                         fontFamily="font-luckiest"
-                        fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                        fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                         fontWeight="font-bold"
                         textAlign="text-center sm:text-center md:text-center lg:text-center xl:text-center"
                         letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
                     </div>
 
                     <div className="">
-                        At <span className="bg-[#FFCE49] text-black px-1 py-0.5 leading-none inline rounded-sm">Kurixel Inc.</span> (“we,” “us,” or “our”), we are committed to protecting your privacy and handling your personal information responsibly. This Privacy Policy explains how we collect, use, and protect the information of users who interact with our educational games, websites, mobile applications, and related services (collectively, the “Services”). We comply with all applicable privacy regulations, including the General Data Protection Regulation (GDPR), the California Consumer Privacy Act and California Privacy Rights Act (CCPA/CPRA), the Children’s Online Privacy Protection Act (COPPA), and other U.S. state and international laws.
+                        At Kurixel Inc. (“we,” “us,” or “our”), we are committed to protecting your privacy and handling your personal information responsibly. This Privacy Policy explains how we collect, use, and protect the information of users who interact with our educational games, websites, mobile applications, and related services (collectively, the “Services”). We comply with all applicable privacy regulations, including the General Data Protection Regulation (GDPR), the California Consumer Privacy Act and California Privacy Rights Act (CCPA/CPRA), the Children’s Online Privacy Protection Act (COPPA), and other U.S. state and international laws.
                     </div>
 
                     <div className="">
@@ -250,7 +250,7 @@ export default function PrivacyPolicy() {
                                 />
 
                                 <div className="">
-                                    If you have any questions about this Privacy Policy or wish to exercise your rights, please contact <span className="bg-[#FFCE49] text-black px-1 py-0.5 leading-none inline rounded-sm">Kurixel Inc.</span>
+                                    If you have any questions about this Privacy Policy or wish to exercise your rights, please contact <Link href="/contact-us">Kurixel Inc.</Link>
                                 </div>
                             </li>
                             <li className="px-2 py-1 sm:py-1 md:py-3 lg:py-4">

@@ -8,7 +8,7 @@ export default function TermsAndConditions() {
                     <Heading
                         text="Terms and Conditions"
                         fontFamily="font-luckiest"
-                        fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                        fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                         fontWeight="font-bold"
                         textAlign="text-center sm:text-center md:text-center lg:text-center xl:text-center"
                         letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
@@ -34,7 +34,7 @@ export default function TermsAndConditions() {
                     </div>
 
                     <div className="">
-                        Welcome to <span className="bg-[#FFCE49] text-black px-1 py-0.5 leading-none inline rounded-sm">Kurixel Inc.</span>  (“we,” “us,” or “our”). These Terms and Conditions (“Terms”) govern your use of our educational gaming platform, including our website, mobile applications, and related services (collectively, the “Services”). By accessing or using the Service whether as a student, educator, parent, or guardian you agree to be bound by these Terms and by our Privacy Policy. If you do not agree to these Terms, please do not use the Services.
+                        Welcome to (“we,” “us,” or “our”). These Terms and Conditions (“Terms”) govern your use of our educational gaming platform, including our website, mobile applications, and related services (collectively, the “Services”). By accessing or using the Service whether as a student, educator, parent, or guardian you agree to be bound by these Terms and by our Privacy Policy. If you do not agree to these Terms, please do not use the Services.
                     </div>
 
                     <div className="">
@@ -100,7 +100,7 @@ export default function TermsAndConditions() {
                                 />
 
                                 <div className="">
-                                    All content and materials on the Services including but not limited to text, artwork, audio, code, avatars, and game design are owned by <span className="bg-[#FFCE49] text-black px-1 py-0.5 leading-none inline rounded-sm">Kurixel Inc.</span> or its licensors. These materials are protected under intellectual property laws and are provided for personal, non-commercial educational use only. You may not reproduce, republish, transmit, or create derivative works from any part of the Services without written permission.
+                                    All content and materials on the Services including but not limited to text, artwork, audio, code, avatars, and game design are owned by Kurixel Inc. or its licensors. These materials are protected under intellectual property laws and are provided for personal, non-commercial educational use only. You may not reproduce, republish, transmit, or create derivative works from any part of the Services without written permission.
                                 </div>
                             </li>
                             <li className="px-2 py-1 sm:py-1 md:py-3 lg:py-4">
@@ -196,7 +196,7 @@ export default function TermsAndConditions() {
                                 />
 
                                 <div className="">
-                                    To the fullest extent allowed by law, our liability to you is limited to the greater of (a) the total amount you paid us in the last 6 months, or (b) fifty U.S. dollars ($50). You agree to indemnify and hold harmless <span className="bg-[#FFCE49] text-black px-1 py-0.5 leading-none inline rounded-sm">Kurixel Inc.</span>, our affiliates, and employees from any claims or disputes arising from your use of the Services or violation of these Terms.
+                                    To the fullest extent allowed by law, our liability to you is limited to the greater of (a) the total amount you paid us in the last 6 months, or (b) fifty U.S. dollars ($50). You agree to indemnify and hold harmless Kurixel Inc., our affiliates, and employees from any claims or disputes arising from your use of the Services or violation of these Terms.
                                 </div>
                             </li>
                             <li className="px-2 py-1 sm:py-1 md:py-3 lg:py-4">
@@ -244,7 +244,7 @@ export default function TermsAndConditions() {
                                 />
 
                                 <div className="">
-                                    If you have questions or concerns about these Terms, please contact us at <span className="bg-[#FFCE49] text-black px-1 py-0.5 leading-none inline rounded-sm">Kurixel Inc.</span>
+                                    If you have questions or concerns about these Terms, please contact us at <Link href="/contact-us">Kurixel Inc.</Link>
                                 </div>
                             </li>
                         </ol>

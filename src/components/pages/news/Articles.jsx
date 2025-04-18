@@ -56,7 +56,7 @@ export default function Articles() {
                                     slug={blog?.title?.toLowerCase().split(" ").join("-")}
                                     heading={blog?.title}
                                     headingFontFamily="font-luckiest"
-                                    headingFontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                                    headingfontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                                     headingFontWeight="font-normal"
                                     headingTextAlign="text-left"
                                     headingTextColor="text-[#8F0E00] dark:text-[#FFCE49]"

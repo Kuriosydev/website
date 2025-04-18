@@ -58,17 +58,17 @@ const resourceCards = [
     {
         text: "Simple tips to keep learning fun, focused, and stress-free.",
         linkText: "Learn More",
-        link: "#",
+        link: "/news",
     },
     {
         text: "Discover ways to support your child’s growth mindset at home.",
         linkText: "Learn More",
-        link: "#",
+        link: "/news",
     },
     {
         text: "Ways to Celebrate Your Child’s Progress",
         linkText: "Learn More",
-        link: "#",
+        link: "/news",
     }
 ];
 

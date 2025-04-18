@@ -26,7 +26,7 @@ export default function BlogSingleClient({ id }) {
                                 <Heading
                                     text={blog?.title}
                                     fontFamily="font-luckiest"
-                                    fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                                    fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                                     fontWeight="font-normal"
                                     textAlign="text-left"
                                     letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
