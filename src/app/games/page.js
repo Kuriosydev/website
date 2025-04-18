@@ -25,7 +25,7 @@ const menu = [
         childrens: [
             {
                 href: "#",
-                name: "Maths",
+                name: "Math",
                 styles: "mr-5 md:mr-12",
                 dropdown: false,
                 childrens: []
@@ -95,14 +95,10 @@ const faqs = [
 
 
 const cards = [
+
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Parent portal",
-        description: "See instant data on your child's progress, all in one place.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Monthly report card",
+        heading: "Earn Epic Rewards",
         description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
     },
     {
