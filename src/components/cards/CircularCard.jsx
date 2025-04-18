@@ -5,14 +5,17 @@ export default function CircularCard({
     heading,
     description,
     textColor = "text-white ",
-    isRow = false
+    isRow = false,
+    image = true
 }) {
     return isRow
         ? (
             <div className={`flex flex-row w-full h-full items-start justify-between py-6 md:py-auto gap-4 md:gap-4`}>
-                <div className="w-24 h-24 bg-white  dark:bg-black rounded-full flex items-center justify-center">
-                    <img src={imgSrc} alt="Circle image" className="w-full h-full object-contain" />
-                </div>
+                {image &&
+                    <div className="w-24 h-24 bg-white  dark:bg-black rounded-full flex items-center justify-center">
+                        <img src={imgSrc} alt="Circle image" className="w-full h-full object-contain" />
+                    </div>
+                }
                 <div className="w-full h-full flex flex-col items-start justify-start">
                     <Heading
                         text={heading}
@@ -30,9 +33,11 @@ export default function CircularCard({
         )
         : (
             <div className="w-96 h-96 flex flex-col items-center justify-center py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 px-10 gap-4">
-                <div className="w-52 h-52 bg-white rounded-full flex items-center justify-center ">
-                    <img src={imgSrc} alt="Circle image" className="w-full h-full object-cover" />
-                </div>
+                {image &&
+                    <div className="w-52 h-52 bg-white rounded-full flex items-center justify-center ">
+                        <img src={imgSrc} alt="Circle image" className="w-full h-full object-cover" />
+                    </div>
+                }
                 <div className="w-full h-full flex flex-col items-center justify-center">
                     <Heading
                         text={heading}
