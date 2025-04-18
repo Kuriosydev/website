@@ -2,7 +2,7 @@ import TestimonialCards from "@/components/cards/TestimonialCards";
 
 const testimonials = [
     {
-        comment: "We used to struggle through math worksheets—now she logs into Kurixel on her own. It’s made a huge difference.",
+        comment: "We used to struggle through math worksheets. Now she logs into Kurixel on her own.",
         author: "R. Marks",
     },
     {

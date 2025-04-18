@@ -89,7 +89,7 @@ const faqs = [
     },
     {
         question: "Does the learning get more challenging over time?",
-        answer: "Yep! Kurixel's smart progression system tailors the gameplay to your child's level. As players build skills, the game evolves offering new challenges to keep things exciting and just the right amount of tricky."
+        answer: "Yep! Kurixel's smart progression system tailors the gameplay to your child's level. As players build skills, the game evolves offering new challenges to keep things exciting and just the right amount of challenge."
     },
 ];
 
@@ -99,17 +99,17 @@ const cards = [
     {
         imgSrc: "/images/Ellipse.png",
         heading: "Earn Epic Rewards",
-        description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
+        // description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
     },
+    // {
+    //     imgSrc: "/images/Ellipse.png",
+    //     heading: "Curriculum Progress report",
+    //     // description: "Find out which grade-level math skills your child has mastered from their curriculum.",
+    // },
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Curriculum Progress report",
-        description: "Find out which grade-level math skills your child has mastered from their curriculum.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "More powerful parent tools",
-        description: "Members get even more ways to support learning. Set Goals for your child, send in-game Cheers, print custom Practice Sheets and more!",
+        heading: "Team Up, and Play",
+        // description: "Members get even more ways to support learning. Set Goals for your child, send in-game Cheers, print custom Practice Sheets and more!",
     }
 ];
 

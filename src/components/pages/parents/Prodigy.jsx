@@ -13,7 +13,7 @@ const events = [
     {
         imageSrc: '/images/gamplay_screenshot1.png',
         link: '#',
-        title: 'Reading, writing, and world-building—together at last',
+        title: 'Reading, writing, and world-building',
         description: "Students grow their vocabulary while shaping a world that's uniquely their own.",
         buttonText: "Explore English Language Arts",
         buttonLink: "#"
@@ -37,7 +37,7 @@ export default function Prodigy() {
                     />
                 </div>
                 <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center  dark:text-white">
-                    Kurixel blends playful adventures with real learning goals—so kids feel safe, supported, and excited to keep exploring.
+                    Kurixel blends playful adventures with real learning goals so kids feel safe, supported, and excited to keep exploring.
                 </div>
 
                 <div className="flex flex-col items-center justify-center px-10 md:px-20 mt-5">
