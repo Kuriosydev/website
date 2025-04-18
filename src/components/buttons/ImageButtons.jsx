@@ -11,7 +11,7 @@ export default function ImageButtons({
     textSize,
     textColor,
     isLink = false,
-    link,
+    link = "",
     isSubmit = false
 }) {
     const content = (

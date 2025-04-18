@@ -1,20 +1,17 @@
 
-import EducatorTestimonials from "@/components/pages/educators/EducatorTestimonials";
-import EducatorLayout from "../../EducatorLayout";
 import AssesmentBanner from "@/components/pages/educators/resources/dashboard/AssesmentBanner";
 import EngagingBanner from "@/components/pages/educators/resources/dashboard/EngagingBanner";
-import Prodigy from "@/components/pages/educators/resources/dashboard/Prodigy";
-import WhyProdigy from "@/components/pages/educators/resources/dashboard/WhyProdigy";
 import Portal from "@/components/pages/educators/resources/dashboard/Portal";
-import Faq from "@/components/pages/Faq";
-import ParentAccount from "@/components/pages/parents/ParentAccount";
+import WhyProdigy from "@/components/pages/educators/resources/dashboard/WhyProdigy";
 import JoinUs from "@/components/pages/home/JoinUs";
+import ParentAccount from "@/components/pages/parents/ParentAccount";
+import EducatorLayout from "../../EducatorLayout";
 
 const whyJoin = [
   { text: "Be the first to try new levels." },
   { text: "Unlock members-only outfits and power-ups." },
   { text: "Get behind-the-scenes insights." },
-  { text: "Participate in exclusive contests and challenges" },
+  { text: "Participate in exclusive contests and challenges." },
 ];
 
 const faqs = [
@@ -77,14 +74,14 @@ const testimonials = [
 
 const cards = [
   {
-      imgSrc: "/images/Ellipse.png",
-      heading: "Learning That Feels Like Play",
-      description: "Say goodbye to worksheets that get tossed aside. Kurixel turns skill-building into epic quests, where students engage deeply without even realizing they're practicing.",
+    imgSrc: "/images/Ellipse.png",
+    heading: "Learning That Feels Like Play",
+    description: "Say goodbye to worksheets that get tossed aside. Kurixel turns skill-building into epic quests, where students engage deeply without even realizing they're practicing.",
   },
   {
-      imgSrc: "/images/Ellipse.png",
-      heading: "Aligned With What You Already Teach",
-      description: "Every learning moment is thoughtfully designed to match your curriculum goals, so you can reinforce key reading and language skills while students explore and create.",
+    imgSrc: "/images/Ellipse.png",
+    heading: "Aligned With What You Already Teach",
+    description: "Every learning moment is thoughtfully designed to match your curriculum goals, so you can reinforce key reading and language skills while students explore and create.",
   },
 ]
 
@@ -94,9 +91,9 @@ export default function Assessments() {
       <AssesmentBanner />
       <EngagingBanner />
       <ParentAccount
-                heading="Teaching Tools That Work With You"
-                cards={cards}
-            />
+        heading="Teaching Tools That Work With You"
+        cards={cards}
+      />
       <Portal />
       <WhyProdigy />
       <JoinUs

@@ -24,7 +24,7 @@ export default function CircularCard({
                         fontWeight="font-semibold"
                         textAlign="text-left"
                         letterSpacing=""
-                        textColor="text-black dark:text-[#FFCE49]"
+                        textColor={`${textColor} dark:text-[#FFCE49]`}
                         customStyle=""
                     />
                     <p className={`text-gray-400 text-left text-sm font-medium dark:text-white`}>{description}</p>

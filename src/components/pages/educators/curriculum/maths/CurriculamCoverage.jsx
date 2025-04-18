@@ -5,18 +5,18 @@ import Heading from "@/components/texts/Heading";
 const gameFeature2 = [
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Discover a World of Endless Adventures new skills, new quests, nonstop fun",
-        description: "See instant data on your child's progress, all in one place.",
+        heading: "Students",
+        description: "master key math concepts.",
     },
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Monthly report card",
-        description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
+        heading: "Teachers",
+        description: "can track progress and ensure curriculum alignment.",
     },
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Curriculum Progress report",
-        description: "Find out which grade-level math skills your child has mastered from their curriculum.",
+        heading: "Parents",
+        description: "see real growth.",
     },
 ];
 
@@ -35,23 +35,27 @@ export default function CurriculamCoverage() {
                     customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-20"
                 />
                 <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center sm:items-center md:items-center lg:items-start xl:items-start justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
-                    <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2">
+                    <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2  py-4 sm:py-4 md:py-8">
                         <img src="/images/creativeGameplay.png" alt="creative gameplay image" className="w-full h-full object-contain" />
                     </div>
-                    <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2">
+                    <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2  py-4 sm:py-4 md:py-8">
                         {gameFeature2?.map((gameFeature, index) => (
                             <CircularCard key={index} {...gameFeature} textColor="text-black" isRow={true} image={false} />
                         ))}
+
+                        <div className="text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium dark:text-white">
+                            Ready to level up your learning journey?
+                        </div>
+                        <div className="py-4 sm:py-4 md:py-8">
+                            <ImageButtons
+                                text="Create a free account"
+                                source="/images/Group.png"
+                                alt="Teachers, sign up now"
+                                className=" px-10 py-4 sm:py-4 md:px-8 md:py-6 lg:py-8 xl:py-10"
+                                textSize="text-base"
+                            />
+                        </div>
                     </div>
-                </div>
-                <div className="flex flex-row flex-wrap items-center justify-center px-10 md:px-24">
-                    <ImageButtons
-                        text="Teachers, sign up now"
-                        source="/images/Group.png"
-                        alt="Teachers, sign up now"
-                        className=" px-10 py-4 sm:py-4 md:px-8 md:py-6 lg:py-8 xl:py-10"
-                        textSize="text-base"
-                    />
                 </div>
             </div>
         </section>
