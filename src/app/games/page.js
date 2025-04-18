@@ -1,59 +1,12 @@
-import Faq from "@/components/pages/Faq";
 import Banner from "@/components/pages/games/Banner";
 import Dashboard from "@/components/pages/games/Dashboard";
 import GameFeature from "@/components/pages/games/GameFeature";
 import GamePreview from "@/components/pages/games/GamePreview";
 import ProdigyWorld from "@/components/pages/games/ProdigyWorld";
-import JoinUs from "@/components/pages/home/JoinUs";
 import ParentAccount from "@/components/pages/parents/ParentAccount";
 import ResourceBlog from "@/components/pages/parents/ResourceBlog";
-import SecondaryHeader from "@/Layouts/SecondaryHeader";
+import GameLayout from "./GameLayout";
 
-const whyJoin = [
-    { text: "Be the first to try new levels." },
-    { text: "Unlock members-only outfits and power-ups." },
-    { text: "Get behind-the-scenes insights." },
-    { text: "Participate in exclusive contests and challenges." },
-];
-
-const menu = [
-    {
-        href: "#",
-        name: "Subjects",
-        styles: "mr-5 md:mr-12",
-        dropdown: true,
-        childrens: [
-            {
-                href: "#",
-                name: "Maths",
-                styles: "mr-5 md:mr-12",
-                dropdown: false,
-                childrens: []
-            },
-            {
-                href: "#",
-                name: "English Language Arts",
-                styles: "mr-5 md:mr-12",
-                dropdown: false,
-                childrens: []
-            },
-        ]
-    },
-    {
-        href: "#",
-        name: "Memberships",
-        styles: "mr-5 md:mr-12",
-        dropdown: true,
-        childrens: []
-    },
-    {
-        href: "/contact-us",
-        name: "Support",
-        styles: "mr-5 md:mr-12",
-        dropdown: false,
-        childrens: []
-    },
-];
 
 
 const resourceCards = [
@@ -74,6 +27,21 @@ const resourceCards = [
     }
 ];
 
+
+
+const cards = [
+
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "Earn Epic Rewards",
+    },
+    {
+        imgSrc: "/images/Ellipse.png",
+        heading: "Team Up, and Play",
+    }
+];
+
+
 const faqs = [
     {
         question: "What kind of learning does Kurixel follow?",
@@ -93,39 +61,9 @@ const faqs = [
     },
 ];
 
-
-const cards = [
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Parent portal",
-        description: "See instant data on your child's progress, all in one place.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Monthly report card",
-        description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "Curriculum Progress report",
-        description: "Find out which grade-level math skills your child has mastered from their curriculum.",
-    },
-    {
-        imgSrc: "/images/Ellipse.png",
-        heading: "More powerful parent tools",
-        description: "Members get even more ways to support learning. Set Goals for your child, send in-game Cheers, print custom Practice Sheets and more!",
-    }
-];
-
 export default function Games() {
     return (
-        <>
-            <SecondaryHeader
-                pageName="Games"
-                menu={menu}
-                buttonText="Let's Play"
-                buttonStyles="px-6 py-2 md:px-8 md:py-2.5"
-            />
+        <GameLayout faq={true} joinus={true} faqs={faqs}>
             <Banner />
             <GameFeature />
             <GamePreview />
@@ -145,31 +83,6 @@ export default function Games() {
                 bgImgSrc="/images/resource_blog2.png"
                 resourceCards={resourceCards}
             />
-            <Faq
-                bgColor="bg-[#8F0E00] dark:bg-[#212121]"
-                heading="Frequently Asked Questions"
-                headingColor="text-white dark:text-[#FFCE49]"
-                faqs={faqs}
-                buttonText="More FAQ"
-                faqQuestionColor="text-white"
-                faqQuestionFontFamily="font-luckiest"
-                faqQuestionFontSize=" text-3xl"
-                faqQuestionFontWeight="font-normal"
-                faqAnswerFontSize="text-lg"
-                faqAnswerFontWeight="font-medium"
-                faqAnswerColor="text-white"
-                customStyles="pb-12"
-                description="Got questions? We've got answers! Whether you're a parent, a learner, or just curious about what makes Kurixel so magical, explore below to learn more."
-                descriptionClasses="text-white"
-            />
-            <JoinUs
-                heading={"JOIN THE KURIXEL EXPLORERS CLUB"}
-                headingColor={"text-black"}
-                headingStyle={"md:mt-10"}
-                subHeading={"Get insider perks, secret rewards, and early access to new games."}
-                subHeadingStyle={"items-start justify-start mt-4 md:mt-8"}
-                list={whyJoin}
-            />
-        </>
+        </GameLayout>
     )
 }

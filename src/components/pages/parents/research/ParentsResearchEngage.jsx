@@ -1,31 +1,30 @@
-import React from "react";
-import Heading from "@/components/texts/Heading";
 import YellowButton from "@/components/buttons/YellowButton";
+import Heading from "@/components/texts/Heading";
 
 export default function ParentsResearchEngage() {
   return (
-    <section className={`w-full h-auto bg-[#8F0E00] relative overflow-hidden`}>
-      <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
-        <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row flex-wrap items-center justify-center px-4 sm:px-10 md:px-20 lg:px-20">
-          <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 flex flex-row flex-wrap items-center justify-center">
+    <section className="w-full h-auto bg-[#8F0E00] relative overflow-hidden dark:bg-black">
+      <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16">
+        <div className="text-white flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8">
+          <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8 px-10">
             <img
-              src="/images/image 12.png"
-              alt="Kids image"
-              className="w-full h-auto object-cover"
+              src="/images/reserach3.png"
+              alt="creative gameplay image"
+              className="w-full h-full object-cover"
             />
           </div>
-          <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 flex flex-col items-center justify-center px-4 sm:px-10 md:px-20 lg:px-20">
+          <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8 px-10">
             <Heading
               text="Ready for a smarter way to engage students?"
               fontFamily="font-luckiest"
-              fontSize="text-xl sm:text-2xl md:text-3xl lg:text-3xl"
+              fontSize="text-3xl sm:text-3xl md:text-4xl lg:text-5xl"
               fontWeight="font-bold"
-              textAlign="text-center sm:text-center md:text-center lg:text-center xl:text-center"
+              textAlign="text-left"
               letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-              textColor="text-[white]"
-              customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-20"
+              textColor="text-white"
+              customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 "
             />
-            <div className="flex flex-row flex-wrap items-center justify-start gap-10 py-4">
+            <div className="text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-white py-2">
               <YellowButton text="Sign up today!" />
             </div>
           </div>

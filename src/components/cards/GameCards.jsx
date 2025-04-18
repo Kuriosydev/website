@@ -112,7 +112,7 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                         {data.map((item, index) => (
                             <div key={index} className={`max-w-xs md:max-w-sm bg-white border border-gray-100 rounded-lg shadow-xl ${item.className || ''}`}>
                                 <a href={item.link}>
-                                    <img className="rounded-t-lg p-2 w-full h-full object-cover" src={item.imageSrc} alt={`${item.title} image`} />
+                                    <img className="rounded-t-lg p-2 w-full h-full object-contain" src={item.imageSrc} alt={`${item.title} image`} />
                                 </a>
                                 <div className="p-5">
                                     <a href={item.link}>

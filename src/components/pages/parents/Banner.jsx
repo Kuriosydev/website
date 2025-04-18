@@ -7,7 +7,7 @@ export default function Banner() {
                 col={1}
                 bgColor={"bg-[#FFCE49] dark:bg-[#001032]"}
                 description="Cheer your child on as they dive into learning with Kurixel!"
-                heading="When Learning Feels Like Play - Parents Bring the Magic to Life"
+                heading="Parents Bring the Magic to Life"
             />
         </>
     )
