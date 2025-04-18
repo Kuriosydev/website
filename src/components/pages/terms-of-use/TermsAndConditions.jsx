@@ -1,4 +1,5 @@
 import Heading from "@/components/texts/Heading";
+import Link from "next/link";
 
 export default function TermsAndConditions() {
     return (
