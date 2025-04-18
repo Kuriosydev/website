@@ -1,11 +1,8 @@
 import EnglishCurriculumBanner from "@/components/pages/educators/curriculum/english/EnglishCurriculumBanner";
-import EducatorTestimonials from "@/components/pages/educators/EducatorTestimonials";
-import EducatorLayout from "../../EducatorLayout";
-import TeachersAccount from "@/components/pages/educators/curriculum/maths/TeachersAccount";
-import Prodigy from "@/components/pages/educators/curriculum/maths/prodigy";
-import ViewCurriculum from "@/components/pages/educators/curriculum/english/ViewCurriculum";
-import TeacherClassroom from "@/components/pages/educators/curriculum/english/TeacherClassroom";
 import ParentsSupport from "@/components/pages/educators/curriculum/english/ParentsSupport";
+import TeacherClassroom from "@/components/pages/educators/curriculum/english/TeacherClassroom";
+import ViewCurriculum from "@/components/pages/educators/curriculum/english/ViewCurriculum";
+import EducatorLayout from "../../EducatorLayout";
 
 const testimonials = [
     {
@@ -28,12 +25,10 @@ const testimonials = [
 export default function MathCurriculum() {
     return (
         <EducatorLayout joinus={true}>
-            <EnglishCurriculumBanner/>
-            <ViewCurriculum/>
-            <TeacherClassroom/>
-           
-            {/* <EducatorTestimonials heading="Here's what teachers are saying" testimonials={testimonials} /> */}
-            <ParentsSupport/>
+            <EnglishCurriculumBanner />
+            <ViewCurriculum />
+            <TeacherClassroom />
+            <ParentsSupport />
         </EducatorLayout>
     )
 }

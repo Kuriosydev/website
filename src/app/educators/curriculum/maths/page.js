@@ -27,8 +27,8 @@ export default function MathCurriculum() {
     return (
         <EducatorLayout joinus={true}>
             <MathCurriculumBanner />
-            <CurriculamCoverage />
             <ViewCurriculam />
+            <CurriculamCoverage />
             <TeachersAccount />
             <EducatorTestimonials heading="Here's what teachers are saying" testimonials={testimonials} />
         </EducatorLayout>
