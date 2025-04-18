@@ -37,7 +37,7 @@ export default function WhyProdigy() {
                         <Heading
                             text="Unlock Brighter Thinking Through Play"
                             fontFamily="font-luckiest"
-                            fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
+                            fontSize="text-xl sm:text-xl md:text-2xl lg:text-4xl"
                             fontWeight="font-bold"
                             textAlign="text-left"
                             letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"

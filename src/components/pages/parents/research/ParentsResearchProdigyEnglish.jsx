@@ -20,7 +20,7 @@ export default function ParentsResearchProdigyEnglish() {
               fontWeight="font-bold"
               textAlign="text-left"
               letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
-              textColor="text-white"
+              textColor="text-white dark:text-[#FFCE49]"
               customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 "
             />
             <div className="text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-white py-2">
