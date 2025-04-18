@@ -6,7 +6,7 @@ export default function AssesmentBanner() {
       col={2}
       bgColor={"bg-[#FFCE49]"}
       heading="Design lessons your students will love"
-      subHeading="Bring your curriculum to life. Kurixel keeps learning fun for students while giving you built-in grading and real-time performance insights."
+      description="Bring your curriculum to life. Kurixel keeps learning fun for students while giving you built-in grading and real-time performance insights."
       imgsrc="/images/frame (1).png"
       buttons={[
         {

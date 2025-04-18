@@ -8,7 +8,7 @@ const events = [
         title: 'Kurixel Ignites a Love for Learning',
         description: "Students using Kurixel master skills through story-rich adventures that spark curiosity and build confidence.",
         buttonText: "Learn more",
-        buttonLink: "#",
+        buttonLink: "/news",
         isImageButton: false
     },
     {
@@ -17,7 +17,7 @@ const events = [
         title: 'Learning That Sticks—Anywhere, Anytime',
         description: "Kurixel goes where your learners go. Whether in school or at home, kids stay connected to meaningful learning that feels like play",
         buttonText: "Learn more",
-        buttonLink: "#",
+        buttonLink: "/news",
         isImageButton: false
     },
 ];
@@ -37,7 +37,7 @@ export default function WhyProdigy() {
                         <Heading
                             text="Unlock Brighter Thinking Through Play"
                             fontFamily="font-luckiest"
-                            fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
+                            fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                             fontWeight="font-bold"
                             textAlign="text-left"
                             letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
