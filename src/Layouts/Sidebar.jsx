@@ -19,14 +19,14 @@ const educatorSubMenu = [
         dropdown: true,
         childrens: [
             {
-                href: "#",
+                href: "/educators/curriculum/maths",
                 name: "Math",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
                 childrens: []
             },
             {
-                href: "#",
+                href: "/educators/curriculum/english",
                 name: "English Language Arts",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
@@ -41,15 +41,15 @@ const educatorSubMenu = [
         dropdown: true,
         childrens: [
             {
-                href: "#",
+                href: "/educators/resources/dashboard",
                 name: "Dashboard",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
                 childrens: []
             },
             {
-                href: "#",
-                name: "Assesment",
+                href: "/educators/resources/assesment",
+                name: "Assessments",
                 styles: "mr-5 md:mr-8",
                 dropdown: false,
                 childrens: []
@@ -73,14 +73,14 @@ const gameSubMenu = [
         dropdown: true,
         childrens: [
             {
-                href: "#",
-                name: "Maths",
+                href: "/games",
+                name: "Math",
                 styles: "mr-5 md:mr-12",
                 dropdown: false,
                 childrens: []
             },
             {
-                href: "#",
+                href: "/games/subjects/english",
                 name: "English Language Arts",
                 styles: "mr-5 md:mr-12",
                 dropdown: false,
@@ -89,7 +89,7 @@ const gameSubMenu = [
         ]
     },
     {
-        href: "#",
+        href: "/games/membership",
         name: "Memberships",
         styles: "mr-5 md:mr-12",
         dropdown: true,
@@ -113,21 +113,21 @@ const parentSubMenu = [
         childrens: []
     },
     {
-        href: "#",
+        href: "/parents/membership",
         name: "Membership",
         styles: "mr-5 md:mr-8",
         dropdown: true,
         childrens: []
     },
     {
-        href: "#",
+        href: "/parents/research",
         name: "Research",
         styles: "mr-5 md:mr-8",
         dropdown: false,
         childrens: []
     },
     {
-        href: "#",
+        href: "/parents/resources",
         name: "Resources",
         styles: "mr-5 md:mr-8",
         dropdown: true,

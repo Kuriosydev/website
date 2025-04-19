@@ -7,16 +7,16 @@ const events = [
         link: '#',
         title: 'Play. Battle. Learn. Repeat.',
         description: 'Players conquer math challenges, earn rewards, and grow with every quest they complete.',
-        buttonText: "Explore Math",
-        buttonLink: "#"
+        buttonText: "Explore More",
+        buttonLink: "/games"
     },
     {
         imageSrc: '/images/gamplay_screenshot1.png',
         link: '#',
         title: 'Reading, writing, and world-building',
         description: "Students grow their vocabulary while shaping a world that's uniquely their own.",
-        buttonText: "Explore English Language Arts",
-        buttonLink: "#"
+        buttonText: "Explore More",
+        buttonLink: "/games/subjects/english"
     },
 ];
 

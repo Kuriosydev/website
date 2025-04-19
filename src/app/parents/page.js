@@ -75,17 +75,17 @@ const resourceCards = [
 
 const cards = [
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/parentDashboard.jpg",
         heading: "Parent Dashboard",
         description: "Real-time insights, right at your fingertips",
     },
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/monthlyReport.jpg",
         heading: "Monthly Report",
         description: "A clear snapshot, delivered to your inbox",
     },
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/progressTracking.jpg",
         heading: "Progress Tracking",
         description: "Know exactly where they stand",
     },

@@ -33,7 +33,7 @@ export default function ParentAccount({
                 </div>
 
                 {buttonText &&
-                    <div className="w-full flex flex-col items-center justify-center mt-20">
+                    <div className="w-full flex flex-col items-center justify-center mt-8">
                         <YellowButton text={buttonText} />
                     </div>
                 }

@@ -9,7 +9,7 @@ const events = [
         title: 'Where Curiosity Becomes Adventure',
         description: "Every quest strengthens critical thinking, problem-solving, and academic skills without losing the magic of imagination.",
         buttonText: "See the research",
-        buttonLink: "#",
+        buttonLink: "/parents/research",
         isImageButton: false
     },
     {
@@ -18,7 +18,7 @@ const events = [
         title: 'Designed for Students. Built for Educators. Backed by Schools.',
         description: "Kurixel empowers the whole learning ecosystem with an engaging platform that sparks lifelong curiosity. ",
         buttonText: "See the research",
-        buttonLink: "#",
+        buttonLink: "/parents/research",
         isImageButton: false
     },
 ];

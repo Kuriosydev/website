@@ -54,7 +54,7 @@ export default function ImageBanner({
               <Heading
                 text={heading}
                 fontFamily="font-luckiest"
-                fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
+                fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-5xl"
                 fontWeight="font-bold"
                 textAlign="text-center sm:text-center md:text-center lg:text-left xl:text-left"
                 letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"

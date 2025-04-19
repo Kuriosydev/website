@@ -6,7 +6,7 @@ export default function EnglishCurriculumBanner() {
       col={2}
       bgColor={"bg-[#FFCE49]"}
       heading="Kurixel Language Arts – Aligned. Engaging. Always Growing."
-      subHeading="Kurixel’s Language Arts world is packed with interactive challenges that build reading, writing, and grammar skills"
+      description="Kurixel’s Language Arts world is packed with interactive challenges that build reading, writing, and grammar skills"
       imgsrc="/images/image 30.png"
       buttons={[
         {

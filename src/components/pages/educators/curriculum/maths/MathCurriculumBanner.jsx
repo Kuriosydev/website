@@ -41,7 +41,7 @@ export default function MathCurriculumBanner() {
             col={2}
             bgColor={"bg-[#FFCE49]"}
             heading="Aligned Math Skills"
-            subHeading="Fully aligned curriculum standards"
+            description="Fully aligned curriculum standards"
             imgsrc="/images/maths_curr_banner.png"
             dropdown={countryDropdown}
             buttontext="View Curriculum"

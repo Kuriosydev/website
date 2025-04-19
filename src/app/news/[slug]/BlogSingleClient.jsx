@@ -94,7 +94,7 @@ export default function BlogSingleClient({ id }) {
                                                         ?
                                                         <ul className="px-8 list-disc marker:text-black dark:marker:text-white">
                                                             {paragraph?.map((item, index) =>
-                                                                <li className="py-2 marker:text-black dark:marker:text-white">{item}</li>
+                                                                <li key={index} className="py-2 marker:text-black dark:marker:text-white">{item}</li>
                                                             )}
                                                         </ul>
                                                         : <p>{paragraph}</p>

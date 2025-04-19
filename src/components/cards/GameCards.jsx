@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ImageButtons from "../buttons/ImageButtons";
 import Heading from "../texts/Heading";
 import VideoPreview from "../videos/VideoPreview";
@@ -14,7 +15,7 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                             <div key={index} className="max-w-xs bg-white border border-gray-100 rounded-lg shadow-xl dark:border-transparent">
                                 <img className="rounded-t-lg p-2" src={item.imageSrc} alt={item.title} />
                                 <div className="p-5">
-                                    <h5 className="mb-2 text-xl font-bold tracking-tight">{item.title}</h5>
+                                    <h5 className="mb-2 text-lg font-bold tracking-tight">{item.title}</h5>
                                     <p className="mb-3 font-medium text-lg">{item.description}</p>
                                     {item.buttonLink && (
                                         item.isImageButton
@@ -53,20 +54,34 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                 );
             case 3:
                 return (
-                    <div className="flex gap-4">
+                    <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row items-start justify-center mx-auto gap-8">
                         {data.map((item, index) => (
-                            <div key={index} className="max-w-sm bg-white border border-gray-100 rounded-lg shadow-xl">
-                                <div className="p-5">
-                                    <h5 className="mb-2 text-xl font-bold tracking-tight">{item.title}</h5>
-                                    <p className="mb-3 font-medium text-lg">{item.description}</p>
-                                    {item.buttonLink && (
-                                        <div className="flex justify-end">
-                                            <a href={item.buttonLink} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">
-                                                {item.buttonText}
-                                                {/* You can add an icon here if needed */}
-                                            </a>
-                                        </div>
-                                    )}
+                            <div key={index} className="h-full bg-transparent flex flex-col rounded-4xl text-xl items-center justify-center">
+                                <img className="rounded-4xl md:w-52 lg:w-80 md:h-52 lg:h-80 object-cover" src={item.imageSrc} alt={item.title} />
+                                <div className="p-5 flex-grow">
+                                    <Heading
+                                        text={item.title}
+                                        fontFamily=""
+                                        fontSize="text-xl md:text-xl lg:text-2xl xl:text-2xl"
+                                        fontWeight="font-semibold"
+                                        textAlign="text-left"
+                                        letterSpacing="tracking-wide"
+                                        textColor="text-black dark:text-white"
+                                        customStyle="mb-2 items-center justify-center "
+                                    />
+                                    <p className="hidden mb-3 font-medium text-left text-lg dark:text-white">{item.description}</p>
+                                    <Link href={item.link}>
+                                        <Heading
+                                            text="View More"
+                                            fontFamily="font-luckiest"
+                                            fontSize="text-xl"
+                                            fontWeight="font-normal"
+                                            textAlign="text-left"
+                                            letterSpacing="tracking-tight"
+                                            textColor="text-black dark:text-white"
+                                            customStyle="mb-2 "
+                                        />
+                                    </Link>
                                 </div>
                             </div>
                         ))}
@@ -82,7 +97,7 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                                     <Heading
                                         text={item.title}
                                         fontFamily="font-luckiest"
-                                        fontSize="text-2xl md:text-5xl"
+                                        fontSize="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl"
                                         fontWeight="font-normal"
                                         textAlign="text-left"
                                         letterSpacing="tracking-tight"

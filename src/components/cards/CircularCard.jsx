@@ -32,7 +32,7 @@ export default function CircularCard({
             </div>
         )
         : (
-            <div className="w-96 h-96 flex flex-col items-center justify-center py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 px-10 gap-4">
+            <div className="w-96 h-96 flex flex-col items-center justify-center py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 gap-4">
                 {image &&
                     <div className="w-52 h-52 bg-white rounded-full flex items-center justify-center ">
                         <img src={imgSrc} alt="Circle image" className="w-52 h-52 object-cover rounded-full" />
@@ -50,7 +50,7 @@ export default function CircularCard({
                         customStyle="px-8 sm:px-10 md:px-0 lg:px-0"
                     />
                 </div>
-                <div className="w-full h-full flex flex-col items-start justify-start">
+                <div className="w-full h-full flex flex-col items-center justify-center">
                     <p className={`${textColor} text-center sm:text-center md:text-left lg:text-left xl:text-left text-base dark:text-white`}>{description}</p>
                 </div>
             </div>
