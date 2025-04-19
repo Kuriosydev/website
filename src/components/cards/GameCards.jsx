@@ -15,7 +15,7 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                             <div key={index} className="max-w-xs bg-white border border-gray-100 rounded-lg shadow-xl dark:border-transparent">
                                 <img className="rounded-t-lg p-2" src={item.imageSrc} alt={item.title} />
                                 <div className="p-5">
-                                    <h5 className="mb-2 text-xl font-bold tracking-tight">{item.title}</h5>
+                                    <h5 className="mb-2 text-lg font-bold tracking-tight">{item.title}</h5>
                                     <p className="mb-3 font-medium text-lg">{item.description}</p>
                                     {item.buttonLink && (
                                         item.isImageButton
@@ -97,7 +97,7 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                                     <Heading
                                         text={item.title}
                                         fontFamily="font-luckiest"
-                                        fontSize="text-2xl md:text-5xl"
+                                        fontSize="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl"
                                         fontWeight="font-normal"
                                         textAlign="text-left"
                                         letterSpacing="tracking-tight"

@@ -1,6 +1,7 @@
 import YellowButton from "@/components/buttons/YellowButton";
 import ResourceCard from "@/components/cards/ResourceCard";
 import Heading from "@/components/texts/Heading";
+import Link from "next/link";
 
 const engagingAssessments1 = [
     {
@@ -56,27 +57,27 @@ export default function Curriculam() {
                             Integrates seamlessly with Clever and Google Classroom making sign-ins a breeze for students and teachers.
                         </div>
                         <div className="flex flex-row flex-wrap items-center justify-start gap-10 py-4">
-                            <YellowButton text="Explore Kurixel's Math Pathways" />
-                            <YellowButton text="Explore Kurixel's Language Journeys" />
+                            <Link href="/educators/curriculum/maths" className="cursor-pointer"><YellowButton text="Explore Kurixel's Math Pathways" /></Link>
+                            <Link href="/educators/curriculum/english" className="cursor-pointer"><YellowButton text="Explore Kurixel's Language Journeys" /></Link>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row flex-wrap items-center justify-center px-10 py-10 md:px-10 md:py-20 mt-10 md:mt-0">
+                <div className="flex flex-row flex-wrap items-center justify-center px-10 py-10 md:px-10 md:py-8 mt-10 md:mt-0">
                     <Heading
                         text="Your Teacher Dashboard, Supercharged"
                         fontFamily="font-luckiest"
                         fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                         fontWeight="font-bold"
-                        textAlign="text-left sm:text-left md:text-left lg:text-left xl:text-left"
+                        textAlign="text-center"
                         letterSpacing="tracking-wide sm:tracking-wide md:tracking-wide lg:tracking-wider"
                         textColor="text-white dark:text-[#FFCE49]"
-                        customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-0 "
+                        customStyle="py-12 sm:py-12 md:py-16 lg:py-20 xl:py-20 px-0 "
                     />
-                    <div className="text-center font-medium text-lg py-4 md:py-4 dark:text-white">
+                    <div className="text-center font-medium text-lg  dark:text-white">
                         Unleash the power of Kurixel's educator tools to personalize learning and boost classroom outcomes.
                     </div>
                 </div>
-                <div className="w-full py-10 px-2 sm:px-2 md:px-4 lg:px-8 xl:px-16">
+                <div className="w-full px-2 sm:px-2 md:px-4 lg:px-8 xl:px-16">
                     <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row flex-wrap items-start justify-start">
                         <Heading
                             text="Craft interactive assessments"
@@ -100,7 +101,7 @@ export default function Curriculam() {
                         </div>
                     </div>
                     <div className="flex justify-end w-auto">
-                        <a href="#" className="flex items-center space-x-2 py-4 md:py-4 px-8 sm:px-8 md:px-10 lg:px-20 xl:px-20">
+                        <a href="/educators/resources/assesment" className="flex items-center space-x-2 py-4 md:py-4 px-8 sm:px-8 md:px-10 lg:px-20 xl:px-20">
                             <span>
                                 <Heading
                                     text="See More"
@@ -116,7 +117,7 @@ export default function Curriculam() {
                         </a>
                     </div>
                 </div>
-                <div className="w-full py-10 px-2 sm:px-2 md:px-4 lg:px-8 xl:px-16">
+                <div className="w-full px-2 sm:px-2 md:px-4 lg:px-8 xl:px-16">
                     <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row flex-wrap items-start justify-start">
                         <Heading
                             text="Smart Reporting to Uncover Hidden Learning Gaps"
@@ -140,7 +141,7 @@ export default function Curriculam() {
                         </div>
                     </div>
                     <div className="flex justify-end w-auto">
-                        <a href="#" className="flex items-center space-x-2 py-4 md:py-4 px-8 sm:px-8 md:px-10 lg:px-20 xl:px-20">
+                        <a href="/contact-us" className="flex items-center space-x-2 py-4 md:py-4 px-8 sm:px-8 md:px-10 lg:px-20 xl:px-20">
                             <span>
                                 <Heading
                                     text="See More"
