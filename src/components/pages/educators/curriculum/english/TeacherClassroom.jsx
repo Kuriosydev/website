@@ -5,7 +5,7 @@ import Heading from "@/components/texts/Heading";
 const gameFeature2 = [
   {
     imgSrc: "/images/Ellipse.png",
-    heading: "Teachers — Align Prodigy to your classroom lessons",
+    heading: "Connect your roster in seconds",
     description: "",
   },
   {

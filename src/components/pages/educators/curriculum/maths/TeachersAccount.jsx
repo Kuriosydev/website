@@ -15,9 +15,9 @@ export default function TeachersAccount() {
           textColor="text-[#8F0E00] dark:text-[#FFCE49]"
           customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-20"
         />
-        <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center sm:items-center md:items-center lg:items-start xl:items-start justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
+        <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center sm:items-center md:items-center lg:items-center xl:items-center justify-center sm:justify-center md:justify-center lg:justify-center xl:justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8">
-            <img src="/images/image 20.png" alt="creative gameplay image" className="w-full h-full object-contain" />
+            <img src="/images/image20.png" alt="creative gameplay image" className="w-3/4 h-3/4 object-contain" />
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8">
             <div className="text-left text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium dark:text-white">

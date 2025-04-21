@@ -1,9 +1,13 @@
+"use client";
+
 import Accordian from "@/components/accordian/Accordian";
 import Heading from "@/components/texts/Heading";
+import { useEffect, useState } from "react";
 
 export default function ViewCurriculum() {
   const grades = Array.from({ length: 8 }, (_, i) => i + 1); // Grade 1 to 6
   const subjects = ["Language", "Reading", "Writing"];
+  const [gradeSkills, setGradeSkills] = useState(null);
 
   const dropdown = grades.flatMap((grade) =>
     subjects.map((subject) => `Grade ${grade} ${subject}`)
@@ -18,7 +22,15 @@ export default function ViewCurriculum() {
     })
   ))
 
+  useEffect(() => {
+    console.log("gradeSkills: ", gradeSkills);
+  }, [gradeSkills]);
 
+  const handleOnChange = (e) => {
+    console.log("on change: ", e.target.value);
+    const val = e.target.value;
+    setGradeSkills(`${val} Skills`)
+  }
 
   return (
     <section className="w-full h-auto bg-white relative overflow-hidden dark:bg-[#212121]">
@@ -35,7 +47,7 @@ export default function ViewCurriculum() {
         />
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8">
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8">
-            <select className="bg-white text-black px-4 py-2 rounded-lg w-1/2 border-2 border-black">
+            <select onChange={handleOnChange} className="bg-white text-black px-4 py-2 rounded-lg w-1/2 border-2 border-black">
               <option value="">Select Grade Level</option>
               {dropdown.map((item, index) => (
                 <option key={index} value={item}>
@@ -46,11 +58,14 @@ export default function ViewCurriculum() {
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8">
             <img
-              src="/images/image 31.png"
+              src="/images/image31.png"
               alt="creative gameplay image"
-              className="w-full h-full object-contain"
+              className="w-3/4 h-3/4 object-contain"
             />
           </div>
+        </div>
+        <div className="flex flex-col text-lg sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start justify-start gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8">
+          {gradeSkills}
         </div>
         <div className="hidden flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8">
           <Accordian

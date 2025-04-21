@@ -35,7 +35,7 @@ export default function Articles() {
         <section className={`w-full h-auto bg-white relative overflow-hidden dark:bg-[#212121]`}>
             <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 gap-4">
                 <div className="flex flex-row flex-wrap items-start justify-between px-4 sm:px-4 md:px-4 lg:px-10 xl:px-10">
-                    <div className="w-2/12 pr-2 md:px-6">
+                    <div className="hidden w-2/12 pr-2 md:px-6">
                         <h3 className="font-bold text-xl md:text-3xl text-[#98A2B3] text-left md:text-right">Share</h3>
                         <div className="flex flex-col gap-8 py-4 items-end">
                             <SocialIcons socialName="facebook" socialLink="#" color="[#98A2B3]" borderColor="white" height="10" width="10" fontSize="3xl" />
@@ -43,7 +43,7 @@ export default function Articles() {
                             <SocialIcons socialName="pinterest" socialLink="#" color="[#98A2B3]" borderColor="white" height="10" width="10" fontSize="3xl" />
                         </div>
                     </div>
-                    <div className="w-10/12 text-left border-l-4 border-[#98A2B3] pl-7 pr-8 md:pl-14 md:pr-16">
+                    <div className="w-full text-left pl-7 pr-8 md:pl-14 md:pr-16">
                         {blogs?.map((blog, index) => {
                             let blogAuthor = {}
                             blogAuthor.img = blog?.authorImage

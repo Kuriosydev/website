@@ -69,7 +69,7 @@ export default function GameCards({ type, data, customDivClass = "flex flex-wrap
                                         textColor="text-black dark:text-white"
                                         customStyle="mb-2 items-center justify-center "
                                     />
-                                    <p className="hidden mb-3 font-medium text-left text-lg dark:text-white">{item.description}</p>
+                                    <p className="mb-3 font-medium text-left text-lg dark:text-white">{item.description}</p>
                                     <Link href={item.link}>
                                         <Heading
                                             text="View More"

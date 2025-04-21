@@ -152,7 +152,7 @@ export default function ImageBanner({
                 customStyle="mt-10"
               />
               <div className="font-medium text-center md:text-left text-base md:text-3xl mt-10 md:px-0 dark:text-white">
-                Math Kurixel officially launches on May 26, 2025!
+                Kurixel Math Coming Soon!
               </div>
             </div>
             <div className="w-full md:w-3/12 flex flex-col text-center md:text-left text-xl h-auto md:h-[27rem] px-14 md:px-0">
