@@ -1,5 +1,6 @@
 import GameCards from "@/components/cards/GameCards";
 import Heading from "@/components/texts/Heading";
+
 const data = [
   {
     title: "Discover why kids learn best when they’re having fun and how Kurixel turns play into powerful, research-backed learning.",

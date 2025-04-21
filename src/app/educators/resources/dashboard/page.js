@@ -85,7 +85,7 @@ const cards = [
   },
 ]
 
-export default function Assessments() {
+export default function Dashboard() {
   return (
     <EducatorLayout>
       <AssesmentBanner />

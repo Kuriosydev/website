@@ -40,7 +40,7 @@ export default function CurriculamCoverage() {
                     </div>
                     <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2  py-4 sm:py-4 md:py-8">
                         {gameFeature2?.map((gameFeature, index) => (
-                            <CircularCard key={index} {...gameFeature} textColor="text-black" isRow={true} image={false} />
+                            <CircularCard key={index} {...gameFeature} textColor="text-black" isRow={true} image={false} className="dark:text-white" />
                         ))}
 
                         <div className="text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium dark:text-white">

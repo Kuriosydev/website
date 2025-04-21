@@ -33,11 +33,14 @@ const cards = [
 
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Earn Epic Rewards",
+        heading: "Teachers, reclaim your time.",
+        description: "Let Kurixel turn lessons into interactive adventures your students will actually love."
+
     },
     {
         imgSrc: "/images/Ellipse.png",
-        heading: "Team Up, and Play",
+        heading: "Parents, end the homework drama.",
+        description: "Say goodbye to nagging and hello to a world where your child wants to learn."
     }
 ];
 
@@ -68,13 +71,9 @@ export default function Games() {
             <GameFeature />
             <GamePreview />
             <ParentAccount
-                heading="Teachers, reclaim your time. Let Kurixel turn lessons into interactive adventures your students will actually love."
+                heading="Teachers, reclaim your time. Parents, end the homework drama."
                 cards={cards}
                 bgColor="bg-white"
-            />
-            <ParentAccount
-                heading="Parents, end the homework drama. Say goodbye to nagging and hello to a world where your child wants to learn."
-                cards={cards}
             />
             <Dashboard />
             <ProdigyWorld />
