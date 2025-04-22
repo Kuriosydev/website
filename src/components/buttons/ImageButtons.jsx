@@ -1,4 +1,5 @@
-import Image from "next/image";
+'use client';
+
 import Link from "next/link";
 
 export default function ImageButtons({
@@ -14,29 +15,6 @@ export default function ImageButtons({
     link = "",
     isSubmit = false
 }) {
-    const content = (
-        <>
-            {icon && (
-                <span
-                    className={`mr-2 text-${textColor || 'white'} text-${textSize || 'base'} font-montserrat`}
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                >
-                    <i className={`${icon} text-sm md:text-xl`}></i>
-                </span>
-            )}
-            <span className={`text-${textColor || 'white'} text-${textSize || 'base'} font-montserrat break-words whitespace-normal max-w-[140px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[260px] xl:max-w-[300px]`} style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                {text}
-            </span>
-
-            {/* <span
-                className={`text-${textColor || 'white'} text-${textSize || 'base'} font-montserrat whitespace-nowrap`}
-                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-                {text}
-            </span> */}
-        </>
-    );
-
     const baseClasses = `relative inline-flex items-center justify-center border-none rounded-md overflow-hidden ${className} cursor-pointer`;
 
     const isValidLink = isLink && typeof link === "string";
@@ -46,29 +24,39 @@ export default function ImageButtons({
         ? {
             href: link,
             role: "button",
-            "aria-label": alt || text,
         }
         : {
-            onClick,
             type: isSubmit ? "submit" : "button",
-            "aria-label": alt || text,
         };
 
     return (
         <Wrapper {...wrapperProps} className={baseClasses}>
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src={source}
-                    alt={alt || text}
-                    fill
-                    className="object-contain w-full h-full"
-                    priority
-                />
-            </div>
-            <div className="relative z-10 px-4 py-2 rounded-md items-center">
-                {content}
+            <div className="flex flex-col items-center space-y-4">
+                <div
+                    onClick={onClick}
+                    className="button-overlay"
+                    aria-label={alt || text}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            onClick?.();
+                        }
+                    }}
+                >
+                    {icon && (
+                        <span
+                            className={`mr-2 text-${textColor || 'white'} text-${textSize || 'base'} font-montserrat`}
+                            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                        >
+                            <i className={`${icon} text-sm md:text-xl`}></i>
+                        </span>
+                    )}
+                    <span className={`text-${textColor || 'white'} text-${textSize || 'base'} font-montserrat break-words whitespace-normal`} style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                        {text}
+                    </span>
+                </div>
             </div>
         </Wrapper>
     );
-
 }
