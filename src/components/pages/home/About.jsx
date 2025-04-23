@@ -5,7 +5,7 @@ import VideoPreview from "@/components/videos/VideoPreview";
 
 const features = [
     {
-        imgSource: "/images/kid_friendly.svg",
+        imgSource: "/images/kid_friendly.png",
         heading: "Safe & Kid Friendly",
         text: "No weird stuff. Just fun and learning.",
     },

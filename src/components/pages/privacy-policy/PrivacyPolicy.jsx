@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
 
                                 <div className="">
                                     <p className="py-1 sm:py-1 md:py-2 lg:py-3 xl:py-3">
-                                        We collect different types of information depending on your role and how you use the Services. Information you provide directly includes your name, <Link href="/contact-us" className="text-blue-600">email</Link> address, username, password, and contact information. If you are a parent, guardian, or educator, we may collect your relationship to the student user. Payment data such as billing address and transaction information is processed securely by third-party providers; we do not store full credit card details. Users may also provide user-generated content such as in-game answers, profile information, and support messages.
+                                        We collect different types of information depending on your role and how you use the Services. Information you provide directly includes your name, email address, username, password, and contact information. If you are a parent, guardian, or educator, we may collect your relationship to the student user. Payment data such as billing address and transaction information is processed securely by third-party providers; we do not store full credit card details. Users may also provide user-generated content such as in-game answers, profile information, and support messages.
                                     </p>
                                     <p className="py-1 sm:py-1 md:py-2 lg:py-3 xl:py-3">
                                         We automatically collect information about your device and usage. This includes your IP address, browser type, device type, operating system, and in-app behavior (such as session activity, progress, and interaction with features). We may also receive limited information from third-party login providers (e.g., Google or Apple) and analytics platforms that help us improve user experience.
@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
 
                                 <div className="">
                                     <p className="py-1 sm:py-1 md:py-2 lg:py-3 xl:py-3">
-                                        You have the right to control your information. If you no longer wish to receive marketing or promotional <Link href="/contact-us" className="text-blue-600">email</Link>s from us, you can unsubscribe by clicking the link in the <Link href="/contact-us" className="text-blue-600">email</Link> or contacting us at [insert contact <Link href="/contact-us" className="text-blue-600">email</Link>]. You will still receive service-related communications essential to your account, such as billing updates or password resets.
+                                        You have the right to control your information. If you no longer wish to receive marketing or promotional emails from us, you can unsubscribe by clicking the link in the email or contacting us at <a href="mailto:info@kurixel.com" className="text-blue-600">info@kurixel.com</a>. You will still receive service-related communications essential to your account, such as billing updates or password resets.
                                     </p>
                                     <p className="py-1 sm:py-1 md:py-2 lg:py-3 xl:py-3">
                                         Your privacy rights may vary based on your location. If you are a California resident, you have the right to access, correct, delete, or limit the use of your personal information, and to request information about how we collect and use it. You may also opt out of data “sharing” under CPRA definitions, though we do not share personal information for advertising purposes.
@@ -124,7 +124,7 @@ export default function PrivacyPolicy() {
                                         Residents of Virginia, Colorado, Connecticut, and Utah have similar rights, including access, deletion, correction of personal information, and the ability to opt out of profiling or targeted advertising. We do not currently engage in profiling or behavioral advertising.
                                     </p>
                                     <p className="py-1 sm:py-1 md:py-2 lg:py-3 xl:py-3">
-                                        If you are located in the European Union or the United Kingdom, you have the right to access, correct, delete, or restrict processing of your data, object to certain uses, withdraw consent at any time, and request a copy of your personal data in a portable format. You may also lodge a complaint with your local data protection authority. To exercise any of these rights, contact us at [insert contact <Link href="/contact-us" className="text-blue-600">email</Link>]. We may require you to verify your identity before responding.
+                                        If you are located in the European Union or the United Kingdom, you have the right to access, correct, delete, or restrict processing of your data, object to certain uses, withdraw consent at any time, and request a copy of your personal data in a portable format. You may also lodge a complaint with your local data protection authority. To exercise any of these rights, contact us at <a href="mailto:info@kurixel.com" className="text-blue-600">info@kurixel.com</a>. We may require you to verify your identity before responding.
                                     </p>
                                 </div>
                             </li>
@@ -184,7 +184,7 @@ export default function PrivacyPolicy() {
                                                 Schools and educational agencies retain control over student records and may review, correct, or request deletion of student information at any time by contacting us. Upon termination of the school agreement or at the request of the school, we will delete or return student data in accordance with FERPA and our data retention policy.
                                             </p>
                                             <p className="py-1 sm:py-1 md:py-2 lg:py-3 xl:py-3">
-                                                If your institution requires a Data Processing Agreement (DPA) or custom terms for compliance, please contact us at [insert contact <Link href="/contact-us" className="text-blue-600">email</Link>] to initiate the process.
+                                                If your institution requires a Data Processing Agreement (DPA) or custom terms for compliance, please contact us at <a href="mailto:info@kurixel.com" className="text-blue-600">info@kurixel.com</a> to initiate the process.
                                             </p>
                                         </div>
                                     </li>
@@ -235,7 +235,7 @@ export default function PrivacyPolicy() {
                                 />
 
                                 <div className="">
-                                    We may update this Privacy Policy from time to time to reflect changes in our services, legal requirements, or industry practices. If we make any material changes, we will notify you through prominent in-app messages, <Link href="/contact-us" className="text-blue-600">email</Link>, or on our website. The revised version will be effective as of the date listed at the top of the policy. Your continued use of the Services after an update constitutes acceptance of the revised policy.
+                                    We may update this Privacy Policy from time to time to reflect changes in our services, legal requirements, or industry practices. If we make any material changes, we will notify you through prominent in-app messages, email, or on our website. The revised version will be effective as of the date listed at the top of the policy. Your continued use of the Services after an update constitutes acceptance of the revised policy.
                                 </div>
                             </li>
                             <li className="px-2 py-1 sm:py-1 md:py-3 lg:py-4">

@@ -44,7 +44,7 @@ export default function Intro() {
 							Millie and Max are your fun-loving, brain-powered chimps guiding you through the Kurixel universe. They love solving puzzles, building crazy gadgets, and taking you on the ultimate learning adventure!
 						</p>
 
-						<div className="flex flex-row mt-4 sm:mt-4 md:mt-6 lg:mt-8">
+						<div className="flex flex-row -ml-32 sm:-ml-0 md:-ml-0 lg:-ml-0 xl:-ml-0 mt-4 sm:mt-4 md:mt-2 lg:mt-8">
 							<ImageButtons
 								text="Play Now"
 								source="/images/Group.png"

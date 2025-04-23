@@ -22,17 +22,17 @@ const gameFeature1 = [
 
 const gameFeature2 = [
   {
-    imgSrc: "/images/Ellipse.png",
+    imgSrc: "/images/child_progress.jpg",
     heading: "Discover a World of Endless Adventures new skills, new quests, nonstop fun",
     description: "See instant data on your child's progress, all in one place.",
   },
   {
-    imgSrc: "/images/Ellipse.png",
+    imgSrc: "/images/monthly_report.jpg",
     heading: "Monthly report card",
     description: "Get a detailed, skill-by-skill breakdown delivered straight to your inbox each month.",
   },
   {
-    imgSrc: "/images/Ellipse.png",
+    imgSrc: "/images/curriculum_report.jpg",
     heading: "Curriculum Progress report",
     description: "Find out which grade-level math skills your child has mastered from their curriculum.",
   },
