@@ -60,11 +60,11 @@ export default function EngagingBanner() {
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 px-4 sm:px-4 md:px-6 lg:px-8 xl:px-8 py-4 sm:py-4 md:py-8">
             <nav className="flex flex-col py-4 text-xl">
               {menuItems.map((item) => (
-                <div key={item.id} className="border-b border-gray-100 last:border-b-0">
+                <div key={item.id} className="border-b border-black last:border-b-0 dark:border-white">
                   <button
                     className={`flex items-center justify-between w-full px-4 py-3 font-medium text-left ${expandedItem === item.id
-                      ? 'text-gray-900 bg-gray-50'
-                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                      ? 'text-gray-900 bg-gray-50 dark:text-[#8F0E00]'
+                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-[#FFCE49] dark:hover:text-[#8F0E00] '
                       }`}
                     onClick={() => handleItemClick(item.id)}
                   >

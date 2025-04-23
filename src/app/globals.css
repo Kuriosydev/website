@@ -30,30 +30,22 @@
 
 .button-overlay {
   background-image: url('/images/Group.png');
-  /* Replace with your image URL */
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   border: none;
   color: white;
-  /* Text color */
   padding: 2rem;
-  /* Adjust padding to maintain aspect ratio */
   min-width: 150px;
-  /* Minimum width */
   aspect-ratio: 2 / 1;
-  /* Aspect ratio for the button */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   border-radius: 8px;
-  /* Rounded corners */
   transition: transform 0.3s ease;
-  /* Button hover effect */
 }
 
 .button-overlay:hover {
   transform: scale(1.05);
-  /* Slight zoom on hover */
 }

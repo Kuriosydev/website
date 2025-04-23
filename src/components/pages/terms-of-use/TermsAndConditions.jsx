@@ -213,7 +213,7 @@ export default function TermsAndConditions() {
                                 />
 
                                 <div className="">
-                                    We may update these Terms occasionally to reflect changes to our platform, policies, or legal obligations. If we make significant updates, we will notify you by <Link href="/contact-us" className="text-blue-600">email</Link> or within the Services. Continued use of the Services after updates means you accept the new Terms.
+                                    We may update these Terms occasionally to reflect changes to our platform, policies, or legal obligations. If we make significant updates, we will notify you by email or within the Services. Continued use of the Services after updates means you accept the new Terms.
                                 </div>
                             </li>
                             <li className="px-2 py-1 sm:py-1 md:py-3 lg:py-4">

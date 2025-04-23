@@ -55,7 +55,7 @@ export default function ProdigyWorld() {
                                 text="Enter the Game Portal"
                                 source="/images/Group.png"
                                 alt="Enter the Game Portal Background"
-                                className=" px-10 py-4 sm:py-4 md:px-8 md:py-6 lg:py-8 xl:py-10"
+                                className=" "
                             />
                         </div>
 

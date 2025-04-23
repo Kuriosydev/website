@@ -3,17 +3,17 @@ import Heading from "@/components/texts/Heading";
 
 const gameFeature1 = [
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/4118011.jpg",
         heading: "Discover",
         description: "Wander through enchanted environments and shape your own evolving world.",
     },
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/5484597.jpg",
         heading: "Craft with Purpose",
         description: "Design expressive items and unlock custom recipes that reflect your style and creativity.",
     },
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/560.jpg",
         heading: "Power Up with Knowledge",
         description: "Solve skill-building challenges to create, explore, and grow.",
     },
@@ -21,17 +21,17 @@ const gameFeature1 = [
 
 const gameFeature2 = [
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/marketplaces.png",
         heading: "Trade, Style & Thrive",
         description: "Visit magical marketplaces to buy and sell outfits, and rare finds.",
     },
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/chase_goal.jpg",
         heading: "Chase Your Goals",
         description: "Complete daily quests or long-term challenges that unlock new realms.",
     },
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/reward.jpg",
         heading: "Rewards & Rare Treasures",
         description: "Earn rewards for your achievements and trade them for exclusive boosts, limited-time items, and special surprises hidden across the Kurixel world.",
     },

@@ -64,7 +64,7 @@ export default function ViewCurriculum() {
             />
           </div>
         </div>
-        <div className="flex flex-col text-lg sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start justify-start gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8">
+        <div className="flex flex-col text-lg sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start justify-start gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8 dark:text-white">
           {gradeSkills}
         </div>
         <div className="hidden flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8">

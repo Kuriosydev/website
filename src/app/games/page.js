@@ -32,13 +32,13 @@ const resourceCards = [
 const cards = [
 
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/4876975.jpg",
         heading: "Teachers, reclaim your time.",
         description: "Let Kurixel turn lessons into interactive adventures your students will actually love."
 
     },
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/8550090.jpg",
         heading: "Parents, end the homework drama.",
         description: "Say goodbye to nagging and hello to a world where your child wants to learn."
     }

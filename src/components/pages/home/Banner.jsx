@@ -34,18 +34,19 @@ export default function Banner() {
             Where play meets adventure. Learn, explore, and level up in the coolest way possible!
           </p>
           <div className="flex flex-col md:flex-row mt-8">
-
             <ImageButtons
               text="Play Now"
               source={"/images/Group.png"}
               alt="Play Now Background"
               icon={playIcon}
+              className="md:mr-8 px-6 py-2 md:px-8 md:py-5"
             />
             <ImageButtons
               text="Download"
               source={"/images/Group.png"}
               alt="Download Background"
               icon={downloadIcon}
+              className="mt-4 md:mt-0 px-6 py-2 md:px-8 md:py-5"
             />
           </div>
         </div>

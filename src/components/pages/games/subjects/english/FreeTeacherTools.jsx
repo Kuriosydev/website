@@ -2,17 +2,17 @@ import ParentAccount from "@/components/pages/parents/ParentAccount";
 
 const cards = [
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/adaptive_assessments.webp",
         heading: "Adaptive Assessments",
         description: "Seamlessly connect gameplay to your lesson plans.",
     },
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/progress_tracking.png",
         heading: "Progress Tracking",
         description: "Monitor student growth as they explore, build, and learn.",
     },
     {
-        imgSrc: "/images/Ellipse.png",
+        imgSrc: "/images/curriculum.jpg",
         heading: "Curriculum",
         description: "Kurixel ensures your students stay on track while having fun.",
     }

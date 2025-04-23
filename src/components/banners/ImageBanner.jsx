@@ -96,6 +96,7 @@ export default function ImageBanner({
                       text={item.text}
                       source="/images/Group.png"
                       alt="Teachers, sign up now Background"
+                      className={item.className}
                       isLink={true}
                       link={item.link}
                     />
@@ -103,6 +104,7 @@ export default function ImageBanner({
                     text={buttontext}
                     source="/images/Group.png"
                     alt="Teachers, sign up now Background"
+                    className=' px-10 py-4 sm:py-4 md:px-8 md:py-6 lg:py-8 xl:py-10'
                     isLink={true}
                     link={link}
                   />
