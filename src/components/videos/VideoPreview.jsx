@@ -1,6 +1,3 @@
-'use client';
-
-
 export default function VideoPreview({
     src,
     controls = true,
@@ -22,6 +19,8 @@ export default function VideoPreview({
                 autoPlay={autoPlay}
                 muted={muted}
                 loop={loop}
+                playsInline
+                {...{ 'webkit-playsinline': 'true' }}
                 className={`${videoWidth} ${videoHeight} ${position}`}
             />
         </div>
