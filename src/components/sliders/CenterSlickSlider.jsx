@@ -15,9 +15,11 @@ export default function CenterSlickSlider({ sliderRef }) {
    };
 
    const images = [
-      "/images/gamplay_screenshot1.png",
-      "/images/gamplay_screenshot2.png",
-      "/images/gamplay_screenshot3.png",
+      "/images/game_screen1.jpeg",
+      "/images/game_screen2.jpeg",
+      "/images/game_screen3.jpeg",
+      "/images/game_screen4.jpeg",
+      "/images/game_screen5.jpeg",
    ];
 
    return (

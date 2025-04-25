@@ -63,7 +63,7 @@ export default function GameEnglishFeature() {
                         ))}
                     </div>
                     <div className="flex flex-row flex-wrap items-center justify-center w-full sm:w-full md:w-full lg:w-6/12 xl:w-6/12 px-2 sm:px-4 md:px-20 lg:px-40 xl:px-12">
-                        <img src="/images/gameEnglishFeature.png" alt="gameEnglishFeature" className="w-full md:w-full h-full rounded-4xl" />
+                        <img src="/images/game_screen1.jpeg" alt="gameEnglishFeature" className="w-full md:w-full h-full rounded-4xl" />
                     </div>
                     <div className="flex-col sm:flex-col md:flex-col lg:flex-row xl:lg:flex-row flex-wrap items-center justify-center w-full sm:w-full md:w-full lg:w-3/12 xl:w-3/12 px-2 sm:px-4 md:px-20 lg:px-40 xl:px-12 py-0 sm:py-4 md:py-6 lg:py-8 xl:py-10">
                         {gameFeature2?.map((gameFeature, index) => (

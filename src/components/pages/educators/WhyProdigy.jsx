@@ -4,7 +4,7 @@ import Heading from "@/components/texts/Heading";
 
 const events = [
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
+        imageSrc: '/images/game_screen5.jpeg',
         link: '#',
         title: 'Where Curiosity Becomes Adventure',
         description: "Every quest strengthens critical thinking, problem-solving, and academic skills without losing the magic of imagination.",
@@ -13,7 +13,7 @@ const events = [
         isImageButton: false
     },
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
+        imageSrc: '/images/game_screen3.jpeg',
         link: '#',
         title: 'Designed for Students. Built for Educators. Backed by Schools.',
         description: "Kurixel empowers the whole learning ecosystem with an engaging platform that sparks lifelong curiosity. ",

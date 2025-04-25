@@ -3,7 +3,7 @@ import Heading from "@/components/texts/Heading";
 
 const events = [
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
+        imageSrc: '/images/game_screen2.jpeg',
         link: '#',
         title: 'Kurixel Ignites a Love for Learning',
         description: "Students using Kurixel master skills through story-rich adventures that spark curiosity and build confidence.",
@@ -12,7 +12,7 @@ const events = [
         isImageButton: false
     },
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
+        imageSrc: '/images/game_screen5.jpeg',
         link: '#',
         title: 'Learning That Sticks—Anywhere, Anytime',
         description: "Kurixel goes where your learners go. Whether in school or at home, kids stay connected to meaningful learning that feels like play",

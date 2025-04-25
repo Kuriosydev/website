@@ -58,7 +58,7 @@ export default function GameFeature() {
           In the world of Kurixel, curiosity leads the way. Every quest, puzzle, and battle is powered by curriculum-aligned math practice. With surprises at every turn, students solve problems to unlock new worlds, conquer challenges, and level up all while building real math skills.
         </div>
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:lg:flex-row flex-wrap items-center justify-center py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 md:px-0 px-10">
-          <div className="flex flex-row flex-wrap items-center justify-center w-full sm:w-full md:w-full lg:w-6/12 xl:w-6/12 px-2 sm:px-4 md:px-20 lg:px-40 xl:px-12">
+          <div className="flex flex-row flex-wrap items-center justify-center w-full sm:w-full md:w-full lg:w-full xl:w-6/12 px-2 sm:px-4 md:px-20 lg:px-20 xl:px-12">
             <VideoPreview
               src="/videos/news_banner_vid_2.mp4"
               controls={false}
@@ -68,7 +68,7 @@ export default function GameFeature() {
               wrapperClass="w-full md:w-full h-full rounded-4xl"
             />
           </div>
-          <div className="flex-col sm:flex-col md:flex-col lg:flex-row xl:lg:flex-row flex-wrap items-center justify-center w-full sm:w-full md:w-full lg:w-3/12 xl:w-3/12 px-2 sm:px-4 md:px-20 lg:px-40 xl:px-12 py-0 sm:py-4 md:py-6 lg:py-8 xl:py-10">
+          <div className="flex-col sm:flex-col md:flex-col lg:flex-row xl:lg:flex-row flex-wrap items-center justify-center w-full sm:w-full md:w-full lg:w-full xl:w-6/12 px-2 sm:px-4 md:px-20 lg:px-20 xl:px-12 py-0 sm:py-4 md:py-6 lg:py-8 xl:py-10">
             {gameFeature2?.map((gameFeature, index) => (
               <CircularCard key={index} {...gameFeature} textColor="text-black" isRow={true} />
             ))}

@@ -28,6 +28,10 @@
   transform: scale(1);
 }
 
+.slick-track {
+  height: 32rem;
+}
+
 .button-overlay {
   background-image: url('/images/Group.png');
   background-size: contain;
