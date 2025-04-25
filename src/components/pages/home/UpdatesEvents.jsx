@@ -3,20 +3,20 @@ import Heading from "@/components/texts/Heading";
 
 const events = [
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
-        link: 'https://www.example.com',
+        imageSrc: '/images/game_screen1.jpeg',
+        link: '#',
         title: 'New Levels Unlocked',
         description: 'Crystal Caves expansion now available. More puzzles, more fun!'
     },
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
-        link: 'https://www.example.com',
+        imageSrc: '/images/game_screen2.jpeg',
+        link: '#',
         title: 'Community Challenge',
         description: 'Join the upcoming Treasure Hunt event for exclusive in-game rewards.'
     },
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
-        link: 'https://www.example.com',
+        imageSrc: '/images/game_screen3.jpeg',
+        link: '#',
         title: 'Kurixel Studios is Growing',
         description: 'More creativity, more fun, and more mind-blowing games are on the way!'
     }

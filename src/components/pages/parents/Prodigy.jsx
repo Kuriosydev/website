@@ -3,7 +3,7 @@ import Heading from "@/components/texts/Heading";
 
 const events = [
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
+        imageSrc: '/images/game_screen1.jpeg',
         link: '#',
         title: 'Play. Battle. Learn. Repeat.',
         description: 'Players conquer math challenges, earn rewards, and grow with every quest they complete.',
@@ -11,7 +11,7 @@ const events = [
         buttonLink: "/games"
     },
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
+        imageSrc: '/images/game_screen4.jpeg',
         link: '#',
         title: 'Reading, writing, and world-building',
         description: "Students grow their vocabulary while shaping a world that's uniquely their own.",

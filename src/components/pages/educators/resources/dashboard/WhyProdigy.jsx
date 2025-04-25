@@ -2,7 +2,7 @@ import GameCards from "@/components/cards/GameCards";
 
 const events = [
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
+        imageSrc: '/images/game_screen1.jpeg',
         link: '#',
         title: 'Boosting Confidence Through Creativity',
         description: "",
@@ -11,7 +11,7 @@ const events = [
         isImageButton: false
     },
     {
-        imageSrc: '/images/gamplay_screenshot1.png',
+        imageSrc: '/images/game_screen4.jpeg',
         link: '#',
         title: 'The Magic of Meeting Students Where They Are',
         description: "",
