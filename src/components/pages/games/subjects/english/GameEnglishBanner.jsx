@@ -7,7 +7,7 @@ export default function GameEnglishBanner() {
             bgColor={"bg-[#FFCE49]"}
             heading="Spark Imagination with Kurixel"
             description="Through immersive adventures, learners strengthen their reading and language skills in ways that feel more like play than practice."
-            imgsrc="/images/5437683.jpg"
+            imgsrc="/images/image30.png"
             buttons={[
                 {
                     text: "Get Started",
