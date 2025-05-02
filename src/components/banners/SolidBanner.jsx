@@ -1,8 +1,29 @@
+"use client"
 import ImageButtons from "../buttons/ImageButtons";
 import Heading from "../texts/Heading";
 import VideoPreview from "../videos/VideoPreview";
+import { useEffect, useState } from 'react';
 
 export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
+    const [item, setItems] = useState({
+        title: '',
+        description: '',
+      });
+    
+      useEffect(() => {
+        async function fetchData() {
+          try {
+            const response = await fetch("http://localhost:1337/api/cms-pages?filters[slug][$eq]=games&populate=GamesMetaData&populate=GamesMetaData.BannerSection&populate=GamesMetaData.GamePracticeSection&populate=GamesMetaData.supportSection&populate=GamesMetaData.GameHomeworkSection&populate=GamesMetaData.GameDashboardSection&populate=GamesMetaData.BannerSection.button&populate=GamesMetaData.GamePracticeSection.card&populate=GamesMetaData.supportSection.card&populate=GamesMetaData.GameHomeworkSection.card&populate=GamesMetaData.GameDashboardSection.title&populate=GamesMetaData.GameDashboardSection.list&populate=GamesMetaData.GameDiveDeepSection&populate=GamesMetaData.GameDiveDeepSection.button&populate=GamesMetaData.GameResourceSection&populate=GamesMetaData.GameResourceSection.card");
+            const data = await response.json();
+            console.log(data.data[0],"working")
+            setItems(data.data[0].GamesMetaData[0].BannerSection[0]);
+          } catch (error) {
+            console.error('Failed to fetch Data', error);
+          }
+        }
+    
+        fetchData();
+      }, []);
     return (
         <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-40  dark:bg-[#212121]`}>
             <div className="w-full min-h-auto relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
@@ -12,7 +33,7 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row  w-full h-auto items-center justify-center md:items-start md:justify-start">
                             <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 flex flex-col text-left text-xl px-9 md:pl-12">
                                 <Heading
-                                    text="Turn Math Into an Epic Quest"
+                                    text={item.title}
                                     fontFamily="font-luckiest"
                                     fontSize="text-5xl md:text-7xl"
                                     fontWeight="font-normal"
@@ -22,7 +43,7 @@ export default function SolidBanner({ col = 2, bgColor = "bg-[#FFCE49]" }) {
                                     customStyle="mt-10"
                                 />
                                 <div className="font-medium text-center md:text-left text-base md:text-lg mt-10 md:px-0 dark:text-white">
-                                    Kurixel turns math into an epic quest where kids explore different worlds, grow their skills, and learn at their own pace. Behind every adventure, smart tools help parents and teachers track progress and keep the journey going strong.
+                                    {item.description}
                                 </div>
                                 <div className="flex flex-col md:flex-row items-center justify-start mt-8 md:mt-14">
                                     <ImageButtons

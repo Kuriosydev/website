@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import AppStores from "@/components/pages/parents/AppStores";
 import Banner from "@/components/pages/parents/Banner";
 import KidsFeature from "@/components/pages/parents/KidsFeature";
@@ -91,7 +93,73 @@ const cards = [
     },
 ];
 
+const staticImages = [
+    {
+        imgSrc: "/images/parentDashboard.jpg",
+    },
+    {
+        imgSrc: "/images/monthlyReport.jpg",
+    },
+    {
+        imgSrc: "/images/progressTracking.jpg",
+    },
+  ];
+
 export default function ForParents() {
+      const [playtime, setPlaytime] = useState({
+        title: "",
+        description: "",
+        features: [],
+      });
+
+      const [resource, setResource] = useState({
+        resourceFeatures: [],
+      });
+    
+      useEffect(() => {
+        async function fetchPlaytimeContent() {
+          try {
+            const response = await fetch(
+              "http://localhost:1337/api/cms-pages?filters[slug][$eq]=parents&populate=ParentsMetaData&populate=ParentsMetaData.banner&populate=ParentsMetaData.bannerCard&populate=ParentsMetaData.bannerReviewCard&populate=ParentsMetaData.playtimeSection&populate=ParentsMetaData.playtimeSection.ParentsCard&populate=ParentsMetaData.playtimeSection.GooglePlayButton&populate=ParentsMetaData.playtimeSection.ApplePlayButton&populate=ParentsMetaData.learingSection&populate=ParentsMetaData.learingSection.ParentsCard&populate=ParentsMetaData.supportSection&populate=ParentsMetaData.supportSection.ParentsSupportCard&populate=ParentsMetaData.supportSection.button&populate=ParentsMetaData.resourcesSection.card&populate=ParentsMetaData.questionSection&populate=ParentsMetaData.questionSection.QuestionsList&populate=ParentsMetaData.questionSection.button"
+            );
+            const data = await response.json();
+    
+            const section =
+              data.data[0]?.ParentsMetaData[0]?.supportSection?.[0] || {};
+              const resourceSection =
+              data.data[0]?.ParentsMetaData[0]?.resourcesSection?.[0] || {};
+   
+            const features =
+              section.card?.map((card,index) => ({
+                heading: card.title,
+                description: card.description,
+                imgSrc: staticImages[index]?.imgSrc || "",
+              })) || [];
+
+              const resourceFeatures =
+              resourceSection.card?.map((item,index) => ({
+                text: item.title,
+                linkText: item.description,
+                link: "/news",
+              })) || [];
+    console.log(resourceFeatures,"resourceFeatures")
+            setPlaytime({
+              title: section.title || "",
+              description: section.description || "",
+              features,
+            });
+
+            setResource({
+                resourceFeatures,
+              });
+          } catch (error) {
+            console.error("Failed to fetch playtime content:", error);
+          }
+        }
+    
+        fetchPlaytimeContent();
+      }, []);
+
     return (
         <ParentsLayout faq={true} joinus={true}>
             <Banner />
@@ -101,15 +169,15 @@ export default function ForParents() {
             <AppStores />
             <Prodigy />
             <ParentAccount
-                heading="Stay connected to your child’s learning"
+                heading={playtime.title}
                 buttonText="Create your parent account"
                 buttonColor="bg-[#FFCE49]"
-                cards={cards}
+                cards={playtime.features}
             />
             <ResourceBlog
                 heading="Parent Resources"
                 bgImgSrc="/images/resource_blog.png"
-                resourceCards={resourceCards}
+                resourceCards={resource.resourceFeatures}
             />
         </ParentsLayout>
     )

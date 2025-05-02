@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import ImageButtons from "../buttons/ImageButtons";
 import Heading from "../texts/Heading";
 import VideoPreview from "../videos/VideoPreview";
@@ -16,6 +18,35 @@ export default function ImageBanner({
   buttons = [],
   textAfterButton,
 }) {
+
+        const [playtime, setPlaytime] = useState({
+          title: "",
+          description: "",
+        });
+      
+        useEffect(() => {
+          async function fetchPlaytimeContent() {
+            try {
+              const response = await fetch(
+                "http://localhost:1337/api/cms-pages?filters[slug][$eq]=news&populate=NewsMetaData&populate=NewsMetaData.banner&populate=NewsMetaData.updatesAndEventsSection&populate=NewsMetaData.updatesAndEventsSection.card&populate=NewsMetaData.NewsSection"
+              );
+              const data = await response.json();
+      
+              const section =
+                data.data[0]?.NewsMetaData[0]?.banner?.[0] || {};
+      
+              setPlaytime({
+                title: section.title || "",
+                description: section.description || "",
+              });
+            } catch (error) {
+              console.error("Failed to fetch content:", error);
+            }
+          }
+      
+          fetchPlaytimeContent();
+        }, []);
+
   return (
     <section className={`w-full h-auto ${bgColor} relative z-0 overflow-hidden -mt-28 sm:-mt-28 md:-mt-40 lg:-mt-40 xl:-mt-40 dark:bg-[#001032]`}>
       <div className="w-full max-h-full relative overflow-hidden pt-36 md:pt-44 pb-14 md:pb-20">
@@ -140,7 +171,7 @@ export default function ImageBanner({
                 <img src="/images/dark/left_tree.png" alt="Left Tree Image" className="w-[85%] h-full object-cover hidden dark:block" />
               </div>
               <Heading
-                text="BREAKING NEWS"
+                text={playtime.title}
                 fontFamily="font-luckiest"
                 fontSize="text-5xl md:text-7xl"
                 fontWeight="font-normal"
@@ -150,7 +181,7 @@ export default function ImageBanner({
                 customStyle="mt-10"
               />
               <div className="font-medium text-center md:text-left text-base md:text-3xl mt-10 md:px-0 dark:text-white">
-                Kurixel Math Coming Soon!
+                {playtime.description}
               </div>
             </div>
             <div className="w-full md:w-3/12 flex flex-col text-center md:text-left text-xl h-auto md:h-[27rem] px-14 md:px-0">

@@ -1,3 +1,4 @@
+"use client"
 import Banner from "@/components/pages/educators/Banner";
 import Curriculam from "@/components/pages/educators/Curriculam";
 import EducatorTestimonials from "@/components/pages/educators/EducatorTestimonials";
@@ -6,25 +7,26 @@ import OneClickLogin from "@/components/pages/educators/OneClickLogin";
 import WhyProdigy from "@/components/pages/educators/WhyProdigy";
 import ResourceBlog from "@/components/pages/parents/ResourceBlog";
 import EducatorLayout from "./EducatorLayout";
+import { useEffect, useState } from 'react';
 
 
-const resourceCards = [
-    {
-        text: "Discover creative strategies to boost motivation.",
-        linkText: "Learn More",
-        link: "/news",
-    },
-    {
-        text: "Make personalized learning easy and effective.",
-        linkText: "Learn More",
-        link: "/news",
-    },
-    {
-        text: "Turn every session into a meaningful checkpoint.",
-        linkText: "Learn More",
-        link: "/news",
-    }
-];
+// const resourceCards = [
+//     {
+//         text: "Discover creative strategies to boost motivation.",
+//         linkText: "Learn More",
+//         link: "/news",
+//     },
+//     {
+//         text: "Make personalized learning easy and effective.",
+//         linkText: "Learn More",
+//         link: "/news",
+//     },
+//     {
+//         text: "Turn every session into a meaningful checkpoint.",
+//         linkText: "Learn More",
+//         link: "/news",
+//     }
+// ];
 
 const testimonials = [
     {
@@ -61,6 +63,58 @@ const faqs = [
 
 
 export default function Educators() {
+
+    const [testimonials, setTestimonials] = useState([]);
+    const [resourceCards, setResourceCards] = useState([]);
+
+    useEffect(() => {
+      async function fetchTestimonials() {
+        try {
+            const response = await fetch("http://localhost:1337/api/cms-pages?filters[slug][$eq]=educators&populate=EducatorsMetaData&populate=EducatorsMetaData.banner.BannerComponent&populate=EducatorsMetaData.banner.BannerComponent.button&populate=EducatorsMetaData.reviewCardSection.EducatorsCard.ParentsCard&populate=EducatorsMetaData.howKurixelWorksSection&populate=EducatorsMetaData.howKurixelWorksSection.card&populate=EducatorsMetaData.howKurixelWorksSection.button&populate=EducatorsMetaData.oneClickLoginSection&populate=EducatorsMetaData.oneClickLoginSection.button&populate=EducatorsMetaData.curriculumSection&populate=EducatorsMetaData.curriculumSection.button&populate=EducatorsMetaData.levelUpSection&populate=EducatorsMetaData.levelUpSection.firstCard&populate=EducatorsMetaData.levelUpSection.secondCard&populate=EducatorsMetaData.prodigySection&populate=EducatorsMetaData.prodigySection.card&populate=EducatorsMetaData.teachersBlogSection&populate=EducatorsMetaData.teachersBlogSection.LearnMore");
+          const data = await response.json();
+  
+          const parentsCard = data?.data?.[0]?.EducatorsMetaData?.[0]?.reviewCardSection?.[0]?.EducatorsCard?.[0]?.ParentsCard || [];
+          const resourceCard = data?.data?.[0]?.EducatorsMetaData?.[0]?.teachersBlogSection?.[0]?.LearnMore || [];
+
+          const formattedTestimonials = parentsCard.map((card, index) => ({
+            comment: card.title?.replace(/^"|"$/g, '') || '',
+            author: card.description || '',
+            authorImage: `/images/author${index + 1}.png`, // fallback logic based on index
+          }));
+
+          const formattedResources = resourceCard.map((card, index) => ({
+            text: card.title?.replace(/^"|"$/g, '') || '',
+            linkText: "Learn More",
+            link: "/news",
+          }));
+  
+          setTestimonials(formattedTestimonials);
+          setResourceCards(formattedResources);
+        } catch (error) {
+          console.error("Failed to fetch testimonials:", error);
+        }
+      }
+  
+      fetchTestimonials();
+    }, []);
+
+    // const testimonials = [
+    //     {
+    //         comment: "Kurixel is an amazing tool for getting kids who usually don't enjoy math to actually engage with it.",
+    //         author: "E. Guerrero",
+    //         authorImage: "/images/author1.png"
+    //     },
+    //     {
+    //         comment: "I love how Kurixel makes math fun and exciting for students.",
+    //         author: "K. Vega",
+    //         authorImage: "/images/author2.png"
+    //     },
+    //     {
+    //         comment: "Kurixel has really helped my students who usually find math frustrating. It’s so rewarding to see them engaged and feeling more confident.",
+    //         author: "J. Vaughn",
+    //         authorImage: "/images/author3.png"
+    //     }
+    // ];
     return (
         <EducatorLayout faq={true} joinus={true} faqs={faqs}>
             <Banner />

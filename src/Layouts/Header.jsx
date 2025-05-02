@@ -29,7 +29,7 @@ export default function Header() {
               source="/images/Group.png"
               alt="Log In Background"
               isLink={true}
-              link="/contact-us"
+              link="/login"
               className='mr-4 px-3 sm:px-3 md:px-3 lg:px-3 xl:px-3 py-2 sm:py-2 md:py-4 lg:py-6 xl:py-8 '
             />
           </div>

@@ -1,7 +1,9 @@
+"use client"
 import YellowButton from "@/components/buttons/YellowButton";
 import ResourceCard from "@/components/cards/ResourceCard";
 import Heading from "@/components/texts/Heading";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const engagingAssessments1 = [
     {
@@ -35,6 +37,42 @@ const engagingAssessments2 = [
 
 
 export default function Curriculam() {
+        const [section, setSection] = useState({
+            title: '',
+            description: '',
+        });
+
+        const [teacherSection, setTeacherSection] = useState({
+            title: '',
+            description: '',
+        });
+
+                useEffect(() => {
+                    async function fetchData() {
+                        try {
+                            const response = await fetch("http://localhost:1337/api/cms-pages?filters[slug][$eq]=educators&populate=EducatorsMetaData&populate=EducatorsMetaData.banner.BannerComponent&populate=EducatorsMetaData.banner.BannerComponent.button&populate=EducatorsMetaData.reviewCardSection.EducatorsCard.ParentsCard&populate=EducatorsMetaData.howKurixelWorksSection&populate=EducatorsMetaData.howKurixelWorksSection.card.ParentsCard&populate=EducatorsMetaData.howKurixelWorksSection.button&populate=EducatorsMetaData.oneClickLoginSection&populate=EducatorsMetaData.oneClickLoginSection.button&populate=EducatorsMetaData.curriculumSection&populate=EducatorsMetaData.curriculumSection.button&populate=EducatorsMetaData.levelUpSection&populate=EducatorsMetaData.levelUpSection.firstCard&populate=EducatorsMetaData.levelUpSection.secondCard&populate=EducatorsMetaData.prodigySection&populate=EducatorsMetaData.prodigySection.card&populate=EducatorsMetaData.teachersBlogSection&populate=EducatorsMetaData.teachersBlogSection.LearnMore");
+                            const data = await response.json();
+            
+                            const item = data.data[0].EducatorsMetaData[0].curriculumSection[0]
+                            const teacher = data.data[0].EducatorsMetaData[0].curriculumSection[0]
+
+                            setTeacherSection({
+                                title: teacher.title,
+                                description: teacher.description,
+                            });
+        
+                            setSection({
+                                title: item.title,
+                                description: item.description,
+                            });
+            
+                        } catch (error) {
+                            console.error("Failed to fetch data:", error);
+                        }
+                    }
+            
+                    fetchData();
+                }, []);
     return (
         <section className={`w-full h-auto bg-[#8F0E00] relative overflow-hidden dark:bg-[#212121]`}>
             <div className="text-white w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 gap-8">
@@ -44,7 +82,7 @@ export default function Curriculam() {
                     </div>
                     <div className="w-full sm:w-full md:w-full lg:w-7/12 xl:w-7/12 gap-8 py-10 md:py-0">
                         <Heading
-                            text="Built for Classrooms. Backed by Curriculum."
+                            text={section.title}
                             fontFamily="font-luckiest"
                             fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                             fontWeight="font-bold"
@@ -54,7 +92,7 @@ export default function Curriculam() {
                             customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-0 "
                         />
                         <div className="text-left font-medium text-lg lg:pr-24 py-4 dark:text-white">
-                            Integrates seamlessly with Clever and Google Classroom making sign-ins a breeze for students and teachers.
+                            {section.description}
                         </div>
                         <div className="flex flex-row flex-wrap items-center justify-start gap-10 py-4">
                             <Link href="/educators/curriculum/maths" className="cursor-pointer"><YellowButton text="Explore Kurixel's Math Pathways" /></Link>
@@ -64,7 +102,7 @@ export default function Curriculam() {
                 </div>
                 <div className="flex flex-row flex-wrap items-center justify-center px-10 py-10 md:px-10 md:py-8 mt-10 md:mt-0">
                     <Heading
-                        text="Your Teacher Dashboard, Supercharged"
+                        text={teacherSection.title}
                         fontFamily="font-luckiest"
                         fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                         fontWeight="font-bold"
@@ -74,7 +112,7 @@ export default function Curriculam() {
                         customStyle="py-12 sm:py-12 md:py-16 lg:py-20 xl:py-20 px-0 "
                     />
                     <div className="text-center font-medium text-lg  dark:text-white">
-                        Unleash the power of Kurixel's educator tools to personalize learning and boost classroom outcomes.
+                        {teacherSection.description}
                     </div>
                 </div>
                 <div className="w-full px-2 sm:px-2 md:px-4 lg:px-8 xl:px-16">
