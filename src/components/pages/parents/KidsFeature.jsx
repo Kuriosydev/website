@@ -14,7 +14,7 @@ export default function KidsFeature() {
     async function fetchPlaytimeContent() {
       try {
         const response = await fetch(
-          "http://localhost:1337/api/cms-pages?filters[slug][$eq]=parents&populate=ParentsMetaData&populate=ParentsMetaData.playtimeSection&populate=ParentsMetaData.playtimeSection.ParentsCard"
+          "https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=parents&populate=ParentsMetaData&populate=ParentsMetaData.playtimeSection&populate=ParentsMetaData.playtimeSection.ParentsCard"
         );
         const data = await response.json();
 
