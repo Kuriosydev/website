@@ -1,9 +1,30 @@
+"use client"
 import ImageButtons from "@/components/buttons/ImageButtons";
 const playIcon = 'fa-solid fa-play';
-
+import { useEffect, useState } from 'react';
 
 export default function Intro() {
-	return (
+	const [bannerData, setBannerData] = useState({
+		secondTitle: 'WHERE LEARNING IS',
+		secondDescription: 'Where play meets adventure. Learn, explore, and level up in the coolest way possible!',
+	  });
+	
+	  useEffect(() => {
+		async function fetchBannerData() {
+		  try {
+			const response = await fetch('http://localhost:1337/api/cms-pages?filters[slug][$eq]=home&filters[slug][$eq]=footer&populate=HomeMetaData.banner.banner.button&populate=HomeMetaData.playAnyWhereSection.content_left_card_1&populate=HomeMetaData.playAnyWhereSection.content_left_card_2&populate=HomeMetaData.playAnyWhereSection.content_left_card_3&populate=HomeMetaData.playAnyWhereSection.DownloadNow&populate=HomeMetaData.playAnyWhereSection.AppStore&populate=HomeMetaData.playAnyWhereSection.GoogleStore&populate=HomeMetaData.playAnyWhereSection.app_preview_image&populate=HomeMetaData.adventureSection&populate=HomeMetaData.adventureSection.wooden_button&populate=HomeMetaData.adventureSection.slider_button&populate=HomeMetaData.updateAndEventsSection&populate=HomeMetaData.updateAndEventsSection.EventsCard&populate=HomeMetaData.contactUsSection&populate=HomeMetaData.contactUsSection.ContactUsList&populate=HomeMetaData.contactUsSection.ContactUsList&filters[slug][$eq]=footer&populate=Footer&populate=Footer.quick_links&populate=Footer.quick_links_support_anchor&populate=Footer.social_media_footer_links');
+			const data = await response.json();
+			console.log(data.data[1].HomeMetaData[0].banner[0],"data")
+			setBannerData(data.data[1].HomeMetaData[0].banner[0]);
+		  } catch (error) {
+			console.error('Failed to fetch banner data:', error);
+		  }
+		}
+	
+		fetchBannerData();
+	  }, []);
+
+	return (	
 		<section className="w-full h-auto">
 			<div className="flex flex-row justify-between w-full absolute -mt-30 sm:-mt-30 md:-mt-[11.25rem] lg:-mt-48 z-10">
 				<div className="flex flex-col -ml-6 md:ml-0 aspect-auto mt-0 sm:mt-0 md:mt-10 lg:mt-20">
@@ -37,11 +58,11 @@ export default function Intro() {
 				<div className="relative w-full items-center justify-center overflow-hidden aspect-[3/4] sm:aspect-[9/16] md:aspect-[4/3] lg:aspect-[16/9]">
 					<div className="inset-0 z-10 mt-4 md:mt-6 lg:mt-8 flex flex-col justify-center items-center md:justify-center md:items-center text-white px-4 sm:px-6 md:px-4 w-full max-w-[32rem] sm:max-w-[32rem] md:max-w-[20rem] lg:max-w-[30rem] xl:max-w-[40rem] mx-auto">
 						<h1 className="text-center text-3xl sm:text-2xl md:text-4xl lg:text-5xl leading-tight md:leading-12 lg:leading-14 tracking-wide md:tracking-[4px] font-luckiest font-bold text-white break-words capitalize ml-32 sm:ml-16 md:ml-0">
-							<span className="block">Meet Millie & Max!</span>
+							<span className="block">{bannerData.secondTitle}</span>
 						</h1>
 
 						<p className="mt-32 sm:mt-8 md:mt-4 font-semibold text-xs sm:text-sm md:text-base md:leading-[22px] text-black dark:text-white text-left sm:text-center break-words pl-8 pr-30 sm:px-0 md:px-0 lg:px-0 xl:px-0">
-							Millie and Max are your fun-loving, brain-powered chimps guiding you through the Kurixel universe. They love solving puzzles, building crazy gadgets, and taking you on the ultimate learning adventure!
+							{bannerData.secondDescription}
 						</p>
 
 						<div className="flex flex-row -ml-32 sm:-ml-0 md:-ml-0 lg:-ml-0 xl:-ml-0 mt-4 sm:mt-4 md:mt-2 lg:mt-8">

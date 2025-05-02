@@ -28,8 +28,24 @@ export default function Login() {
             });
 
             const data = await response.json();
+            const userId = data.user.id;
+            const profileRes = await fetch(`https://cms.kurixel.com/api/user-profiles?filters[users_permissions_user][id][$eq]=${userId}&populate=*`, {
+                headers: {
+                    // Authorization: `Bearer ${jwt}`,
+                },
+            });
+            
+            const profileData = await profileRes.json();
+            const profile = profileData.data?.[0] || null;
+            // console.log(encodeURIComponent(JSON.stringify(fullUser.data)),"fullUser");
+            // return;
 
             if (response.ok) {
+                localStorage.setItem("user", JSON.stringify(data.user));
+                localStorage.setItem("jwt", data.jwt);
+                localStorage.setItem("profile", JSON.stringify(profile));
+                document.cookie = `user=${encodeURIComponent(JSON.stringify(data.user))}; path=/; max-age=86400`;
+                document.cookie = `profile=${encodeURIComponent(JSON.stringify(profile))}; path=/; max-age=86400`;
                 setMessage("Login successful!");
                 setTimeout(() => {
                     window.location.href = "/dashboard";

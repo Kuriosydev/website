@@ -4,6 +4,7 @@ import ImageButtons from "@/components/buttons/ImageButtons";
 import CenterSlickSlider from "@/components/sliders/CenterSlickSlider";
 import Heading from "@/components/texts/Heading";
 import { useRef } from "react";
+import { useEffect, useState } from 'react';
 
 const buttons = ['Epic Worlds', 'Creative Quests', 'Multiplayer Fun', 'Learning Disguised as Fun'];
 
@@ -12,6 +13,27 @@ export default function GameInfo() {
 
    const next = () => sliderRef.current?.slickNext();
    const prev = () => sliderRef.current?.slickPrev();
+   const [bannerData, setBannerData] = useState({
+      title: '',
+      secondary_header: '',
+      slider_header: '',
+    });
+  
+    useEffect(() => {
+      async function fetchBannerData() {
+        try {
+          const response = await fetch('http://localhost:1337/api/cms-pages?filters[slug][$eq]=home&filters[slug][$eq]=footer&populate=HomeMetaData.banner.banner.button&populate=HomeMetaData.playAnyWhereSection.content_left_card_1&populate=HomeMetaData.playAnyWhereSection.content_left_card_2&populate=HomeMetaData.playAnyWhereSection.content_left_card_3&populate=HomeMetaData.playAnyWhereSection.DownloadNow&populate=HomeMetaData.playAnyWhereSection.AppStore&populate=HomeMetaData.playAnyWhereSection.GoogleStore&populate=HomeMetaData.playAnyWhereSection.app_preview_image&populate=HomeMetaData.adventureSection&populate=HomeMetaData.adventureSection.wooden_button&populate=HomeMetaData.adventureSection.slider_button&populate=HomeMetaData.updateAndEventsSection&populate=HomeMetaData.updateAndEventsSection.EventsCard&populate=HomeMetaData.contactUsSection&populate=HomeMetaData.contactUsSection.ContactUsList&populate=HomeMetaData.contactUsSection.ContactUsList&filters[slug][$eq]=footer&populate=Footer&populate=Footer.quick_links&populate=Footer.quick_links_support_anchor&populate=Footer.social_media_footer_links');
+          const data = await response.json();
+          console.log(data.data[1].HomeMetaData[0].playAnyWhereSection[0].content_left_card_1[0].content_left_title,"data")
+          setBannerData(data.data[1].HomeMetaData[0].adventureSection[0]);
+        } catch (error) {
+          console.error('Failed to fetch banner data:', error);
+        }
+      }
+  
+      fetchBannerData();
+    }, []);
+   
 
    return (
       <section className="w-full h-auto bg-[#FFCE49] relative overflow-hidden dark:bg-[#212121]">
@@ -24,7 +46,7 @@ export default function GameInfo() {
          {/* Heading */}
          <div className="flex flex-col mt-2 items-center justify-center w-full h-full z-20 relative">
             <Heading
-               text="The Ultimate Learning Adventure"
+               text={bannerData.title}
                fontFamily="font-luckiest"
                fontSize="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
                fontWeight="font-bold"
@@ -59,7 +81,7 @@ export default function GameInfo() {
 
          {/* Subtext */}
          <div className="font-medium dark:text-white text-sm sm:text-base md:text-xl lg:text-2xl text-center sm:text-left mt-4 px-4 sm:px-6 md:px-16 lg:px-40 xl:px-56">
-            Explore futuristic cities and enchanted forests.
+         {bannerData.secondary_header}
          </div>
 
          {/* Slick Carousel */}

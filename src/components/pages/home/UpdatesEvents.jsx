@@ -1,28 +1,60 @@
+"use client"
 import EventCard from "@/components/cards/EventCard";
 import Heading from "@/components/texts/Heading";
+import { useEffect, useState } from 'react';
 
-const events = [
-    {
-        imageSrc: '/images/game_screen1.jpeg',
-        link: '#',
-        title: 'New Levels Unlocked',
-        description: 'Crystal Caves expansion now available. More puzzles, more fun!'
-    },
-    {
-        imageSrc: '/images/game_screen2.jpeg',
-        link: '#',
-        title: 'Community Challenge',
-        description: 'Join the upcoming Treasure Hunt event for exclusive in-game rewards.'
-    },
-    {
-        imageSrc: '/images/game_screen3.jpeg',
-        link: '#',
-        title: 'Kurixel Studios is Growing',
-        description: 'More creativity, more fun, and more mind-blowing games are on the way!'
-    }
-];
 
 export default function UpdatesEvents({ isImage = true, bgColor }) {
+
+    const [bannerData, setBannerData] = useState({
+        title: '',
+        EventsCard: [],
+      });
+    
+      useEffect(() => {
+        async function fetchBannerData() {
+          try {
+            const response = await fetch('http://localhost:1337/api/cms-pages?filters[slug][$eq]=home&filters[slug][$eq]=footer&populate=HomeMetaData.banner.banner.button&populate=HomeMetaData.playAnyWhereSection.content_left_card_1&populate=HomeMetaData.playAnyWhereSection.content_left_card_2&populate=HomeMetaData.playAnyWhereSection.content_left_card_3&populate=HomeMetaData.playAnyWhereSection.DownloadNow&populate=HomeMetaData.playAnyWhereSection.AppStore&populate=HomeMetaData.playAnyWhereSection.GoogleStore&populate=HomeMetaData.playAnyWhereSection.app_preview_image&populate=HomeMetaData.adventureSection&populate=HomeMetaData.adventureSection.wooden_button&populate=HomeMetaData.adventureSection.slider_button&populate=HomeMetaData.updateAndEventsSection&populate=HomeMetaData.updateAndEventsSection.EventsCard&populate=HomeMetaData.contactUsSection&populate=HomeMetaData.contactUsSection.ContactUsList&populate=HomeMetaData.contactUsSection.ContactUsList&filters[slug][$eq]=footer&populate=Footer&populate=Footer.quick_links&populate=Footer.quick_links_support_anchor&populate=Footer.social_media_footer_links');
+            const data = await response.json();
+            console.log(data.data[1].HomeMetaData[0].playAnyWhereSection[0].content_left_card_1[0].content_left_title,"data")
+            setBannerData(data.data[1].HomeMetaData[0].updateAndEventsSection[0]);
+          } catch (error) {
+            console.error('Failed to fetch banner data:', error);
+          }
+        }
+    
+        fetchBannerData();
+      }, []);
+
+
+      const events = bannerData.EventsCard.length
+      ? bannerData.EventsCard.map((card, index) => ({
+          imageSrc: `/images/game_screen${index + 1}.jpeg`,
+          link: '#',
+          title: card.title,
+          description: card.description,
+        }))
+      : [
+          {
+            imageSrc: '/images/game_screen1.jpeg',
+            link: '#',
+            title: 'New Levels Unlocked',
+            description: 'Crystal Caves expansion now available. More puzzles, more fun!',
+          },
+          {
+            imageSrc: '/images/game_screen2.jpeg',
+            link: '#',
+            title: 'Community Challenge',
+            description: 'Join the upcoming Treasure Hunt event for exclusive in-game rewards.',
+          },
+          {
+            imageSrc: '/images/game_screen3.jpeg',
+            link: '#',
+            title: 'Kurixel Studios is Growing',
+            description: 'More creativity, more fun, and more mind-blowing games are on the way!',
+          },
+        ];
+    
     return (
         <section className={`w-full h-auto  ${bgColor || ""} dark:bg-[#212121]`}>
             {/* Heading */}

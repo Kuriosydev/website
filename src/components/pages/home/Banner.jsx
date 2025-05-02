@@ -1,10 +1,33 @@
 
+"use client"
 import ImageButtons from '@/components/buttons/ImageButtons';
+import { useEffect, useState } from 'react';
 
 const playIcon = 'fa-solid fa-play';
 const downloadIcon = 'fa-solid fa-arrow-down';
 
 export default function Banner() {
+
+  const [bannerData, setBannerData] = useState({
+    title: 'WHERE LEARNING IS AN Adventure',
+    description: 'Where play meets adventure. Learn, explore, and level up in the coolest way possible!',
+  });
+
+  useEffect(() => {
+    async function fetchBannerData() {
+      try {
+        const response = await fetch('http://localhost:1337/api/cms-pages?filters[slug][$eq]=home&filters[slug][$eq]=footer&populate=HomeMetaData.banner.banner.button&populate=HomeMetaData.playAnyWhereSection.content_left_card_1&populate=HomeMetaData.playAnyWhereSection.content_left_card_2&populate=HomeMetaData.playAnyWhereSection.content_left_card_3&populate=HomeMetaData.playAnyWhereSection.DownloadNow&populate=HomeMetaData.playAnyWhereSection.AppStore&populate=HomeMetaData.playAnyWhereSection.GoogleStore&populate=HomeMetaData.playAnyWhereSection.app_preview_image&populate=HomeMetaData.adventureSection&populate=HomeMetaData.adventureSection.wooden_button&populate=HomeMetaData.adventureSection.slider_button&populate=HomeMetaData.updateAndEventsSection&populate=HomeMetaData.updateAndEventsSection.EventsCard&populate=HomeMetaData.contactUsSection&populate=HomeMetaData.contactUsSection.ContactUsList&populate=HomeMetaData.contactUsSection.ContactUsList&filters[slug][$eq]=footer&populate=Footer&populate=Footer.quick_links&populate=Footer.quick_links_support_anchor&populate=Footer.social_media_footer_links');
+        const data = await response.json();
+        console.log(data.data[1].HomeMetaData[0].banner[0].banner[0].title,"data")
+        setBannerData(data.data[1].HomeMetaData[0].banner[0].banner[0]);
+      } catch (error) {
+        console.error('Failed to fetch banner data:', error);
+      }
+    }
+
+    fetchBannerData();
+  }, []);
+
   return (
     <section className="w-auto h-auto">
       <div className="w-full min-h-screen relative overflow-hidden -mt-[60px] pt-[80px]">
@@ -24,14 +47,14 @@ export default function Banner() {
         {/* Centered content */}
         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-white text-center px-4 w-full max-w-screen-xl mx-auto">
           <h1 className="text-4xl sm:text-6xl md:text-[87px] leading-tight md:leading-[91px] tracking-wide md:tracking-[0.25rem] font-luckiest font-bold text-white sm:text-[#8A4616] md:text-[#8A4616] lg:text-[#8A4616] xl:text-[#8A4616] break-words text-center capitalize dark:text-[#FFCE49] sm:dark:text-[#FFCE49] md:dark:text-[#FFCE49] lg:dark:text-[#FFCE49] xl:dark:text-[#FFCE49]">
-            <span className="block">WHERE LEARNING IS</span>
-            <span className="block">AN ADVENTURE!</span>
+            <span className="block">{bannerData.title}</span>
+            {/* <span className="block">AN ADVENTURE!</span> */}
           </h1>
 
 
 
           <p className="mt-4 font-medium text-[18px] leading-[22px] tracking-[0] text-white sm:text-black text-center break-keep dark:text-white sm:dark:text-white md:dark:text-white lg:dark:text-white xl:dark:text-white">
-            Where play meets adventure. Learn, explore, and level up in the coolest way possible!
+          {bannerData.description}
           </p>
           <div className="flex flex-col md:flex-row mt-8">
             <ImageButtons
