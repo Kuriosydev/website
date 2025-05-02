@@ -9,7 +9,7 @@ export default function ParentTestimonials() {
     async function fetchTestimonials() {
       try {
         const response = await fetch(
-          "http://localhost:1337/api/cms-pages?filters[slug][$eq]=parents&populate=ParentsMetaData&populate=ParentsMetaData.bannerReviewCard"
+          "https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=parents&populate=ParentsMetaData&populate=ParentsMetaData.bannerReviewCard"
         );
         const data = await response.json();
 

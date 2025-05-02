@@ -9,7 +9,7 @@ export const getAllBlogs = async () => {
 
   try {
     const response = await fetch(
-      "http://localhost:1337/api/cms-pages?filters[slug][$eq]=news&populate=NewsMetaData&populate=NewsMetaData.banner&populate=NewsMetaData.updatesAndEventsSection&populate=NewsMetaData.updatesAndEventsSection.card&populate=NewsMetaData.NewsSection"
+      "https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=news&populate=NewsMetaData&populate=NewsMetaData.banner&populate=NewsMetaData.updatesAndEventsSection&populate=NewsMetaData.updatesAndEventsSection.card&populate=NewsMetaData.NewsSection"
     );
     const data = await response.json();
 

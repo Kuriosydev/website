@@ -14,7 +14,7 @@ export default function Dashboard() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("http://localhost:1337/api/cms-pages?filters[slug][$eq]=games&populate=GamesMetaData.GameDashboardSection.title&populate=GamesMetaData.GameDashboardSection.list");
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=games&populate=GamesMetaData.GameDashboardSection.title&populate=GamesMetaData.GameDashboardSection.list");
         const data = await response.json();
 
         const dashboard = data.data[0]?.GamesMetaData[0]?.GameDashboardSection[0];

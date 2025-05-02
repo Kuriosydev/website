@@ -15,7 +15,7 @@ export default function ProdigyWorld() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("http://localhost:1337/api/cms-pages?filters[slug][$eq]=games&populate=GamesMetaData.GameDiveDeepSection.button");
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=games&populate=GamesMetaData.GameDiveDeepSection.button");
         const data = await response.json();
 
         const diveDeep = data.data[0]?.GamesMetaData[0]?.GameDiveDeepSection[0];
