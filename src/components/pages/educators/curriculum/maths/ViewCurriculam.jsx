@@ -1,3 +1,5 @@
+"use client"
+import { useEffect, useState } from 'react';
 import Heading from "@/components/texts/Heading";
 
 const listData = [
@@ -5,11 +7,35 @@ const listData = [
 ];
 
 export default function ViewCurriculam() {
+      const [item, setItem] = useState({
+          mainTitle: 'Explore Grade-Level Learning with Kurixel',
+          title: 'Kurixel’s immersive gameplay experience is built around core curriculum standards ensuring your child or student is always learning what matters most.',
+        });
+      
+        useEffect(() => {
+          async function fetchData() {
+            try {
+              const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-math&populate=EducatorsCurriculumMathPage&populate=EducatorsCurriculumMathPage.list");
+              const data = await response.json();
+             
+              const bannerComponent = data.data[0]?.EducatorsCurriculumMathPage[1];
+              console.log(bannerComponent,"main")
+              setItem({
+                mainTitle: bannerComponent?.mainTitle || '',
+                title: bannerComponent?.title || '',
+              });
+            } catch (error) {
+              console.error('Failed to fetch Data', error);
+            }
+          }
+      
+          fetchData();
+        }, []);
   return (
     <section className={`w-full h-auto bg-white relative overflow-hidden dark:bg-[#212121]`}>
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
         <Heading
-          text="Explore Grade-Level Learning with Kurixel"
+          text={item.mainTitle}
           fontFamily="font-luckiest"
           fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
           fontWeight="font-bold"
@@ -31,7 +57,7 @@ export default function ViewCurriculam() {
         />
 
         <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center dark:text-white">
-          Kurixel’s immersive gameplay experience is built around core curriculum standards ensuring your child or student is always learning what matters most.
+          {item.title}
         </div>
       </div>
     </section>

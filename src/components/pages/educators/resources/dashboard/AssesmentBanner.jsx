@@ -1,12 +1,39 @@
+"use client"
+import { useEffect, useState } from 'react';
 import ImageBanner from "@/components/banners/ImageBanner";
 
 export default function AssesmentBanner() {
+  const [item, setItem] = useState({
+    title: 'Uncover Learning Gaps ',
+    description: 'Instantly see which skills they’ve mastered, where they’re still growing, and which topics may need a little extra support.',
+  });
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-report&populate=EducatorsReportPage&populate=EducatorsReportPage.banner");
+        const data = await response.json();
+       
+        const bannerComponentTitle = data.data[0]?.EducatorsReportPage[0]?.banner[0];
+        const bannerComponentSmallTitle = data.data[0]?.EducatorsReportPage[0];
+        console.log(bannerComponentTitle,"bannerComponentTitle")
+        setItem({
+          title: bannerComponentTitle?.smallTitle || '',
+          description: bannerComponentSmallTitle?.smallTitle || '',
+        });
+      } catch (error) {
+        console.error('Failed to fetch Data', error);
+      }
+    }
+
+    fetchData();
+  }, []);
   return (
     <ImageBanner
       col={2}
       bgColor={"bg-[#FFCE49]"}
-      heading="Uncover Learning Gaps "
-      description="Instantly see which skills they’ve mastered, where they’re still growing, and which topics may need a little extra support."
+      heading={item.title}
+      description={item.description}
       imgsrc="/images/frame1.png"
       buttons={[
         {

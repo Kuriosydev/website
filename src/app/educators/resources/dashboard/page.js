@@ -1,4 +1,5 @@
-
+"use client"
+import { useState, useEffect } from "react";
 import AssesmentBanner from "@/components/pages/educators/resources/dashboard/AssesmentBanner";
 import EngagingBanner from "@/components/pages/educators/resources/dashboard/EngagingBanner";
 import Portal from "@/components/pages/educators/resources/dashboard/Portal";
@@ -86,13 +87,48 @@ const cards = [
 ]
 
 export default function Dashboard() {
+  
+  const [item, setItem] = useState({ title: '' });
+  const [cards, setCards] = useState([]);
+  
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-report&populate=EducatorsReportPage.card");
+        const data = await response.json();
+  
+        const pageComponents = data.data[0]?.EducatorsReportPage || [];
+        const bannerComponent = pageComponents.find(c => c.__component === "shared.educators-report-teachers-section");
+  
+        setItem({
+          title: bannerComponent?.title || '',
+        });
+  
+        if (bannerComponent?.card) {
+          const dynamicCards = bannerComponent.card.map(card => ({
+            imgSrc: "/images/circular_assessment.jpg", // or dynamic if API includes images
+            heading: card.title,
+            description: card.description
+          }));
+          setCards(dynamicCards);
+        }
+  
+      } catch (error) {
+        console.error("Failed to fetch data", error);
+      }
+    }
+  
+    fetchData();
+  }, []);
+  
   return (
     <EducatorLayout>
       <AssesmentBanner />
       <EngagingBanner />
       <ParentAccount
-        heading="Teaching Tools That Work With You"
-        cards={cards}
+  heading={item.title}
+  cards={cards}
       />
       <Portal />
       <WhyProdigy />

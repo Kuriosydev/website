@@ -1,22 +1,56 @@
+"use client"
+import { useEffect, useState } from "react";
 import BulletList from "@/components/lists/BulletList";
 import Heading from "@/components/texts/Heading";
 import VideoPreview from "@/components/videos/VideoPreview";
 
-const listData = [
-    {
-        text: "English Language Arts Built for Play.Designed for Growth."
-    },
-    { text: "Strengthen language skills by creating, crafting, and storytelling." },
-    { text: "Stay curious with new content that adapts to their pace and progress." },
-];
+
 
 export default function OneAccount() {
+            const [item, setItem] = useState({
+                title: '',
+                description: '',
+                list1: '',
+                list2: '',
+                list3: '',
+              });
+            
+              useEffect(() => {
+                async function fetchData() {
+                  try {
+                    const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=game-english&populate=GameEnglishPage&populate=GameEnglishPage.DashboardSection.title");
+                    const data = await response.json();
+                   
+                    const bannerComponent = data.data[0]?.GameEnglishPage[0]?.DashboardSection[0];
+                    console.log(bannerComponent?.title[0]?.title,"working")
+                    setItem({
+                      title:bannerComponent?.title[0]?.title || '',
+                      description: bannerComponent?.title[0]?.description || '',
+                      list1: bannerComponent?.title[1]?.title || '',
+                      list2:bannerComponent?.title[2]?.title || '',
+                      list3:bannerComponent?.title[3]?.title || '',
+                    });
+                  } catch (error) {
+                    console.error('Failed to fetch Data', error);
+                  }
+                }
+            
+                fetchData();
+              }, []);
+
+              const listData = [
+                {
+                    text: item.list1
+                },
+                { text: item.list2 },
+                { text: item.list3 },
+            ];
     return (
         <section className="w-full h-auto bg-[#8F0E00] dark:bg-[#212121]">
             <div className="flex flex-col items-center justify-center w-full h-full py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
                 <div className="py-10">
                     <Heading
-                        text="One Account. Endless Adventures."
+                        text={item.title}
                         fontFamily="font-luckiest"
                         fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
                         fontWeight="font-bold"
@@ -28,7 +62,7 @@ export default function OneAccount() {
                 </div>
 
                 <div className="flex flex-row flex-wrap items-center justify-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12 text-justify sm:text-justify md:text-justify lg:text-center xl:text-center  text-white">
-                    Unlock a universe of learning with a single Kurixel dashboard.
+                    {item.description}
                 </div>
 
                 <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start justify-between w-full gap-10 py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-8 sm:px-10 md:px-20 lg:px-40 xl:px-12">

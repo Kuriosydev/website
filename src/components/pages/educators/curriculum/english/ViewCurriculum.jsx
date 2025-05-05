@@ -5,6 +5,39 @@ import Heading from "@/components/texts/Heading";
 import { useEffect, useState } from "react";
 
 export default function ViewCurriculum() {
+    const [item, setItem] = useState({
+      title: 'Explore Your Language Arts Adventure',
+    });
+    const [item2, setItem2] = useState({
+      title: 'Master Language Arts Through Play',
+      listTitle: '',
+      listDescription: '',
+    });
+  
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-english&populate=EducatorsCurriculumEnglishPage&populate=EducatorsCurriculumEnglishPage.BannerSection&populate=EducatorsCurriculumEnglishPage.classRoomLessions&populate=EducatorsCurriculumEnglishPage.classRoomLessions.list");
+          const data = await response.json();
+          const bannerComponent = data.data[0]?.EducatorsCurriculumEnglishPage[1];
+          const bannerComponent2 = data.data[0]?.EducatorsCurriculumEnglishPage[2]?.classRoomLessions;
+          console.log(bannerComponent2,"bannerComponent2")
+          setItem({
+            title: bannerComponent?.title || '',
+          });
+          setItem2({
+            title: bannerComponent2?.header || '',
+            listTitle: bannerComponent2?.list[0]?.link,
+            listDescription: bannerComponent2?.list[0]?.title,
+          });
+        } catch (error) {
+          console.error('Failed to fetch Data', error);
+        }
+      }
+  
+      fetchData();
+    }, []);
+
   const grades = Array.from({ length: 8 }, (_, i) => i + 1); // Grade 1 to 6
   const subjects = ["Language", "Reading", "Writing"];
   const [gradeSkills, setGradeSkills] = useState(null);
@@ -36,7 +69,7 @@ export default function ViewCurriculum() {
     <section className="w-full h-auto bg-white relative overflow-hidden dark:bg-[#212121]">
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16">
         <Heading
-          text="Explore Your Language Arts Adventure"
+          text={item.title}
           fontFamily="font-luckiest"
           fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
           fontWeight="font-bold"
@@ -80,7 +113,7 @@ export default function ViewCurriculum() {
         </div>
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 py-4 sm:py-4 md:py-8">
           <Heading
-            text="Master Language Arts Through Play"
+            text={item2.title}
             fontFamily="font-luckiest"
             fontSize="text-2xl sm:text-2xl md:text-3xl lg:text-4xl"
             fontWeight="font-bold"
@@ -100,10 +133,10 @@ export default function ViewCurriculum() {
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8">
             <div className="text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium dark:text-white">
-              At Kurixel, reading and writing come to life. Learners unlock stories, earn rewards, and level up their skills while they play.
+             {item2.listTitle}
             </div>
             <div className="text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-extrabold dark:text-white py-4 sm:py-4 md:py-8">
-              Discover the Kurixel English experience
+             {item2.listDescription}
             </div>
           </div>
         </div>

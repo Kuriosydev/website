@@ -1,12 +1,36 @@
+"use client"
+import { useEffect, useState } from 'react';
 import ImageButtons from "@/components/buttons/ImageButtons";
 import Heading from "@/components/texts/Heading";
 
 export default function TeachersAccount() {
+  const [item, setItem] = useState({
+    title: '',
+    description: '',
+  });
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-math&populate=EducatorsCurriculumMathPage&populate=EducatorsCurriculumMathPage.section");
+        const data = await response.json();
+        const bannerComponent = data.data[0]?.EducatorsCurriculumMathPage[2]?.section[0];
+        setItem({
+          title: bannerComponent?.title || '',
+          description: bannerComponent?.description || '',
+        });
+      } catch (error) {
+        console.error('Failed to fetch Data', error);
+      }
+    }
+
+    fetchData();
+  }, []);
   return (
     <section className={`w-full h-auto bg-[#FFCE49] relative overflow-hidden dark:bg-[#212121]`}>
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16">
         <Heading
-          text="Discover the Fun Side of Math"
+          text={item.title}
           fontFamily="font-luckiest"
           fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
           fontWeight="font-bold"
@@ -21,7 +45,7 @@ export default function TeachersAccount() {
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8">
             <div className="text-left text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium dark:text-white">
-              Kurixel turns everyday lessons into immersive challenges kids can’t wait to solve.
+              {item.description}
             </div>
 
             <div className="py-4 sm:py-4 md:py-8">

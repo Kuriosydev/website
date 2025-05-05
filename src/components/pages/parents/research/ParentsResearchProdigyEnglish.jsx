@@ -1,6 +1,31 @@
+
+"use client"
+import { useEffect, useState } from "react";
 import Heading from "@/components/texts/Heading";
 
 export default function ParentsResearchProdigyEnglish() {
+  const [bannerData, setBannerData] = useState(null);
+  useEffect(() => {
+    async function fetchBannerData() {
+      try {
+        const res = await fetch(
+          "https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=second-research&populate=SecondResearchPage.list&populate=SecondResearchPage.card&populate=SecondResearchPage.banner"
+        );
+        const json = await res.json();
+        const page = json?.data?.[0]?.SecondResearchPage[3] || [];
+      
+        setBannerData(page);
+
+      } catch (err) {
+        console.error("Error fetching banner data:", err);
+      }
+    }
+
+    fetchBannerData();
+  }, []);
+
+  if (!bannerData) return null; // or a loading indicator
+
   return (
     <section className="w-full h-auto bg-[#8F0E00] relative overflow-hidden dark:bg-black">
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16">
@@ -14,7 +39,7 @@ export default function ParentsResearchProdigyEnglish() {
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8 px-10">
             <Heading
-              text="Kurixel Language – Where Stories Spark Skills"
+              text={bannerData.title}
               fontFamily="font-luckiest"
               fontSize="text-3xl sm:text-3xl md:text-4xl lg:text-5xl"
               fontWeight="font-bold"
@@ -24,7 +49,7 @@ export default function ParentsResearchProdigyEnglish() {
               customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 "
             />
             <div className="text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-white py-2">
-              Kurixel Language blends trusted learning strategies with playful storytelling to help kids strengthen their reading, comprehension, and vocabulary skills one fun challenge at a time. Built around classroom standards and inspired by the joy of discovery, Kurixel turns reading practice into an exciting adventure. Because when learning feels like a story worth telling, kids stay curious, confident, and motivated to grow.
+              {bannerData.description}
             </div>
           </div>
         </div>

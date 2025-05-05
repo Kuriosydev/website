@@ -1,6 +1,33 @@
+"use client"
+import { useEffect, useState } from 'react';
 import ImageBanner from "@/components/banners/ImageBanner";
 
 export default function AssesmentBanner() {
+    const [item, setItem] = useState({
+      title: 'Design lessons your students will love',
+      description: 'Bring your curriculum to life. Kurixel keeps learning fun for students while giving you built-in grading and real-time performance insights.',
+    });
+  
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-assessment&populate=EducatorAssessmentPage.list&populate=EducatorAssessmentPage.card&populate=EducatorAssessmentPage.banner");
+          const data = await response.json();
+         
+          const bannerComponentTitle = data.data[0]?.EducatorAssessmentPage[0]?.banner[0];
+          const bannerComponentSmallTitle = data.data[0]?.EducatorAssessmentPage[0];
+          console.log(bannerComponentTitle,"bannerComponentTitle")
+          setItem({
+            title: bannerComponentTitle?.title || '',
+            description: bannerComponentTitle?.description || '',
+          });
+        } catch (error) {
+          console.error('Failed to fetch Data', error);
+        }
+      }
+  
+      fetchData();
+    }, []);
   return (
     <ImageBanner
       col={2}
