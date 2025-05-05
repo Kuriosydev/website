@@ -1,7 +1,30 @@
+"use client"
+import { useEffect, useState } from "react";
 import YellowButton from "@/components/buttons/YellowButton";
 import Heading from "@/components/texts/Heading";
 
 export default function ParentsResearchEngage() {
+  const [bannerData, setBannerData] = useState(null);
+  useEffect(() => {
+    async function fetchBannerData() {
+      try {
+        const res = await fetch(
+          "https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=second-research&populate=SecondResearchPage.list&populate=SecondResearchPage.card&populate=SecondResearchPage.banner"
+        );
+        const json = await res.json();
+        const page = json?.data?.[0]?.SecondResearchPage[5] || [];
+      
+        setBannerData(page);
+
+      } catch (err) {
+        console.error("Error fetching banner data:", err);
+      }
+    }
+
+    fetchBannerData();
+  }, []);
+
+  if (!bannerData) return null; // or a loading indicator
   return (
     <section className="w-full h-auto bg-[#8F0E00] relative overflow-hidden dark:bg-black">
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16">
@@ -15,7 +38,7 @@ export default function ParentsResearchEngage() {
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8 px-10">
             <Heading
-              text="Ready for a smarter way to engage students?"
+              text={bannerData.title}
               fontFamily="font-luckiest"
               fontSize="text-3xl sm:text-3xl md:text-4xl lg:text-5xl"
               fontWeight="font-bold"

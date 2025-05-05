@@ -1,3 +1,5 @@
+"use client"
+import { useEffect, useState } from 'react';
 import ImageBanner from "@/components/banners/ImageBanner";
 
 const countryDropdown = [
@@ -36,12 +38,36 @@ const countryDropdown = [
 ]
 
 export default function MathCurriculumBanner() {
+    const [item, setItem] = useState({
+        title: 'Aligned Math Skills',
+        description: 'Fully aligned curriculum standards',
+      });
+    
+      useEffect(() => {
+        async function fetchData() {
+          try {
+            const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-math&populate=EducatorsCurriculumMathPage.BannerSection");
+            const data = await response.json();
+           
+            const bannerComponent = data.data[0]?.EducatorsCurriculumMathPage[0]?.BannerSection;
+            console.log(bannerComponent,"bannerComponent")
+            setItem({
+              title: bannerComponent?.title || '',
+              description: bannerComponent?.description || '',
+            });
+          } catch (error) {
+            console.error('Failed to fetch Data', error);
+          }
+        }
+    
+        fetchData();
+      }, []);
     return (
         <ImageBanner
             col={2}
             bgColor={"bg-[#FFCE49]"}
-            heading="Aligned Math Skills"
-            description="Fully aligned curriculum standards"
+            heading={item.title}
+            description={item.description}
             imgsrc="/images/maths_curr_banner.png"
             dropdown={countryDropdown}
             buttontext="View Curriculum"

@@ -115,66 +115,66 @@ export default function Register() {
     }
   };
 
-  const handleSendOtp = async () => {
-    setMessage("");
-    setMessageType("error");
+  // const handleSendOtp = async () => {
+  //   setMessage("");
+  //   setMessageType("error");
 
-    if (!phone || phone.length < 8) {
-      setMessage("❌ Please enter a valid phone number.");
-      return;
-    }
+  //   if (!phone || phone.length < 8) {
+  //     setMessage("❌ Please enter a valid phone number.");
+  //     return;
+  //   }
 
-    try {
-      setLoading(true);
-      const otpResponse = await fetch("/api/send-otp", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone }),
-      });
+  //   try {
+  //     setLoading(true);
+  //     const otpResponse = await fetch("/api/send-otp", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ phone }),
+  //     });
 
-      const otpData = await otpResponse.json();
+  //     const otpData = await otpResponse.json();
 
-      if (!otpResponse.ok) {
-        throw new Error(otpData.error || "Failed to send verification code");
-      }
+  //     if (!otpResponse.ok) {
+  //       throw new Error(otpData.error || "Failed to send verification code");
+  //     }
 
-      setVerificationId(otpData.verificationId);
-      setOtpSent(true);
-      setMessage("✅ OTP sent successfully. Check your phone.");
-      setMessageType("success");
-    } catch (err) {
-      setMessage(`❌ ${err.message}`);
-      setMessageType("error");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     setVerificationId(otpData.verificationId);
+  //     setOtpSent(true);
+  //     setMessage("✅ OTP sent successfully. Check your phone.");
+  //     setMessageType("success");
+  //   } catch (err) {
+  //     setMessage(`❌ ${err.message}`);
+  //     setMessageType("error");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
-  const handleVerifyOtpInline = async () => {
-    try {
-      setLoading(true);
-      const verifyResponse = await fetch("/api/verify-otp", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ verificationId, otp, phone }),
-      });
+  // const handleVerifyOtpInline = async () => {
+  //   try {
+  //     setLoading(true);
+  //     const verifyResponse = await fetch("/api/verify-otp", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ verificationId, otp, phone }),
+  //     });
 
-      const verifyData = await verifyResponse.json();
+  //     const verifyData = await verifyResponse.json();
 
-      if (!verifyResponse.ok) {
-        throw new Error(verifyData.error || "Invalid verification code");
-      }
+  //     if (!verifyResponse.ok) {
+  //       throw new Error(verifyData.error || "Invalid verification code");
+  //     }
 
-      setOtpVerified(true);
-      setMessage("✅ Phone number verified.");
-      setMessageType("success");
-    } catch (err) {
-      setMessage(`❌ ${err.message}`);
-      setMessageType("error");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     setOtpVerified(true);
+  //     setMessage("✅ Phone number verified.");
+  //     setMessageType("success");
+  //   } catch (err) {
+  //     setMessage(`❌ ${err.message}`);
+  //     setMessageType("error");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   // Render registration form
   return (
@@ -248,7 +248,7 @@ export default function Register() {
                 onChange={(e) => {
                   setPhone(e.target.value);
                   setOtpSent(false);
-                  setOtpVerified(false);
+                  setOtpVerified(true);
                 }}
                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                 required
@@ -256,7 +256,7 @@ export default function Register() {
               />
               <button
                 type="button"
-                onClick={handleSendOtp}
+                // onClick={handleSendOtp}
                 disabled={loading || otpSent}
                 className="mt-1 px-3 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
               >
@@ -352,8 +352,8 @@ export default function Register() {
 
           <button
             type="submit"
-            disabled={loading || !otpVerified}
-            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition disabled:bg-gray-400"
+            // disabled={loading || !otpVerified}
+            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition "
           >
             {loading ? "Registering..." : "Register"}
           </button>

@@ -9,112 +9,51 @@ import ResourceBlog from "@/components/pages/parents/ResourceBlog";
 import EducatorLayout from "./EducatorLayout";
 import { useEffect, useState } from 'react';
 
-
-// const resourceCards = [
-//     {
-//         text: "Discover creative strategies to boost motivation.",
-//         linkText: "Learn More",
-//         link: "/news",
-//     },
-//     {
-//         text: "Make personalized learning easy and effective.",
-//         linkText: "Learn More",
-//         link: "/news",
-//     },
-//     {
-//         text: "Turn every session into a meaningful checkpoint.",
-//         linkText: "Learn More",
-//         link: "/news",
-//     }
-// ];
-
-const testimonials = [
-    {
-        comment: "Kurixel is an amazing tool for getting kids who usually don't enjoy math to actually engage with it.",
-        author: "E. Guerrero",
-        authorImage: "/images/author1.png"
-    },
-    {
-        comment: "I love how Kurixel makes math fun and exciting for students.",
-        author: "K. Vega",
-        authorImage: "/images/author2.png"
-    },
-    {
-        comment: "Kurixel has really helped my students who usually find math frustrating. It’s so rewarding to see them engaged and feeling more confident.",
-        author: "J. Vaughn",
-        authorImage: "/images/author3.png"
-    }
-];
-
-const faqs = [
-    {
-        question: "Why Kurixel?",
-        answer: "Kurixel offers a rich, game-based learning environment that turns academic practice into an interactive adventure. With so many digital tools available, few captivate students the way Kurixel does. It transforms learning into a world of challenges, creativity, and rewards that students actually look forward to."
-    },
-    {
-        question: "How Does Kurixel Protect Student Privacy?",
-        answer: "Kurixel is committed to safeguarding student data. We follow strict privacy standards, collect only the information necessary to support learning, and never sell or share personal data. Our platform is fully compliant with major student privacy laws, ensuring a secure and trusted learning environment for every user."
-    },
-    {
-        question: "Is Kurixel Aligned with School, State or National Standards?",
-        answer: "Yes! Kurixel is built to align with a wide range of educational standards at the school, state, and national levels."
-    },
-];
-
-
 export default function Educators() {
-
     const [testimonials, setTestimonials] = useState([]);
     const [resourceCards, setResourceCards] = useState([]);
+    const [faqs, setFaqs] = useState([]);
 
     useEffect(() => {
-      async function fetchTestimonials() {
-        try {
-            const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators&populate=EducatorsMetaData&populate=EducatorsMetaData.banner.BannerComponent&populate=EducatorsMetaData.banner.BannerComponent.button&populate=EducatorsMetaData.reviewCardSection.EducatorsCard.ParentsCard&populate=EducatorsMetaData.howKurixelWorksSection&populate=EducatorsMetaData.howKurixelWorksSection.card&populate=EducatorsMetaData.howKurixelWorksSection.button&populate=EducatorsMetaData.oneClickLoginSection&populate=EducatorsMetaData.oneClickLoginSection.button&populate=EducatorsMetaData.curriculumSection&populate=EducatorsMetaData.curriculumSection.button&populate=EducatorsMetaData.levelUpSection&populate=EducatorsMetaData.levelUpSection.firstCard&populate=EducatorsMetaData.levelUpSection.secondCard&populate=EducatorsMetaData.prodigySection&populate=EducatorsMetaData.prodigySection.card&populate=EducatorsMetaData.teachersBlogSection&populate=EducatorsMetaData.teachersBlogSection.LearnMore");
-          const data = await response.json();
-  
-          const parentsCard = data?.data?.[0]?.EducatorsMetaData?.[0]?.reviewCardSection?.[0]?.EducatorsCard?.[0]?.ParentsCard || [];
-          const resourceCard = data?.data?.[0]?.EducatorsMetaData?.[0]?.teachersBlogSection?.[0]?.LearnMore || [];
+        async function fetchEducatorData() {
+            try {
+                const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators&populate=EducatorsMetaData&populate=EducatorsMetaData.banner.BannerComponent&populate=EducatorsMetaData.banner.BannerComponent.button&populate=EducatorsMetaData.reviewCardSection.EducatorsCard.ParentsCard&populate=EducatorsMetaData.howKurixelWorksSection&populate=EducatorsMetaData.howKurixelWorksSection.card&populate=EducatorsMetaData.howKurixelWorksSection.button&populate=EducatorsMetaData.oneClickLoginSection&populate=EducatorsMetaData.oneClickLoginSection.button&populate=EducatorsMetaData.curriculumSection&populate=EducatorsMetaData.curriculumSection.button&populate=EducatorsMetaData.levelUpSection&populate=EducatorsMetaData.levelUpSection.firstCard&populate=EducatorsMetaData.levelUpSection.secondCard&populate=EducatorsMetaData.prodigySection&populate=EducatorsMetaData.prodigySection.card&populate=EducatorsMetaData.teachersBlogSection&populate=EducatorsMetaData.teachersBlogSection.LearnMore&populate=EducatorsMetaData.questionSection&populate=EducatorsMetaData.questionSection.QuestionsList");
+                const data = await response.json();
 
-          const formattedTestimonials = parentsCard.map((card, index) => ({
-            comment: card.title?.replace(/^"|"$/g, '') || '',
-            author: card.description || '',
-            authorImage: `/images/author${index + 1}.png`, // fallback logic based on index
-          }));
+                const metaData = data?.data?.[0]?.EducatorsMetaData?.[0];
 
-          const formattedResources = resourceCard.map((card, index) => ({
-            text: card.title?.replace(/^"|"$/g, '') || '',
-            linkText: "Learn More",
-            link: "/news",
-          }));
-  
-          setTestimonials(formattedTestimonials);
-          setResourceCards(formattedResources);
-        } catch (error) {
-          console.error("Failed to fetch testimonials:", error);
+                const parentsCard = metaData?.reviewCardSection?.[0]?.EducatorsCard?.[0]?.ParentsCard || [];
+                const resourceCard = metaData?.teachersBlogSection?.[0]?.LearnMore || [];
+                const questionsList = metaData?.questionSection?.[0]?.QuestionsList || [];
+
+                const formattedTestimonials = parentsCard.map((card, index) => ({
+                    comment: card.title?.replace(/^"|"$/g, '') || '',
+                    author: card.description || '',
+                    authorImage: `/images/author${index + 1}.png`,
+                }));
+
+                const formattedResources = resourceCard.map((card) => ({
+                    text: card.title?.replace(/^"|"$/g, '') || '',
+                    linkText: "Learn More",
+                    link: "/news",
+                }));
+
+                const formattedFaqs = questionsList.map((q) => ({
+                    question: q.question_text,
+                    answer: q.question_answer,
+                }));
+
+                setTestimonials(formattedTestimonials);
+                setResourceCards(formattedResources);
+                setFaqs(formattedFaqs);
+            } catch (error) {
+                console.error("Failed to fetch educator page data:", error);
+            }
         }
-      }
-  
-      fetchTestimonials();
+
+        fetchEducatorData();
     }, []);
 
-    // const testimonials = [
-    //     {
-    //         comment: "Kurixel is an amazing tool for getting kids who usually don't enjoy math to actually engage with it.",
-    //         author: "E. Guerrero",
-    //         authorImage: "/images/author1.png"
-    //     },
-    //     {
-    //         comment: "I love how Kurixel makes math fun and exciting for students.",
-    //         author: "K. Vega",
-    //         authorImage: "/images/author2.png"
-    //     },
-    //     {
-    //         comment: "Kurixel has really helped my students who usually find math frustrating. It’s so rewarding to see them engaged and feeling more confident.",
-    //         author: "J. Vaughn",
-    //         authorImage: "/images/author3.png"
-    //     }
-    // ];
     return (
         <EducatorLayout faq={true} joinus={true} faqs={faqs}>
             <Banner />
@@ -129,5 +68,5 @@ export default function Educators() {
                 resourceCards={resourceCards}
             />
         </EducatorLayout>
-    )
+    );
 }

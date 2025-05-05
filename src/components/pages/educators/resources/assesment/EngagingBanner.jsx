@@ -1,7 +1,7 @@
 "use client";
 
 import Heading from "@/components/texts/Heading";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function EngagingBanner() {
   const ChevronDown = ({ size = 16, className = '' }) => (
@@ -39,11 +39,36 @@ export default function EngagingBanner() {
     setExpandedItem(expandedItem === id ? null : id);
   };
 
+    const [item, setItem] = useState({
+      title: 'Power up learning',
+      description: 'Create personalized, standards-aligned tasks, then let students explore, play, and grow.',
+    });
+  
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-assessment&populate=EducatorAssessmentPage.list&populate=EducatorAssessmentPage.card&populate=EducatorAssessmentPage.banner");
+          const data = await response.json();
+         
+          const bannerComponent = data.data[0]?.EducatorAssessmentPage[1];
+          console.log(bannerComponent,"bannerComponent")
+          setItem({
+            title: bannerComponent?.header || '',
+            description: bannerComponent?.text || '',
+          });
+        } catch (error) {
+          console.error('Failed to fetch Data', error);
+        }
+      }
+  
+      fetchData();
+    }, []);
+
   return (
     <section className={`w-full h-auto bg-white relative overflow-hidden dark:bg-[#212121]`}>
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16">
         <Heading
-          text="Power up learning"
+          text={item.title}
           fontFamily="font-luckiest"
           fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
           fontWeight="font-bold"
@@ -53,7 +78,7 @@ export default function EngagingBanner() {
           customStyle="py-2 sm:py-2 md:py-6 lg:py-7 xl:py-8 px-4 sm:px-10 md:px-20 lg:px-20"
         />
         <div className="text-center text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium dark:text-white">
-          Create personalized, standards-aligned tasks, then let students explore, play, and grow.
+          {item.description}
         </div>
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center sm:items-center md:items-center lg:items-center xl:items-center justify-center sm:justify-center md:justify-center lg:justify-center xl:justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
 

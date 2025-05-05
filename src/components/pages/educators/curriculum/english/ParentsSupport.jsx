@@ -1,3 +1,5 @@
+"use client"
+import { useEffect, useState } from 'react';
 import YellowButton from "@/components/buttons/YellowButton";
 import BulletList from "@/components/lists/BulletList";
 import Heading from "@/components/texts/Heading";
@@ -9,11 +11,40 @@ const listData = [
 ];
 
 export default function ParentsSupport() {
+  const [item, setItem] = useState({
+    title: 'Aligned Math Skills',
+    description: 'Fully aligned curriculum standards',
+    list: [],
+  });
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-english&populate=EducatorsCurriculumEnglishPage&populate=EducatorsCurriculumEnglishPage.classRoomLessions");
+        const data = await response.json();
+       
+        const bannerComponent = data.data[0]?.EducatorsCurriculumEnglishPage[4]?.classRoomLessions;
+        setItem({
+          title: bannerComponent?.header || '',
+          description: bannerComponent?.text || '',
+          list: bannerComponent?.list?.map(item => ({ 
+            imgSrc: "/images/Ellipse.png",
+            heading: item.title,
+            description: item.description
+
+         })) || []
+        });
+      } catch (error) {
+        console.error('Failed to fetch Data', error);
+      }
+    }
+
+    fetchData();
+  }, []);
   return (
     <section className={`w-full h-auto bg-[#8F0E00] relative overflow-hidden dark:bg-[#212121]`}>
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16">
         <Heading
-          text="Parents — Stay Connected to Your Child’s Learning"
+          text={item.title}
           fontFamily="font-luckiest"
           fontSize="text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
           fontWeight="font-bold"
@@ -29,7 +60,7 @@ export default function ParentsSupport() {
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 px-4 sm:px-4 md:px-6 lg:px-8 xl:px-8 py-4 sm:py-4 md:py-8">
             <div className="text-cenleftter text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-white py-4 sm:py-4 md:py-8">
-              Kurixel grows with your child. Our adaptive system personalizes each step, helping learners move forward with confidence while you stay in the loop with tools that make it easy to track progress and celebrate milestones.
+             {item.description}
             </div>
             <div className="py-4 sm:py-4 md:py-8">
               <BulletList
