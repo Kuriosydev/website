@@ -45,6 +45,10 @@ export default function OneAccount() {
                 { text: item.list2 },
                 { text: item.list3 },
             ];
+
+            const videoSrc = item.image && item.image.length > 0
+            ? `https://cms.kurixel.com${item.image[0].url}`
+            : "/videos/news_banner_vid_2.mp4";
     return (
         <section className="w-full h-auto bg-[#8F0E00] dark:bg-[#212121]">
             <div className="flex flex-col items-center justify-center w-full h-full py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">

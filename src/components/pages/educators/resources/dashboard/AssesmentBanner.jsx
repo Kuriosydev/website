@@ -11,7 +11,7 @@ export default function AssesmentBanner() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-report&populate=EducatorsReportPage&populate=EducatorsReportPage.banner");
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-report&populate=EducatorsReportPage&populate=EducatorsReportPage.banner&populate=EducatorsReportPage&populate=EducatorsReportPage.banner.image");
         const data = await response.json();
        
         const bannerComponentTitle = data.data[0]?.EducatorsReportPage[0]?.banner[0];
@@ -28,13 +28,18 @@ export default function AssesmentBanner() {
 
     fetchData();
   }, []);
+
+  const imageSrc = item.image  && item.image.length > 0
+  ? `https://cms.kurixel.com${item.image[0].url}`
+  : "/images/frame1.png"
+
   return (
     <ImageBanner
       col={2}
       bgColor={"bg-[#FFCE49]"}
       heading={item.title}
       description={item.description}
-      imgsrc="/images/frame1.png"
+      imgsrc={imageSrc}
       buttons={[
         {
           text: "Start free as a teacher",

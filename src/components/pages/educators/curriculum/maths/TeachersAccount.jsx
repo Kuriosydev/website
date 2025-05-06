@@ -12,7 +12,7 @@ export default function TeachersAccount() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-math&populate=EducatorsCurriculumMathPage&populate=EducatorsCurriculumMathPage.section");
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-math&populate=EducatorsCurriculumMathPage&populate=EducatorsCurriculumMathPage.section&populate=EducatorsCurriculumMathPage.section.backgroundImage");
         const data = await response.json();
         const bannerComponent = data.data[0]?.EducatorsCurriculumMathPage[2]?.section[0];
         setItem({
@@ -26,6 +26,10 @@ export default function TeachersAccount() {
 
     fetchData();
   }, []);
+
+  const videoSrc = item.backgroundImage && item.backgroundImage.length > 0
+  ? `https://cms.kurixel.com${item.backgroundImage[0].url}`
+  : "/images/image20.png"
   return (
     <section className={`w-full h-auto bg-[#FFCE49] relative overflow-hidden dark:bg-[#212121]`}>
       <div className="w-full h-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16">
@@ -41,7 +45,7 @@ export default function TeachersAccount() {
         />
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center sm:items-center md:items-center lg:items-center xl:items-center justify-center sm:justify-center md:justify-center lg:justify-center xl:justify-center gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8">
-            <img src="/images/image20.png" alt="creative gameplay image" className="w-3/4 h-3/4 object-contain" />
+            <img src={videoSrc} alt="creative gameplay image" className="w-3/4 h-3/4 object-contain" />
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8">
             <div className="text-left text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium dark:text-white">

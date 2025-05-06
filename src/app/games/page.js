@@ -17,7 +17,7 @@ export default function Games() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=games&populate=GamesMetaData&populate=GamesMetaData.BannerSection&populate=GamesMetaData.GamePracticeSection&populate=GamesMetaData.supportSection&populate=GamesMetaData.GameHomeworkSection&populate=GamesMetaData.GameDashboardSection&populate=GamesMetaData.BannerSection.button&populate=GamesMetaData.GamePracticeSection.card&populate=GamesMetaData.supportSection.card&populate=GamesMetaData.GameHomeworkSection.card&populate=GamesMetaData.GameDashboardSection.title&populate=GamesMetaData.GameDashboardSection.list&populate=GamesMetaData.GameDiveDeepSection&populate=GamesMetaData.GameDiveDeepSection.button&populate=GamesMetaData.GameResourceSection&populate=GamesMetaData.GameResourceSection.card&populate=GamesMetaData.GameQuestionSection&populate=GamesMetaData.GameQuestionSection.QuestionsList&populate=GamesMetaData.GameQuestionSection.button");
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=games&populate=GamesMetaData&populate=GamesMetaData.BannerSection&populate=GamesMetaData.GamePracticeSection&populate=GamesMetaData.supportSection&populate=GamesMetaData.GameHomeworkSection&populate=GamesMetaData.GameDashboardSection&populate=GamesMetaData.BannerSection.button&populate=GamesMetaData.GamePracticeSection.card&populate=GamesMetaData.supportSection.card&populate=GamesMetaData.GameHomeworkSection.card&populate=GamesMetaData.GameDashboardSection.title&populate=GamesMetaData.GameDashboardSection.list&populate=GamesMetaData.GameDiveDeepSection&populate=GamesMetaData.GameDiveDeepSection.button&populate=GamesMetaData.GameResourceSection&populate=GamesMetaData.GameResourceSection.card&populate=GamesMetaData.GameQuestionSection&populate=GamesMetaData.GameQuestionSection.QuestionsList&populate=GamesMetaData.GameQuestionSection.button&populate=GamesMetaData.supportSection.card.image");
         const data = await response.json();
 
         const metaData = data.data[0]?.GamesMetaData[0];
@@ -44,11 +44,11 @@ export default function Games() {
     "/images/4876975.jpg",
     "/images/8550090.jpg"
   ];
-
+console.log(item,"items anand")
   const cards =
     item.card.length > 0
       ? item.card.map((card, index) => ({
-          imgSrc: staticImages[index] || "",
+          imgSrc: `https://cms.kurixel.com${card.image[0].url}`,
           heading: card.title,
           description: card.description,
         }))

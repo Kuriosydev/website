@@ -17,7 +17,7 @@ export default function ViewCurriculum() {
     useEffect(() => {
       async function fetchData() {
         try {
-          const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-english&populate=EducatorsCurriculumEnglishPage&populate=EducatorsCurriculumEnglishPage.BannerSection&populate=EducatorsCurriculumEnglishPage.classRoomLessions&populate=EducatorsCurriculumEnglishPage.classRoomLessions.list");
+          const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-english&populate=EducatorsCurriculumEnglishPage&populate=EducatorsCurriculumEnglishPage.BannerSection&populate=EducatorsCurriculumEnglishPage.classRoomLessions&populate=EducatorsCurriculumEnglishPage.classRoomLessions.list&populate=EducatorsCurriculumEnglishPage.image");
           const data = await response.json();
           const bannerComponent = data.data[0]?.EducatorsCurriculumEnglishPage[1];
           const bannerComponent2 = data.data[0]?.EducatorsCurriculumEnglishPage[2]?.classRoomLessions;
@@ -37,6 +37,10 @@ export default function ViewCurriculum() {
   
       fetchData();
     }, []);
+
+    const imageSrc = item.image  && item.image.length > 0
+    ? `https://cms.kurixel.com${item.image[0].url}`
+    : "/images/maths_curr_banner.png"
 
   const grades = Array.from({ length: 8 }, (_, i) => i + 1); // Grade 1 to 6
   const subjects = ["Language", "Reading", "Writing"];
@@ -91,7 +95,7 @@ export default function ViewCurriculum() {
           </div>
           <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 py-4 sm:py-4 md:py-8">
             <img
-              src="/images/image31.png"
+              src={imageSrc}
               alt="creative gameplay image"
               className="w-3/4 h-3/4 object-contain"
             />

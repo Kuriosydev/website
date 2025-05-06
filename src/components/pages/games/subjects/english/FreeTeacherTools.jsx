@@ -13,14 +13,16 @@ export default function FreeTeacherTools() {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=game-english&populate=GameEnglishPage&populate=GameEnglishPage.TeachersSection&populate=GameEnglishPage.TeachersSection.card")
+    fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=game-english&populate=GameEnglishPage&populate=GameEnglishPage.TeachersSection&populate=GameEnglishPage.TeachersSection.card&populate=GameEnglishPage.TeachersSection.card.image")
       .then((res) => res.json())
       .then((data) => {
         const section = data?.data?.[0]?.GameEnglishPage?.[0]?.TeachersSection?.[0];
         setHeading(section?.title || "");
         const fetchedCards = section?.card || [];
         const mergedCards = fetchedCards.map((card, i) => ({
-          imgSrc: staticImages[i], // keep images static
+          imgSrc: card.image && card.image.length > 0 
+          ? `https://cms.kurixel.com${card.image[0].url}`
+          : staticImages[i],
           heading: card.title,
           description: card.description,
         }));
