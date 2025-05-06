@@ -13,7 +13,7 @@ export default function GameEnglishBanner() {
           useEffect(() => {
             async function fetchData() {
               try {
-                const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=game-english&populate=GameEnglishPage.banner");
+                const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=game-english&populate=GameEnglishPage.banner&populate=GameEnglishPage.backgroundImage");
                 const data = await response.json();
                 console.log(data.data[0],"working")
                 const bannerComponent = data.data[0]?.GameEnglishPage[0]?.banner[0];
@@ -31,13 +31,17 @@ export default function GameEnglishBanner() {
         
             fetchData();
           }, []);
+
+          const videoSrc = item.backgroundImage && item.backgroundImage.length > 0
+          ? `https://cms.kurixel.com${item.backgroundImage[0].url}`
+          : "/images/image30.png"
     return (
         <ImageBanner
             col={2}
             bgColor={"bg-[#FFCE49]"}
             heading={item.title}
             description={item.description}
-            imgsrc="/images/image30.png"
+            imgsrc={videoSrc}
             buttons={[
                 {
                     text: "Get Started",

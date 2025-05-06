@@ -11,7 +11,7 @@ export default function EnglishCurriculumBanner() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-english&populate=EducatorsCurriculumEnglishPage&populate=EducatorsCurriculumEnglishPage.BannerSection");
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-english&populate=EducatorsCurriculumEnglishPage&populate=EducatorsCurriculumEnglishPage.BannerSection&populate=EducatorsCurriculumEnglishPage.BannerSection.backgroundImage");
         const data = await response.json();
         const bannerComponent = data.data[0]?.EducatorsCurriculumEnglishPage[0]?.BannerSection;
         setItem({
@@ -25,13 +25,18 @@ export default function EnglishCurriculumBanner() {
 
     fetchData();
   }, []);
+
+  const imageSrc = item.backgroundImage  && item.backgroundImage.length > 0
+  ? `https://cms.kurixel.com${item.backgroundImage[0].url}`
+  : "/images/image30.png"
+
   return (
     <ImageBanner
       col={2}
       bgColor={"bg-[#FFCE49]"}
       heading={item.title}
       description={item.description}
-      imgsrc="/images/image 30.png"
+      imgsrc={imageSrc}
       buttons={[
         {
           text: "Parents, sign up now!",

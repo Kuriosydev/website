@@ -15,7 +15,7 @@ export default function ProdigyWorld() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=games&populate=GamesMetaData.GameDiveDeepSection.button");
+        const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=games&populate=GamesMetaData.GameDiveDeepSection.button&populate=GamesMetaData.GameDiveDeepSection.image");
         const data = await response.json();
 
         const diveDeep = data.data[0]?.GamesMetaData[0]?.GameDiveDeepSection[0];
@@ -34,6 +34,10 @@ export default function ProdigyWorld() {
     fetchData();
   }, []);
 
+  const videoSrc = sectionData.backgroundImage && sectionData.backgroundImage.length > 0
+  ? `https://cms.kurixel.com${sectionData.backgroundImage[0].url}`
+  : "/videos/news_banner_vid_2.mp4"
+
   const listData = sectionData.description
     ? sectionData.description.split("\n").map(text => ({ text }))
     : [];
@@ -44,7 +48,7 @@ export default function ProdigyWorld() {
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start justify-between gap-1 sm:gap-1 md:gap-2 lg:gap-10 xl:gap-14">
           <div className="w-full sm:w-full md:w-full lg:w-5/12 xl:w-5/12 flex flex-col px-6 sm:px-8 md:px-10 lg:px-0 xl:px-0 py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 -ml-0 sm:-ml-0 md:ml-0 lg:-ml-40 xl:-ml-40">
             <VideoPreview
-              src="/videos/news_banner_vid_2.mp4"
+              src={videoSrc}
               controls={false}
               autoPlay={true}
               muted={true}

@@ -31,7 +31,7 @@ export default function CurriculamCoverage() {
             useEffect(() => {
               async function fetchData() {
                 try {
-                  const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-math&populate=EducatorsCurriculumMathPage&populate=EducatorsCurriculumMathPage.list");
+                  const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-math&populate=EducatorsCurriculumMathPage&populate=EducatorsCurriculumMathPage.list&populate=EducatorsCurriculumMathPage.image");
                   const data = await response.json();
                  
                   const bannerComponent = data.data[0]?.EducatorsCurriculumMathPage[1];
@@ -53,7 +53,9 @@ export default function CurriculamCoverage() {
               fetchData();
             }, []);
 
-            
+            const imageSrc = item.image  && item.image.length > 0
+            ? `https://cms.kurixel.com${item.image[0].url}`
+            : "/images/creativeGameplay.png"
 const gameFeature2 = [
     {
         imgSrc: "/images/Ellipse.png",
@@ -86,7 +88,7 @@ const gameFeature2 = [
                 />
                 <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center sm:items-center md:items-center lg:items-start xl:items-start justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
                     <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2  py-4 sm:py-4 md:py-8">
-                        <img src="/images/creativeGameplay.png" alt="creative gameplay image" className="w-full h-full object-contain" />
+                        <img src={imageSrc} alt="creative gameplay image" className="w-full h-full object-contain" />
                     </div>
                     <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2  py-4 sm:py-4 md:py-8">
                         {item.list?.map((gameFeature, index) => (

@@ -46,7 +46,7 @@ export default function MathCurriculumBanner() {
       useEffect(() => {
         async function fetchData() {
           try {
-            const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-math&populate=EducatorsCurriculumMathPage.BannerSection");
+            const response = await fetch("https://cms.kurixel.com/api/cms-pages?filters[slug][$eq]=educators-curriculum-math&populate=EducatorsCurriculumMathPage.BannerSection&populate=EducatorsCurriculumMathPage.BannerSection.backgroundImage");
             const data = await response.json();
            
             const bannerComponent = data.data[0]?.EducatorsCurriculumMathPage[0]?.BannerSection;
@@ -62,13 +62,17 @@ export default function MathCurriculumBanner() {
     
         fetchData();
       }, []);
+
+      const imageSrc = item.backgroundImage  && item.backgroundImage.length > 0
+      ? `https://cms.kurixel.com${item.backgroundImage[0].url}`
+      : "/images/maths_curr_banner.png"
     return (
         <ImageBanner
             col={2}
             bgColor={"bg-[#FFCE49]"}
             heading={item.title}
             description={item.description}
-            imgsrc="/images/maths_curr_banner.png"
+            imgsrc={imageSrc}
             dropdown={countryDropdown}
             buttontext="View Curriculum"
             link="/educators/curriculum"
